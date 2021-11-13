@@ -1,0 +1,32 @@
+"0","# Load prediction data as points (left bottom corner of the evaluated cell)"
+"0","cnne_df <- read_csv(""2021-10-25.predictions/results/east/east.csv"")"
+"2","Warning:"
+"2"," Missing column names filled in: 'X1' [1]
+"
+"2","Parsed with column specification:
+cols(
+  X1 = [32mcol_double()[39m,
+  x = [32mcol_double()[39m,
+  y = [32mcol_double()[39m,
+  mound_probability = [32mcol_double()[39m
+)
+"
+"0","# 15334 points (origins in the raster cells)"
+"0","cnnw_df <- read_csv(""2021-10-25.predictions/results/west/west.csv"")"
+"2","Warning:"
+"2"," Missing column names filled in: 'X1' [1]
+"
+"2","Parsed with column specification:
+cols(
+  X1 = [32mcol_double()[39m,
+  x = [32mcol_double()[39m,
+  y = [32mcol_double()[39m,
+  mound_probability = [32mcol_double()[39m
+)
+"
+"0","# 15334 points (origins in the raster cells)"
+"0","cnn_df <- rbind(cnne_df, cnnw_df)"
+"0","# 30504 rows"
+"0",""
+"0","# Check the probabilities of there being a mound in a given cell"
+"0","hist(cnn_df$mound_probability)"

@@ -1,0 +1,216 @@
+---
+title: "CNN_validate"
+author: "Adela Sobotkova"
+date: "13/11/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Libraries
+```{r}
+library(tidyverse)
+library(sf)
+library(raster)
+```
+
+## Load Data
+
+### Background image
+```{r sat-img}
+# Load the merged Satellite image for Kazanlak Valley, Bulgaria
+kaz <-brick("../1_Teaching/cds-spatial/data/Kaz.tif")
+plotRGB(kaz, stretch= "lin")
+crs(kaz)
+```
+
+### Prediction data
+
+```{r predi-data}
+# Load prediction data as points (left bottom corner of the evaluated cell)
+cnne_df <- read_csv("2021-10-25.predictions/results/east/east.csv")
+# 15334 points (origins in the raster cells)
+cnnw_df <- read_csv("2021-10-25.predictions/results/west/west.csv")
+# 15334 points (origins in the raster cells)
+cnn_df <- rbind(cnne_df, cnnw_df)
+# 30504 rows
+
+# Check the probabilities of there being a mound in a given cell
+hist(cnn_df$mound_probability)
+table(cut(cnn_df$mound_probability, c(0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1)))
+
+# ok, so there is an exponential drop-off. 
+```
+### Make the predictions spatial and convert to grid
+
+```{r predi-spatial}
+
+### Build a grid of those with 60%+ probability of containing a mound
+
+# Build a grid from all points
+#cnnall_sp <- st_as_sf(cnn_df, coords = c("x","y"), crs = 32635)
+#cnnall_grid <- st_make_grid(cnnall_sp, cellsize = 250, what = "polygons")
+
+# Filter predictions to those that have 60+% likelihood of containing a mound
+cnn60_sp <- cnn_df %>% 
+  filter(mound_probability > 0.59) %>%  #333 observations
+  st_as_sf(coords = c("x","y"), crs = 32635)
+
+# Make a grid of 60%+ cells
+cnn_grid <- st_make_grid(cnn60_sp, cellsize = 250, what = "polygons")
+plot(cnn_grid)
+
+# Add probability data to the 60%+ grid 
+#cnnall_datagrid <- st_join(st_sf(cnnall_grid), cnnall_sp)
+cnn_grid <- st_join(st_sf(cnn_grid), cnn60_sp)
+
+# Visualize the grid cells with higher probability 
+ggplot(cnn_grid) +
+  geom_sf(aes(color = mound_probability))
+
+# 333 raster cells are predicted to contain mounds with greater 
+# than 60% likelihood. Archaeologists found 773 mounds in fraction of the area
+
+# View the grid 
+plotRGB(kaz, stretch= "lin");
+plot(cnn_grid$geometry, add = TRUE, border = "white")
+```
+
+
+### Field data
+
+that we will need later for validation
+
+```{r field-data}
+# Bring in survey area to see overall coverage
+survey <- st_read("../1_Teaching/cds-spatial/data/KAZ_surveyarea.shp")
+plot(survey$geometry)
+
+# Bring in all the mounds observed in the field
+mounds <- st_read("../1_Teaching/cds-spatial/data/KAZ_mounds.shp")
+plot(mounds)
+```
+
+
+```{r bounding-boxes}
+# Extrapolate rough study area after subtracting outliers
+far <- mounds %>% 
+  st_is_within_distance(survey, 1500) %>% 
+  lengths>0 
+farmounds <- which(far==0)  # these are the mounds that are mostly far from survey area
+
+# convex hull of points without outliers
+survey_sm <- st_convex_hull(st_union(mounds$geometry[-farmounds]))
+
+# convex hull of survey polygons 
+survey_ch <- st_convex_hull(st_union(survey$geometry))
+
+# quickly see the difference in bounding boxes
+plot(survey_ch, col = "green");plot(survey_sm, col = "red", add = TRUE); plot(survey$geometry, add =TRUE)
+
+```
+
+### Plot the basic data
+```{r view}
+# View all mounds
+plotRGB(kaz, stretch= "lin");
+plot(survey_ch, col = "green", add = TRUE);
+plot(survey_sm, col = "red", add = TRUE);
+plot(survey$geometry, col = "lightyellow", add = TRUE );
+plot(mounds$geometry[-farmounds,], add = TRUE, col = "pink");
+plot(cnn_grid$geometry, add = TRUE, border = "white")
+
+
+```
+
+## Validation
+Explore more closely which mounds were predicted nad which not. Does size play a role?
+
+```{r}
+# Check spatial overlap between 60%+ grid cells and all 773 mounds 
+predicted <- st_intersection(mounds, cnn_grid) # 146 mounds appear in the 380 grids
+predicted #146 features here
+
+`%nin%` = Negate(`%in%`)
+
+mounds <- mounds %>% 
+  mutate(predicted60 =  case_when(TRAP_Code %in% predicted$TRAP_Code ~ "yes",
+                                  TRAP_Code %nin% predicted$TRAP_Code ~ "no"
+                                  ))
+
+# Look at the predicted mounds 
+plot(predicted$geometry)
+
+# Look at the not-predicted mounds
+unpredicted <- mounds[mounds$TRAP_Code%nin%predicted$TRAP_Code,]
+
+
+
+# Bring in mound attributes (n = 773) to explore size
+mounddata <- read_csv("../1_Teaching/cds-spatial/data/KAZ_mdata.csv")
+mounds <- mounds %>% 
+  left_join(mounddata, by = c("TRAP_Code"="MoundID"))
+
+# filter the noticeable ones (2+ meters)
+large <- mounds %>% 
+  filter(Height>=2) # 247 obs
+
+mounds %>% 
+  group_by(predicted60) %>% 
+  summarize(min = min(Height), max = max(Height))
+
+
+boxplot(unpredicted$Height, predicted$Height)
+hist(unpredicted$Height, col = "yellow"); hist(predicted$Height, add =TRUE, col = "pink", alpha = 0.5)
+
+# Is there a significant relationship between the Height of a mound and its detection?
+t.test(Height ~ as.factor(predicted60), data = mounds)
+str(t.test(Height ~ as.factor(predicted60), data = mounds))
+# ... the answer seems to be yes with p at 3.14e-05
+
+# View Large mounds only
+plotRGB(kaz, stretch= "lin");
+plot(mounds$geometry, add = TRUE, col = "red")
+plot(large$geometry, add = TRUE, col = "yellow")
+plot(cnn_grid$geometry, add = TRUE, border = "white")
+
+
+
+```
+Better visualisations
+```{r}
+# Check for intersection between mounds of 2+m height and grids with 60%+ probability
+large_overlap <- st_intersection(cnn_datagrid$geometry, large$geometry)
+plot(st_as_sf(large_overlap))  # 37 mounds are captured, this is a list of the
+
+d
+# See the 146 mound features of all sizes 
+cnn_datagrid %>% 
+ # filter(mound_probability>0.5) %>% 
+  ggplot()+
+  geom_sf(aes(color = mound_probability))+
+  scale_color_gradient(low = "green", 
+                       high = "red",
+                       "Mound probability")+
+  geom_sf(data = test$geometry)+
+ # geom_sf(data = large_overlap)+
+  # geom_sf(data = survey$geometry)+
+  ggtitle("Kazanlak")
+
+# See the 37 2+m high mounds 
+cnn_datagrid %>% 
+  # filter(mound_probability>0.5) %>% 
+  ggplot()+
+  geom_sf(aes(color = mound_probability))+
+  scale_color_gradient(low = "green", 
+                       high = "red",
+                       "Mound probability")+
+  #geom_sf(data = test$geometry)+
+   geom_sf(data = large_overlap)+
+  # geom_sf(data = survey$geometry)+
+  ggtitle("Kazanlak")
+
+```
+

@@ -1,0 +1,28 @@
+{
+    "id": "5A9EA182",
+    "path": "~/Documents/RStudio/CNN_ross/CNN_validate.Rmd",
+    "project_path": "CNN_validate.Rmd",
+    "type": "r_markdown",
+    "hash": "2173592092",
+    "contents": "",
+    "dirty": false,
+    "created": 1636831751228.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "170,51",
+        "scrollLine": "161",
+        "last_setup_crc32": "FA757387bb338d19"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1636836767,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1636836767051,
+    "read_only": false,
+    "read_only_alternatives": []
+}
