@@ -21,6 +21,7 @@ library(raster)
 ### Background image
 ```{r sat-img}
 # Load the merged Satellite image for Kazanlak Valley, Bulgaria
+# use cds-spatial repo from github https://github.com/CDS-AU-DK/cds-spatial
 kaz <-brick("../1_Teaching/cds-spatial/data/Kaz.tif")
 plotRGB(kaz, stretch= "lin")
 crs(kaz)
@@ -128,7 +129,7 @@ plot(cnn_grid$geometry, add = TRUE, border = "white")
 
 ```
 
-## Validation
+## Validation - Overlap with Field Data
 
 Area surveyed in 2009-2011 is ca 85 sq km and contains 773 documented mounds of various shapes and sizes. This area contains 192 grid cells of 250m a side which were allocated 0.6+ probability of containing a mound.
 Let's explore how many mounds are outside these grid cells and which mounds were predicted and which not. Bring in mound attributes and check correlation. Does size play a role?
@@ -176,7 +177,7 @@ grids_n_mounds %>%
 # Gridcells contain between 0 and 29 mounds, which makes sense for the necropolis of little 10m diameter mounds in the NW
 ```
 
-## Overview of results 
+## Visualize results 
 ```{r mapview}
 # See the predicted mounds over grids with 60% likelihood of mound plus unpredicted mounds
 
@@ -188,7 +189,14 @@ mapview(unpredicted, color = "orange", alpha= 0.5,
   survey_grids
 ```
 
-## Couple Observations 
+## Summary of success rates
+
+146 mounds was detected out of 773, making the CNN predictions (over 60% probability) about 20% successful.
+
+```{r}
+cnn_grid
+```
+
 Look at the NW cluster and see that many mounds sit on the border of polygons, and so get counted twice > ca 20 mounds, so the numbers of predicted are slightly exaggerated
 In NE we are missing a lot of very large 20m diameter+ mounds that are covered with scrub (look forested) 
 In the south a lot of forest patches and beach boundaries are getting picked up that are false positives
@@ -297,10 +305,127 @@ cnn_grid %>%
   geom_sf(data = mounds$geometry[mounds$predicted60 == "no"], size = mounds$Height[mounds$predicted60 == "no"], col = "lightgrey", alpha = 0.5)
   ggtitle("unpredicted mounds in Kazanlak")
 ```
-## Other factors?? 
+## Other factors?? To be continued, ... 
 
 Differentiate predictions by other criteria - perhaps RS dataset visibility in 2001 IKONOS?
 
 Create a segregated density image of mound presence?
 
 Biggest ommisions  (false negatives) appear in NE where large mounds are present and biggest overcommits (false positives) are south of the reservoir, where there are morphological features but few mounds.
+
+## Need better training data?
+
+Let's filter the mounds to the large and visible ones, and prepare cutouts so they can be run through the model and see if the detection rate improves.
+First I create the loop to produce squares/grids to use to cutout segments from the raster, then I need to figure out by what characteristics I best improve the model (e.g. get those large scrubby mounds from NE)
+```{r mound-grids-polys}
+
+radius <- 75
+mounds$northing <- st_coordinates(mounds)[,2]
+mounds$easting <- st_coordinates(mounds)[,1]
+
+
+# define the plot edges based upon the plot radius. 
+
+yPlus <- mounds$northing+radius
+xPlus <- mounds$easting+radius
+yMinus <- mounds$northing-radius
+xMinus <- mounds$easting-radius
+
+# calculate polygon coordinates for each plot centroid. 
+square <- cbind(xMinus,yPlus,  # NW corner
+	xPlus, yPlus,  # NE corner
+	xPlus,yMinus,  # SE corner
+	xMinus,yMinus, # SW corner
+	xMinus,yPlus)  # NW corner again - close ploygon
+
+# Extract the mound ID information
+ID <- mounds$TRAP_Code
+
+# create spatial polygons from coordinates with mapply
+polys <- SpatialPolygons(mapply(function(poly, id) 
+		{
+	  xy <- matrix(poly, ncol=2, byrow=TRUE)
+	  Polygons(list(Polygon(xy)), ID=id)
+	  }, 
+	split(square, row(square)), ID),
+	proj4string=CRS(as.character("+proj=utm +zone=35 +datum=WGS84 +units=m +no_defs +ellps=WGS84 +towgs84=0,0,0")))
+
+plot(polys)
+
+
+mnd_polys <- st_as_sf(polys)
+plot(mnd_polys$geometry)
+mnd_polys$geometry
+
+
+# Convert to sf feature
+polys_df <- SpatialPolygonsDataFrame(polys, data.frame(id=ID, row.names=ID))
+polys_df
+mnd_polys <- st_as_sf(polys_df)
+mnd_polys
+
+# Add attributes
+mnd_poly <- mnd_polys %>% 
+  left_join(mounddata, by = c("id"="MoundID"))
+
+# Write to shapefile
+st_write(mnd_poly, "data/moundpolys140.shp",driver = 'ESRI Shapefile')
+
+
+mnd_poly2 <- mnd_poly %>% 
+  filter(Height>=2) 
+
+
+# Loop over a sample of largish mounds and cutout postage stamp rasters
+randomID <- mnd_poly2$id%>% 
+  sample(size = 25, replace = FALSE)
+unique(randomID)
+
+ # cutouts per sample number
+for (i in randomID){
+  new_clip <- crop(kaz, mnd_poly[mnd_poly$id ==i,])
+  plotRGB(new_clip)
+  writeRaster(new_clip, filename= paste0("data/",i,".tiff"), format = "GTiff", overwrite =TRUE)
+}
+
+# Works only if there is overlap with the raster! Nonoverlapping don't work so well:
+mnd_poly[mnd_poly$id ==2006,]
+i = 2006
+
+# Check for overlap with the satellite image
+```
+
+
+```{r generate--slowly-stamps-that-overlap-raster}
+# Check spatial overlap
+#https://gis.stackexchange.com/questions/34535/detect-whether-there-is-a-spatial-polygon-in-a-spatial-extent
+# in <- intersect(e, extent(sp))
+# if (isTRUE(in)) { in <- gIntersects(as(e, 'SpatialPolygons'), sp) }
+
+library(rgeos)
+
+for (i in randomID){
+  lapply(poly, function(raster) {
+    poly <- as(mnd_poly[mnd_poly$id ==i,], "Spatial")
+    ei <- as(extent(kaz), "SpatialPolygons")
+    if (gContainsProperly(ei,poly)) {
+      paste0(i," is fully within")
+      new_clip <- crop(kaz, mnd_poly[mnd_poly$id ==i,])
+      plotRGB(new_clip)
+      writeRaster(new_clip, 
+                  filename= paste0("data/",i,".tiff"), 
+                  format = "GTiff", overwrite =TRUE)
+  } else if (gIntersects(ei,poly)) {
+    paste0(i," intersects")
+  } else {
+    paste0(i," is fully outside the raster")
+  }
+})
+}
+
+# This works, but stamps are pixellated. Higher resolution is needed
+
+randomID
+new_clip
+```
+
