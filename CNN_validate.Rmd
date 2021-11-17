@@ -60,7 +60,7 @@ cnn60_sp <- cnn_df %>%
   filter(mound_probability > 0.59) %>%  #333 observations
   st_as_sf(coords = c("x","y"), crs = 32635)
 
-# Make a grid of 60%+ cells
+# Make a grid of 60%+ cells, 382 cells, 332 unique ones
 cnn_grid <- st_make_grid(cnn60_sp, cellsize = 250, what = "polygons")
 plot(cnn_grid)
 
@@ -144,42 +144,73 @@ mounds <- mounds %>%
 ```{r select-grids}
 # Select gridcells that fall within TRAP study area
 
-survey_grids <- st_intersection(survey_ch, cnn_grid)
+survey_grids <- st_intersection(survey_ch, cnn_grid) # 192 grid cells with 60%+
 plot(survey_grids)
 ```
 
 ```{r overlap}
 # Check spatial overlap between 60%+ grid cells and all 773 mounds 
-predicted <- st_intersection(mounds, cnn_grid) 
+predicted <- st_intersection(mounds, cnn_grid)# %>% distinct()
 
-# Which ones areun-predicted? 
+# Which ones are not-predicted? 
 `%nin%` = Negate(`%in%`)
-unpredicted <- mounds[mounds$TRAP_Code%nin%predicted$TRAP_Code,]
+unpredicted <- mounds[mounds$TRAP_Code%nin%predicted$TRAP_Code,] # 627 not predicted
 
-predicted #166 unique features here
-unique(predicted$TRAP_Code) # 144 unique mounds
-unique(cnn_grid$X1) #332 unique cells
+predicted  #146 unique features among 166 features caught via intersecton
+length(unique(predicted$TRAP_Code)) # 146 unique mounds
+length(unique(cnn_grid$X1)) #332 unique cells
 
-# 146 unique mounds (of 166 intersecting) appear in 51 of the 332 unique (of 380) grids
 
 grids_n_mounds <- predicted %>% 
 #  st_drop_geometry() %>% 
   group_by(X1) %>% 
   count()
-length(unique(grids_n_mounds$X1)) # 51, but one is NA
+
+length(unique(grids_n_mounds$X1)) # all the detected mounds are withing 51 grids, out of which one is labelled NA, so 50 it is
 
 hist(grids_n_mounds$n, breaks = 40)
 
-grids_n_mounds %>% 
-  filter(n>2)
-# Gridcells contain between 0 and 29 mounds, which makes sense for the necropolis of little 10m diameter mounds in the NW
+# Summary: 50 out of 332 Grid cells with 60%+ probability contain between 1 and 29 detected mounds, which makes sense for the necropolis of little 10m diameter mounds in the NW
 ```
-Let's look at the missing mounds
-```{r}
-# The remaining 627 unpredicted mounds are in the remaining
+To summarize the previous chunk, 146 unique mounds (of 166 intersecting) appear in 51 of the 192 "survey" grids that have 60% or higher probability of mounds and are at least partially within the TRAP study area. 
+The entire satellite image contains 332 grids with 60%+ probability of mounds
 
-missing <- st_intersection(unpredicted, cnn_grid)
+### Missing mounds
+Let's explore where else the missing mounds are and what probability has been assigned to the cells that contain them
+```{r missing}
+# The remaining 627 unpredicted mounds are in the remaining grid cells
+cnnall_sp <- st_as_sf(cnn_df, coords = c("x","y"), crs = 32635)
+cnnall_grid <- st_make_grid(cnnall_sp, cellsize = 250, what = "polygons") 
+cnnall_grid <- st_join(st_sf(cnnall_grid), cnnall_sp)
+
+missing <- st_intersection(unpredicted, cnnall_grid)
+
+# Check for duplicates
+?distinct()
+duplicated(missing$TRAP_Code)
+missing <- missing[!duplicated(missing$TRAP_Code),]
+
+hist(missing$mound_probability, main = "Probability of undetected mounds")
+
+## Discrepancy!!!
+missing %>% 
+  filter(mound_probability>0.59)
 ```
+Somehow 5 of the undetected mounds still have high mound-probability!? How have these snuck through?? (Maybe they are outside the study area??)
+```{r missing-grids}
+# How many grids are the missing mounds in?
+missing %>% 
+  group_by(X1) %>% 
+  tally()
+# The missing 620 mounds are contained by 259 grid cells of the satellite image 
+
+missing %>% 
+  group_by(X1) %>% 
+  count() %>% 
+  ggplot()+ geom_histogram(aes(n))+ggtitle("Count of missing mounds per gridcell") + theme_bw()
+
+```
+Undetected mounds appear in 259 gridcells, which contain between 1 and 29 mounds, heavily skewed to the left. 
 
 
 ## Visualize results 
@@ -196,7 +227,9 @@ mapview(unpredicted, color = "orange", alpha= 0.5,
 
 ## Summary of success rates
 
-146 mounds was detected out of 773, making the CNN predict (over 60% probability) ca 20% of mounds documented in the study area. Out of the XX gridcells contained in the study area, 50 contained mounds. 
+146 mounds was detected out of 773, making the CNN predict (over 60% probability) ca 20% of mounds documented in the study area. Out of the 192 gridcells which are within the archaeological study area and have 60%+ probabilty of containing a mound, 50 actually contained between 1 and 29 mounds. 
+Out of the remaining 259 gridcells, 
+
 Smaller mounds seem to enjoy higher detection rate according to the t-test, but that may not be the right metric. Let's say that surprisingly, the large mounds are not detected as frequently as I would expect, and as human would detect them.
 
 Perhaps I need to slide the probability upwards and see if higher prob is needed to track the mounds.
