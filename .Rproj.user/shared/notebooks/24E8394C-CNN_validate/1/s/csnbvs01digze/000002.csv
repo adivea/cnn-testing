@@ -1,3 +1,0 @@
-"0","# Load the merged Satellite image for Kazanlak Valley, Bulgaria"
-"0","kaz <-brick(""../1_Teaching/cds-spatial/data/Kaz.tif"")"
-"0","plotRGB(kaz, stretch= ""lin"")"

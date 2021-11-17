@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Libraries
-```{r}
+```{r libraries}
 library(tidyverse)
 library(sf)
 library(raster)
@@ -38,7 +38,8 @@ cnn_df <- rbind(cnne_df, cnnw_df)
 # 30504 rows
 
 # Check the probabilities of there being a mound in a given cell
-hist(cnn_df$mound_probability)
+hist(cnn_df$mound_probability,
+        main = "Probability of mound present in a satellite image gridcell");abline(v=0.6, col="red", lty = 2, lwd = 3)
 table(cut(cnn_df$mound_probability, c(0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1)))
 
 # ok, so there is an exponential drop-off. 
@@ -108,9 +109,11 @@ survey_sm <- st_convex_hull(st_union(mounds$geometry[-farmounds]))
 survey_ch <- st_convex_hull(st_union(survey$geometry))
 
 # quickly see the difference in bounding boxes
-plot(survey_ch, col = "green");plot(survey_sm, col = "red", add = TRUE); plot(survey$geometry, add =TRUE)
+plot(survey_ch, col = "green");plot(survey_sm, col = "red", alpha=0.5, add = TRUE); plot(survey$geometry, add =TRUE)
 
 ```
+
+
 
 ### Plot the basic data
 ```{r view}
@@ -126,34 +129,93 @@ plot(cnn_grid$geometry, add = TRUE, border = "white")
 ```
 
 ## Validation
-Explore more closely which mounds were predicted nad which not. Does size play a role?
 
-```{r}
+Area surveyed in 2009-2011 is ca 85 sq km and contains 773 documented mounds of various shapes and sizes. This area contains 192 grid cells of 250m a side which were allocated 0.6+ probability of containing a mound.
+Let's explore how many mounds are outside these grid cells and which mounds were predicted and which not. Bring in mound attributes and check correlation. Does size play a role?
+
+```{r mound-attributes}
+# Bring in mound attributes (n = 773) to aid exploration
+mounddata <- read_csv("../1_Teaching/cds-spatial/data/KAZ_mdata.csv")
+mounds <- mounds %>% 
+  left_join(mounddata, by = c("TRAP_Code"="MoundID"))
+```
+
+```{r select-grids}
+# Select gridcells that fall within TRAP study area
+
+survey_grids <- st_intersection(survey_ch, cnn_grid)
+plot(survey_grids)
+```
+
+```{r overlap}
 # Check spatial overlap between 60%+ grid cells and all 773 mounds 
-predicted <- st_intersection(mounds, cnn_grid) # 146 mounds appear in the 380 grids
-predicted #146 features here
+predicted <- st_intersection(mounds, cnn_grid) 
 
+# Which ones areun-predicted? 
 `%nin%` = Negate(`%in%`)
+unpredicted <- mounds[mounds$TRAP_Code%nin%predicted$TRAP_Code,]
 
+predicted #166 unique features here
+unique(predicted$TRAP_Code) # 144 unique mounds
+unique(cnn_grid$X1) #332 unique cells
+
+# 146 unique mounds (of 166 intersecting) appear in the 332 unique (of 380) grids
+
+
+
+
+grids_n_mounds <- predicted %>% 
+#  st_drop_geometry() %>% 
+  group_by(X1) %>% 
+  count()
+
+hist(grids_n_mounds$n, breaks = 40)
+
+grids_n_mounds %>% 
+  filter(n>2)
+# Gridcells contain between 0 and 29 mounds, which makes sense for the necropolis of little 10m diameter mounds in the NW
+```
+
+## Overview of results 
+```{r mapview}
+# See the predicted mounds over grids with 60% likelihood of mound plus unpredicted mounds
+
+library(mapview)
+mapview(unpredicted, color = "orange", alpha= 0.5,
+         map.types = c("Esri.WorldImagery", "CartoDB.Positron"))+
+  mapview(grids_n_mounds, zcol = "n", at = c(1, 2, 5, 10, 15, 30),
+          layer.name = " Predicted mounds per grid")+
+  survey_grids
+```
+
+## Couple Observations 
+Look at the NW cluster and see that many mounds sit on the border of polygons, and so get counted twice > ca 20 mounds, so the numbers of predicted are slightly exaggerated
+In NE we are missing a lot of very large 20m diameter+ mounds that are covered with scrub (look forested) 
+In the south a lot of forest patches and beach boundaries are getting picked up that are false positives
+All in all the model seems to pick on the bright signatures rather than round shapes and there is an odd combination of large forested lozenges and small bare spots picked up, but somehow round forested images with little excavated (bright) trenches on the south side is not getting picked up.
+
+
+## Further exploration - Height
+Let's see what other factors impact detectability in the CNN
+
+### Add un/predicted column to mound data
+```{r write-pred-status}
+# Add the information on prediction to mound dataset
 mounds <- mounds %>% 
   mutate(predicted60 =  case_when(TRAP_Code %in% predicted$TRAP_Code ~ "yes",
                                   TRAP_Code %nin% predicted$TRAP_Code ~ "no"
                                   ))
 
-# Look at the predicted mounds 
-plot(predicted$geometry)
-
-# Look at the not-predicted mounds
+# Look at the predicted and un=predicted mounds 
 unpredicted <- mounds[mounds$TRAP_Code%nin%predicted$TRAP_Code,]
 
+plot(unpredicted$geometry, col = "red", main = "Mounds predicted (green) and unpredicted (red) by CNN");plot(predicted$geometry, col = "darkgreen", add= TRUE); 
+```
 
 
-# Bring in mound attributes (n = 773) to explore size
-mounddata <- read_csv("../1_Teaching/cds-spatial/data/KAZ_mdata.csv")
-mounds <- mounds %>% 
-  left_join(mounddata, by = c("TRAP_Code"="MoundID"))
 
-# filter the noticeable ones (2+ meters)
+```{r explore-height}
+# filter the mounds for largesh and noticeable ones (2+ meters)
 large <- mounds %>% 
   filter(Height>=2) # 247 obs
 
@@ -161,56 +223,84 @@ mounds %>%
   group_by(predicted60) %>% 
   summarize(min = min(Height), max = max(Height))
 
+# Check the height difference between un- and predicted mounds
+boxplot(Height~predicted60, data = mounds)
 
-boxplot(unpredicted$Height, predicted$Height)
-hist(unpredicted$Height, col = "yellow"); hist(predicted$Height, add =TRUE, col = "pink", alpha = 0.5)
+# Check height distribution btw un- and predicted mounds
+hist(mounds$Height[mounds$predicted60 == "no"], col = "pink", breaks  = 20);
+hist(mounds$Height[mounds$predicted60 == "yes"], col = "yellow", add =TRUE, alpha = 0.5)
 
+```
+T-test on height
+```{r ttest-height}
 # Is there a significant relationship between the Height of a mound and its detection?
 t.test(Height ~ as.factor(predicted60), data = mounds)
 str(t.test(Height ~ as.factor(predicted60), data = mounds))
 # ... the answer seems to be yes with p at 3.14e-05
 
-# View Large mounds only
-plotRGB(kaz, stretch= "lin");
-plot(mounds$geometry, add = TRUE, col = "red")
-plot(large$geometry, add = TRUE, col = "yellow")
-plot(cnn_grid$geometry, add = TRUE, border = "white")
-
-
-
 ```
-Better visualisations
-```{r}
-# Check for intersection between mounds of 2+m height and grids with 60%+ probability
-large_overlap <- st_intersection(cnn_datagrid$geometry, large$geometry)
-plot(st_as_sf(large_overlap))  # 37 mounds are captured, this is a list of the
 
-d
-# See the 146 mound features of all sizes 
-cnn_datagrid %>% 
+
+
+
+## Side-by-side static visualisations
+```{r visualisation}
+par(mfrow = c(1,2))
+
+# Look at the predicted and un=predicted mounds 
+plotRGB(kaz, stretch= "lin", main = "Predicted vs unpredicted mounds");
+plot(mounds$geometry[mounds$predicted60 == "no"], add = TRUE, col = "red")
+plot(mounds$geometry[mounds$predicted60 == "yes"], add = TRUE, col = "green")
+plot(cnn_grid$geometry, add = TRUE, border = "white")
+legend(x = "bottom",          # Position
+       legend = c("undetected", "detected",
+                  "grids with 60%+ mound probability"),  # Legend texts
+       pch = c(1,1,0),       # Symbol shapes
+       col = c("red","green", "lightgrey"))           # Line colors
+     
+
+# View Large mounds only
+plotRGB(kaz, stretch= "lin", main = "Un/Predicted mounds of 2m+ height");
+plot(mounds$geometry[mounds$predicted60 == "no" & mounds$Height >=2], add = TRUE, col = "red")
+plot(mounds$geometry[mounds$predicted60 == "yes"& mounds$Height >=2], add = TRUE, col = "green")
+plot(cnn_grid$geometry, add = TRUE, border = "white")
+legend(x = "bottom",          # Position
+       legend = c("unpredicted 2m+ mounds", "predicted 2m+ mounds",
+                  "grids with 60%+ mound probability"),  # Legend texts
+       pch = c(1,1,0),       # Symbol shapes
+       col = c("red","green", "lightgrey"))           # Line colors
+     
+```
+
+
+```{r viz-mounds-size}
+# See the predicted 146/166 mound features of all sizes 
+cnn_grid %>% 
  # filter(mound_probability>0.5) %>% 
   ggplot()+
   geom_sf(aes(color = mound_probability))+
   scale_color_gradient(low = "green", 
                        high = "red",
                        "Mound probability")+
-  geom_sf(data = test$geometry)+
- # geom_sf(data = large_overlap)+
-  # geom_sf(data = survey$geometry)+
-  ggtitle("Kazanlak")
+  geom_sf(data = mounds$geometry[mounds$predicted60 == "yes"], size = mounds$Height[mounds$predicted60 == "yes"], col = "lightgrey", alpha = 0.5) +
+  ggtitle("Predicted mounds in Kazanlak")
 
-# See the 37 2+m high mounds 
-cnn_datagrid %>% 
+# See the unpredicted 627 mounds 
+cnn_grid %>% 
   # filter(mound_probability>0.5) %>% 
   ggplot()+
   geom_sf(aes(color = mound_probability))+
   scale_color_gradient(low = "green", 
                        high = "red",
                        "Mound probability")+
-  #geom_sf(data = test$geometry)+
-   geom_sf(data = large_overlap)+
-  # geom_sf(data = survey$geometry)+
-  ggtitle("Kazanlak")
-
+  #geom_sf(data = unpredicted$geometry)+
+  geom_sf(data = mounds$geometry[mounds$predicted60 == "no"], size = mounds$Height[mounds$predicted60 == "no"], col = "lightgrey", alpha = 0.5)
+  ggtitle("unpredicted mounds in Kazanlak")
 ```
+## Other factors?? 
 
+Differentiate predictions by other criteria - perhaps RS dataset visibility in 2001 IKONOS?
+
+Create a segregated density image of mound presence?
+
+Biggest ommisions  (false negatives) appear in NE where large mounds are present and biggest overcommits (false positives) are south of the reservoir, where there are morphological features but few mounds.
