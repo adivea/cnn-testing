@@ -163,18 +163,18 @@ survey_grids60 <- st_intersection(survey_ch, cnn_grid60) # 192 grid cells with 6
 Archaeological survey documented 773 mounds in the study area. Mounds from this dataset that fall in the 60%+ probability gridcells form the true positives and comprise the success of the CNN model.
 ```{r overlap}
 # Check spatial overlap between 60%+ grid cells and all 773 mounds 
-predicted <- st_intersection(mounds, cnn_grid60)# %>% distinct()
+predicted60 <- st_intersection(mounds, cnn_grid60)# %>% distinct()
 
 # Which ones are not-predicted? 
 `%nin%` = Negate(`%in%`)
-unpredicted <- mounds[mounds$TRAP_Code%nin%predicted$TRAP_Code,] # 627 not predicted
+unpredicted60 <- mounds[mounds$TRAP_Code%nin%predicted60$TRAP_Code,] # 627 not predicted
 
-head(predicted,2)  #146 unique features among 166 features caught via intersecton
-length(unique(predicted$TRAP_Code)) # 146 unique mounds
+head(predicted60,2)  #146 unique features among 166 features caught via intersecton
+length(unique(predicted60$TRAP_Code)) # 146 unique mounds
 length(unique(cnn_grid60$X1)) #332 unique cells
 
 # How many gridcells with 60% probabily actually contain mounds? 
-grids_n_mounds <- predicted %>% 
+grids_n_mounds <- predicted60 %>% 
 #  st_drop_geometry() %>% 
   group_by(X1) %>% 
   count()
@@ -184,7 +184,7 @@ length(unique(grids_n_mounds$X1))
 hist(grids_n_mounds$n, breaks = 40, 
      xlab = "Mound count in grid",
      ylab = "Grid count",
-     main = paste0("Distribution of predicted mounds (n = ",length(unique(predicted$TRAP_Code)), ") \n across ",nrow(grids_n_mounds)," TP grid cells among a total of  ",length(unique(cnn_grid60$X1))," with 60% likelihood"))
+     main = paste0("Distribution of predicted mounds (n = ",length(unique(predicted60$TRAP_Code)), ") \n across ",nrow(grids_n_mounds)," TP grid cells among a total of  ",length(unique(cnn_grid60$X1))," with 60% likelihood"))
 
 # Summary: 50 out of 332 Grid cells with 60%+ probability contain between 1 and 29 detected mounds, which makes sense for the necropolis of little 10m diameter mounds in the NW
 ```
@@ -197,14 +197,14 @@ The entire satellite image contains 332 grids with 60%+ probability of mounds, 1
 ```{r write-pred-status}
 # Add the information on prediction to mound dataset
 mounds <- mounds %>% 
-  mutate(predicted60 =  case_when(TRAP_Code %in% predicted$TRAP_Code ~ "yes",
-                                  TRAP_Code %nin% predicted$TRAP_Code ~ "no"
+  mutate(predicted60 =  case_when(TRAP_Code %in% predicted60$TRAP_Code ~ "yes",
+                                  TRAP_Code %nin% predicted60$TRAP_Code ~ "no"
                                   ))
 
-# Look at the predicted and un=predicted mounds 
-unpredicted <- mounds[mounds$TRAP_Code%nin%predicted$TRAP_Code,]
+# Look at the predicted and unpredicted mounds 
 
-plot(unpredicted$geometry, col = "red", main = "Mounds predicted (green) and unpredicted (red) by CNN");plot(predicted$geometry, col = "darkgreen", add= TRUE); 
+plot(unpredicted60$geometry, col = "red", main = "Mounds predicted (green) and unpredicted (red) by CNN");
+plot(predicted60$geometry, col = "darkgreen", add= TRUE) 
 ```
 
 ### Explore impact of height on detectability
@@ -254,25 +254,25 @@ cnnall_grid <- st_join(st_sf(cnnall_grid), cnnall_sp) # add attributes
 
 # Trying to eliminate overlap in gridcells
 # eliminating id duplicates is nonsensical as the two datasets have same ids, I  must aggregate spatially, e.g. st_union or st_difference, or relabel the datasets before merging, or crop to a shared non-overlapping border.
-missing <- st_intersection(unpredicted, cnnall_grid) # 2158, clearly duplicates
+missing60 <- st_intersection(unpredicted60, cnnall_grid) # 2158, clearly duplicates
 
 # Check for duplicates
 ?distinct()
-length(duplicated(missing$TRAP_Code)) # 2158 points to duplication
-missing <- missing[!duplicated(missing$TRAP_Code),] #620 undetected mounds
+length(duplicated(missing60$TRAP_Code)) # 2158 points to duplication
+missing60 <- missing60[!duplicated(missing60$TRAP_Code),] #620 undetected mounds
 ```
 So we have 620 missing mounds. How many grids are these located within?
 
 ```{r missing-in-grids}
 # How many grids are the missing mounds in?
-missing %>% 
+missing60 %>% 
   st_drop_geometry() %>% 
   group_by(X1) %>% 
   tally() %>% arrange(desc(n))
 # The missing 620 mounds are contained within 259 grid cells of the satellite image 
 
 # Let's see the distribution of missing mounds per grid cell
-missing %>% 
+missing60 %>% 
   group_by(X1) %>% 
   count() %>% 
   ggplot()+ geom_histogram(aes(n))+ggtitle("Count of undetected mounds (620) per gridcell(n=259)") + theme_bw()
@@ -283,7 +283,7 @@ Undetected mounds appear in 259 gridcells, which contain between 1 and 29 mounds
 What is the probability of the cells that contain undetected mounds?
 ```{r missing-prob}
 # What is the mound_probability in these gridcells?
-hist(missing$mound_probability, main = "Probability of gridcells containing undetected mounds")
+hist(missing60$mound_probability, main = "Probability of gridcells containing undetected mounds")
 ```
 
 Somehow 5 of the undetected mounds still have high mound-probability!? How have these snuck through? Maybe they are outside the study area?
@@ -293,14 +293,14 @@ Probability in five undetected mounds is showing to be over 0.59 when it should 
 
 ```{r discrepancy}
 # Ggplot of mounds with high prob and grid with high prob
-# missing %>% 
+# missing60 %>% 
 #   filter(mound_probability>0.59) %>% 
 #   ggplot()+
 #   geom_sf(aes(color = mound_probability))+
 #   geom_sf(data = cnn_grid60, alpha = 0.5)
 
 library(mapview)
-missing %>% 
+missing60 %>% 
   filter(mound_probability>0.59) %>% 
   mapview(color = "red")+
  # mapview(cnn_grid60, alpha = 0.5)+
@@ -322,7 +322,7 @@ Most of the visualisation below is just a rough guide as the overlap in grids ne
 # See the predicted mounds over grids with 60% likelihood of mound plus unpredicted mounds
 
 library(mapview)
-mapview(unpredicted, color = "orange", alpha= 0.5,
+mapview(unpredicted60, color = "orange", alpha= 0.5,
          map.types = c("Esri.WorldImagery", "CartoDB.Positron"),
          layer.name = "Undetected mounds")+
   mapview(grids_n_mounds, zcol = "n", at = c(1, 2, 5, 10, 15, 30),
@@ -382,7 +382,7 @@ cnn_grid60 %>%
   scale_color_gradient(low = "green", 
                        high = "red",
                        "Mound probability")+
-  #geom_sf(data = unpredicted$geometry)+
+  #geom_sf(data = unpredicted60$geometry)+
   geom_sf(data = mounds$geometry[mounds$predicted60 == "no"], size = mounds$Height[mounds$predicted60 == "no"], col = "lightgrey", alpha = 0.5)+
   ggtitle("Unpredicted mounds in Kazanlak")
   

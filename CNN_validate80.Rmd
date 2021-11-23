@@ -47,7 +47,7 @@ cnn_df <- rbind(cnne_df, cnnw_df)
 
 # Check the probabilities of there being a mound in a given cell
 hist(cnn_df$mound_probability,
-        main = "Probability of mound present in a satellite image gridcell");abline(v=0.8, col="red", lty = 2, lwd = 3)
+        main = "Probability of mound present in a satellite image gridcell");abline(v= 0.8, col="red", lty = 2, lwd = 3)
 table(cut(cnn_df$mound_probability, c(0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1)))
 
 # ok, so there is an exponential drop-off. 
@@ -305,8 +305,7 @@ missing80 %>%
 
 ```
 
-Visual inspection of the 5 undetected mounds with high probability shows they fall OUTSIDE the 80%+ gridcells. The problem here is as follows: These mounds have the high probability derived from gridcells, because the grid is composed of two grids, which partially overlap in the middle. Each set of overlapping cells have different values of mound likelihood! Mounds that sit in these gridcells have been duplicated and have both high and low probability values.
-
+NO undetected mounds fall in cells with high probability(80%+). Here I display the undetected mounds in cells with 59%+ probability
 
 Ideally, I should be probably running the validation separately for Kaz-East and Kaz-West images as that is how the CNN values have been generated. However, it is interesting that the model generates different values for the same locations.
 
@@ -414,24 +413,24 @@ par(mfrow = c(1,2))
 plotRGB(kaz, stretch= "lin");
 legend("top", legend = "Detection differences by mound height")
 plot(mounds$geometry[mounds$predicted80 == "no"], add = TRUE, col = "red")
-plot(mounds$geometry[mounds$predicted80 == "yes"], add = TRUE, col = "green")
 plot(cnn_grid80$geometry, add = TRUE, border = "white")
+plot(mounds$geometry[mounds$predicted80 == "yes"], add = TRUE, pch = 19, col = "green")
 legend(x = "bottom",          # Position
        legend = c("undetected", "detected",
                   "grids with 80%+ mound probability"),  # Legend texts
-       pch = c(1,1,0),       # Symbol shapes
+       pch = c(1,19,0),       # Symbol shapes
        col = c("red","green", "lightgrey"))           # Line colors
      
 
 # View Large mounds only
 plotRGB(kaz, stretch= "lin");
 plot(mounds$geometry[mounds$predicted80 == "no" & mounds$Height >=2], add = TRUE, col = "red")
-plot(mounds$geometry[mounds$predicted80 == "yes"& mounds$Height >=2], add = TRUE, col = "green")
 plot(cnn_grid80$geometry, add = TRUE, border = "white")
+plot(mounds$geometry[mounds$predicted80 == "yes"& mounds$Height >=2], add = TRUE, pch = 19, col = "green")
 legend(x = "bottom",          # Position
        legend = c("undetected 2m+ mounds", "detected 2m+ mounds",
                   "grids with 80%+ mound probability"),  # Legend texts
-       pch = c(1,1,0),       # Symbol shapes
+       pch = c(1,19,0),       # Symbol shapes
        col = c("red","green", "lightgrey"))           # Line colors
      
 ```
