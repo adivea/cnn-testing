@@ -27,24 +27,15 @@ library(raster)
 
 ### Background image
 ```{r sat-img}
-# Load the merged Satellite image for Kazanlak Valley, Bulgaria
-# use cds-spatial repo from github https://github.com/CDS-AU-DK/cds-spatial
-kaz <-brick("../1_Teaching/cds-spatial/data/Kaz.tif")
-plotRGB(kaz, stretch= "lin")
-crs(kaz)
+# Merged Satellite image for Kazanlak Valley, Bulgaria
+# from cds-spatial repo from github https://github.com/CDS-AU-DK/cds-spatial
+
+plotRGB(kaz, stretch = "lin")
 ```
 
 ### Prediction data
 
 ```{r predi-data}
-# Load prediction data as points (left bottom corner of the evaluated cell)
-cnne_df <- read_csv("2021-10-25.predictions/results/east/east.csv")
-# 15334 points (origins in the raster cells)
-cnnw_df <- read_csv("2021-10-25.predictions/results/west/west.csv")
-# 15334 points (origins in the raster cells)
-cnn_df <- rbind(cnne_df, cnnw_df)
-# 30504 rows
-
 # Check the probabilities of there being a mound in a given cell
 hist(cnn_df$mound_probability,
         main = "Probability of mound present in a satellite image gridcell");abline(v=0.6, col="red", lty = 2, lwd = 3)
@@ -58,10 +49,6 @@ Let's make the predictions to a grid so we can assess whether gridcells with hig
 ```{r predi-spatial}
 
 ### Build a grid of those with 60%+ probability of containing a mound
-
-# Build a grid from all points
-#cnnall_sp <- st_as_sf(cnn_df, coords = c("x","y"), crs = 32635)
-#cnnall_grid <- st_make_grid(cnnall_sp, cellsize = 250, what = "polygons")
 
 # Filter predictions to those that have 60+% likelihood of containing a mound
 cnn60_sp <- cnn_df %>% 
