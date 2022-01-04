@@ -127,12 +127,12 @@ plot(survey_ch, col = "green", main = "Convex hull around survey area (tight and
 ```{r view}
 # View all mounds
 plotRGB(kaz, stretch= "lin");
-plot(survey_ch, col = "green", add = TRUE);
-plot(survey_sm, col = "red", add = TRUE);
-plot(survey$geometry, col = "lightyellow", add = TRUE );
+plot(survey_ch, border = "green", lwd = 3, add = TRUE);
+plot(survey_sm, border = "red", lwd = 3, add = TRUE);
+#plot(survey$geometry, col = "lightyellow", add = TRUE );
 plot(mounds$geometry[-farmounds,], add = TRUE, col = "pink");
-plot(cnn_grid80$geometry, add = TRUE, border = "white");
-legend("bottom", legend = "Grid cells with 80%+ probability of mounds (white squares) overlayed on \nthe satellite image and survey study area outlines with mounds (pink circles)")
+#plot(cnn_grid80$geometry, add = TRUE, border = "white");
+#legend("bottom", legend = "Grid cells with 80%+ probability of mounds (white squares) overlayed on \nthe satellite image and survey study area outlines with mounds (pink circles)")
 
 ```
 

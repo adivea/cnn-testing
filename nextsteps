@@ -3,3 +3,11 @@ NEXT STEPS
 complete script organisation to: 
 CNN01 _ loading data
 CNN02 _ validating data for both 60 and 80% predictions so that Ross can easily get an overview (side by side charts?)
+
+CNN_Stamps: Load larger kaz image TO DO now
+# grab Kaz_e_fuse and Kaz_w_fuse from E:\TRAP Workstation\Shared GIS\Satellite imagery\IKONOS\Kazanlak\ERDAS\Cormac, clip by mound extent and then create cutouts.
+extent <- st_make_grid(st_bbox(visiblemounds3_5),n = 1)
+plotRGB(kaz); plot(extent, border = "red", add = TRUE)
+kazE <- brick("E:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/Kaz_E_fuse.tif")
+crop(kaze, extent)
+# Create cutouts per sample number

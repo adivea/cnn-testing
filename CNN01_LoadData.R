@@ -2,7 +2,7 @@ library(tidyverse)
 library(sf)
 library(raster)
 
-#######################################LOAD SATELLITE IMAGE
+#######################################LOAD SMALLER SATELLITE IMAGE
 
 # Load the merged Satellite image for Kazanlak Valley, Bulgaria
 # use cds-spatial repo from github https://github.com/CDS-AU-DK/cds-spatial
@@ -17,6 +17,10 @@ plotRGB(kaze, stretch= "lin")
 # West next
 kazw <-brick("../1_Teaching/SpatialAnalytics2021/scripts_rs/data/KazW.tif")
 plotRGB(kazw, stretch= "hist")
+
+# # Need hi-res cropped raster?
+# # If large raster is not in memory
+# KAZcropped <- brick("E:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/Kazcropped.tif")
 
 #######################################LOAD PREDICTIONS
 
@@ -138,10 +142,13 @@ plotRGB(kazw, stretch = "lin", interpolate = TRUE, colNA= 'white');
 plot(cnnw_grid[cnnw_sp6], add = TRUE, border = "white");
 plot(cnnw_grid[cnnw_sp6], add = TRUE, border = "pink");
 
-
+################################    GET MOUND DATA
 # Bring in all the mounds
-mounds <- st_read("data/KAZ_mounds.shp")
-
+mounds <- st_read("../1_Teaching/cds-spatial/data/KAZ_mounds.shp")
+mounddata <- read_csv("../1_Teaching/cds-spatial/data/KAZ_mdata.csv")
+# filter the noticeable ones (2+ meters)
+mounds <- mounds %>% 
+  left_join(mounddata, by = c("TRAP_Code"="MoundID"))
 
 # ok, a number of mounds are outside the grids, 
 # with most surprising absentee being the east-most peninsula
@@ -159,6 +166,7 @@ cnn_datagrid <- rbind(cnnw_datagrid,cnne_datagrid)
 
 
 # Visualise overall grid probability vs the actual mounds
+# Legend label editing: https://stackoverflow.com/questions/23635662/editing-legend-text-labels-in-ggplot 
 cnn_datagrid %>% 
   filter(mound_probability>0.5) %>% 
   ggplot()+
@@ -166,9 +174,15 @@ cnn_datagrid %>%
   scale_color_gradient(low = "green", 
                        high = "red",
                        "Mound probability")+
-  geom_sf(data = mounds, aes(alpha = 0.01))+
-  ggtitle("Kazanlak East")
+  theme(legend.position = "bottom")+
+  theme_bw()+
+  geom_sf(data = mounds, aes(size = Height), alpha = 0.4)+
+  labs(size = "Mound height (m)")+
+  ggtitle("Kazanlak Mound Predictions and Field Data")
+  
 
 
 # Export data
-st_write(cnn_datagrid, "data/Cnn_datagrid.shp")
+dir.create("output_data")
+st_write(cnn_datagrid, "output_data/Cnn_datagrid.shp")
+st_write(mounds, "output_data/mounds.shp")
