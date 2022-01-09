@@ -7,16 +7,27 @@ libraries("rgdal", "gdalUtils", "raster")
 #setwd("E:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac")
 
 # Create an extent for mounds
-extent <- st_make_grid(st_bbox(visiblemounds3_5),n = 1)
+extent <- st_make_grid(st_bbox(visible_mounds),n = 1)
+st_bbox(extent)
+extent_adj <- st_buffer(st_as_sf(extent), 1000)
+
+# Manual extent
+# extent_bigger <- extent(352459, 4712981,367580, 4730228) # increase 1000m west, 1000m south, 100m north, and 0 east
+# extent_bigger <- raster(extent_bigger)
+# proj4string(extent_bigger) <- CRS('+init=epsg:32635')
+# extent_bigger
 
 # Load original  Kaz_e_fuse and Kaz_w_fuse from E:\TRAP Workstation\Shared GIS\Satellite imagery\IKONOS\Kazanlak\ERDAS\Cormac, clip by mound extent and then create cutouts.
 KAZE <- brick("E:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/Kaz_E_fuse.tif")
 KAZW <- brick("E:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/Kaz_W_fuse.tif")
 
-# Crop to mound extent
-KAZEcropped <- crop(KAZE, st_as_sf(extent)) # crop to mound extent
+# Crop to visible mound extent
+KAZEcropped <- crop(KAZE, st_as_sf(extent)) # crop to mound 3.5m extent
 KAZWcropped <- crop(KAZW, st_as_sf(extent))
 
+# Crop to adjusted larger than visible-mounds extent togetthoroughoverlap
+KAZWcropped <- crop(KAZW, extent_adj) 
+KAZEcropped <- crop(KAZE, extent_adj)
 ### Mosaic Option 1 with mosaic() - DOES NOT WORK, USE MERGE BELOW
 
 # Mosaicing cropped files with mosaic(r1,r2,fun = mean). Smaller files > faster performance?
@@ -56,7 +67,9 @@ KAZcropped <- merge(KAZEcropped,KAZWcropped,tolerance=1) # tolerance gets around
 plotRGB(KAZcropped, stretch = "hist") # NAs are handled ok as long as E comes first..
 
 # Writing the cropped-to-mound rasters to E:SharedGIS....Cormac on silver Seagate
+#setwd("E:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac")
 # writeRaster(KAZEcropped, file="KazEcropped.tif", format="GTiff")
 # writeRaster(KAZWcropped, file="KazWcropped.tif", format="GTiff")
-# writeRaster(KAZcropped, file="Kazcropped.tif", format="GTiff")
+# writeRaster(KAZcropped, file="E:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/Kazcropped.tif", format="GTiff")
+writeRaster(KAZcropped, file="E:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/Kazcrop_adj.tif", format="GTiff")
 

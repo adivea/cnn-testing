@@ -1,0 +1,150 @@
+poorlyvisible
+3203
+3211
+3315
+3316
+3317
+3318
+3320
+3321
+3323
+3324
+3325
+3347
+3350
+3351
+3352
+3353
+1002
+1016
+1020 - cuts visible only
+1041 - lower mounds visible, this one poor
+1042
+1047
+1055 - soil mark
+1059 - soil mark
+1069 - crop mark
+1070 - crop mark
+2034 - soil mark
+2092 - soil mark off center
+2098 - soil mark
+2110 - crop mark negative
+2119 - crop mark tree
+2135 - crop mark negative
+2136 - crop mark negative
+2137 - crop mark negative
+2139 - crop mark negative
+2140 - crop mark negative
+2141
+2142
+2143
+2144
+2146
+2171 - RT offcenter
+2176 - RT offcenter
+2191 - RT offcenter
+3020 - crop mark
+3073 - fuzzy
+3092 - choppy ground
+3093 - soil marks offcenter
+3099 - visible offcenter
+3103 - crop mark like tree
+3104 - crop mark round
+3108 - crop mark round
+3109 - crop mark round
+3110 - crop mark round
+3111 - crop mark negative
+3113 - RTs only
+3127
+3131
+3136
+3143
+3144
+3145
+3172 - offcenter
+3174 - offcenter
+3175
+3186
+3187
+3201
+3243
+3252 - rt
+3279
+3280
+3281
+3283
+3284
+3296
+3297
+3309
+3331
+3332
+3334
+3355
+3356
+3417
+3421
+3433
+3439
+3440
+3442
+3443
+3444
+3445
+3446
+3447
+3450
+3452
+3453
+3504
+3583
+3584
+3605
+3606
+3631
+3649
+3650
+3677
+3678
+3687 - offcenter craters
+3688 - military
+3707 - military
+3709 - military
+3713 - military offcenter
+3714 - military offcenter
+3716 - military offcenter
+3717 - military offcenter
+3718 - military offcenter
+4021 - rt
+4022
+4023
+4026
+4027
+4057
+4058
+4059
+4072 - rt
+4075 - choppy surrounding
+4076
+4092
+4095 - rt
+4134 - choppy surrounding
+2184
+3128
+3349
+3449
+3520 
+3571
+3609
+3660
+3661
+3664
+3711
+4009
+4067
+4077
+4088
+
+
+
+
