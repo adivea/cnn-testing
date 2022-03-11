@@ -29,7 +29,7 @@ First I create the loop to produce squares/grids to use to cutout segments from 
 ```{r mound-grids-polys}
 
 radius <- 75 #twice that is 150m per side of polygon
-radius <- 125 #twice that is 250m per side of polygon
+#radius <- 125 #twice that is 250m per side of polygon
 mounds$northing <- st_coordinates(mounds)[,2]
 mounds$easting <- st_coordinates(mounds)[,1]
 
@@ -165,6 +165,9 @@ randomID%in%mnd_poly$id # visible mounds
 field_mounds$TRAP_code%in%mnd_poly$id
 other_mounds$TRAP_code%in%mnd_poly$id
 ```
+# Inspection of mounds marked as visible 
+
+.. and others not marked as such - the annotations are not always 100%
 
 ```{r get-all-visible-mnd}
 # Get all 152 visible mounds from the rs dataset
@@ -193,7 +196,13 @@ mapview(rs %>% filter(TRAP_code%in%randomID[trapnomissing]), map.types = c("Esri
 ```
 All mounds are within the satellite image. 
 
+
+
 ### Loop Proof of Concept: : Small stamps from low-resolution satellite image
+Skip this loop PoC if you are trying to regenerate new stamps. 
+
+To generate stamps, we need to clip the large raster by stamp boundaries in the 'poly' object. 
+
 
 ```{r loop-test, eval=FALSE}
 # Loop over a sample of largish mounds and cutout postage stamp rasters
@@ -221,6 +230,7 @@ The clipping works only if there is overlap with the raster! Non-overlapping pol
 
 
 ### More Defensive Loop
+Skip this loop PoC if you are trying to regenerate new stamps. 
 
 The process of generating stamps from raster with polygon outlines consists of two steps:
 1) check if a given polygon overlaps fully with the raster
@@ -268,27 +278,42 @@ The satellite image suffers from histogram imbalance, however, that should aid w
 ```{r large-stamps}
 # If large raster is not in memory
 # setwd("E:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac")
-# KAZcropped <- brick("Kazcropped.tif")
-# Alternatively if a rebuild is needed, run
+# KAZcropped <- brick("Kazcrop_adj.tif") # this raster has a 1000m buffer around  mounds allowing space for stamps
+# Alternatively if a raster rebuild is needed, run
 #source("MOSAIC.R")
 
-# Loop to check for polygon and raster overlap and to generate stamps 
+# Libraries
 library(rgeos)
 library(rgdal)
-for(i in visibleID){  # make sure random IDs exist in mndpoly and contain no 0 trap codes
-  lapply(poly, function(raster) {
-    poly <- as(mnd_poly[mnd_poly$id ==i,], "Spatial")    # convert polygon to 'Spatial' format
-    ei <- as(extent(KAZcropped), "SpatialPolygons")             # create an extent of sat img as 'Spatial' format
+
+
+# Get visible mound TRAP IDs
+visibleID <- scan("data/visibleID.txt")
+
+
+# Loop to check for polygon and raster overlap and to generate stamps 
+for(i in visibleID){   # ID must exist in mndpoly and contain no "0" TRAP codes
+    lapply(poly, function(raster) {
+      # create stamp boundary polygon and convert to 'Spatial' format
+    poly <- as(mnd_poly[mnd_poly$id ==i,], "Spatial")   
+      # convert the adjusted extent of sat img to  'Spatial' format
+    ei <- as(extent(KAZcropped), "SpatialPolygons")     
+      # check that the mound is actually within satellite image (some are not)
     if (gContainsProperly(ei,poly)) {
       paste0("Polygon for ", i," is fully within raster")
-      new_clip <- crop(KAZcropped, mnd_poly[mnd_poly$id ==i,])  # create the cutout
+       # if is within create the cutout
+      new_clip <- crop(KAZcropped, mnd_poly[mnd_poly$id ==i,])  
+      # if you want to see the result, uncomment the line below
       #plotRGB(new_clip)
+      # write the raster to an ext. HDD using absolute path to existing folder
       writeRaster(new_clip,
                  # filename= paste0("morestamps/",i,".tif"),
-                   filename= paste0("E:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/finalstamps/",i,".tif"),
+                   filename= paste0("E:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/finalstamps150/",i,".tif"),
                   format = "GTiff", overwrite = TRUE)
+      # get messages if the stamp polygon for given mound is not fully within satimg
   } else if (gIntersects(ei,poly)) {
     paste0(i," intersects")
+      # get message if the stamp polygon falls outside the satimg
   } else {
     paste0(i," is fully outside the raster")
   }
@@ -299,6 +324,9 @@ plotRGB(new_clip)
 ```
 
 If the operation errored out, you may want to rerun skipping existing images to save time/ processing power
+
+## Remedial number catching
+
 ```{r check-dir-contents}
 # List existing images and convert names to a vector of integers 
 list.files()
@@ -306,12 +334,25 @@ img_name <- basename(list.files("E:/TRAP Workstation/Shared GIS/Satellite imager
 img_name <- as.integer(str_remove(img_name, pattern = ".tif"))
 randomID[randomID%nin%img_name]
 
+# Lets create a list of valid and visible stamp ID
+
+# mounds marked as visible on surface in RS dataset
 img_name # list of 139 VIS tifs, based on the 150 MND VIS filter
-poor <- c(2184,3128, 3349, 3449,3520, 3571, 3609, 3660, 3661, 3664,3711, 4009, 4067, 4077, 4088) # poor among the 139 VIS mounds
+
+# poorly visible mounds among the 139 VIS mounds after visual inspection in Dec 2021
+poor <- c(2184,3128, 3349, 3449,3520, 3571, 3609, 3660, 3661, 3664,3711, 4009, 4067, 4077, 4088) 
+
+# actually visible 249 mounds
 visible_b <- img_name[img_name%nin%poor] # vector of actually visible VIS mounds 
 visible <- read_table("additionalvisible.txt", col_names = FALSE) # visible among field mounds >NA> and other mounds (CSH, SH, etc.)
 visible_a <- visible[["X1"]]  # vector of other visible mounds 
 visibleID <- sort(c(visible_a, visible_b)) 
+
 length(visibleID)
+
+# write visible TRAP numbers to file 
+# write.table(visibleID, "data/visibleID.txt", append = FALSE, sep = " ", dec = ".",
+ #           row.names = FALSE, col.names = FALSE)
+
 ```
 

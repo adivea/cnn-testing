@@ -15,6 +15,6 @@ kaz <-brick("../1_Teaching/cds-spatial/data/Kaz.tif")
 
 ####################################### LOAD HI-RES CROPPED KAZ IKONOS
 
-# Need hi-res cropped raster?
-KAZcropped <- brick("E:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/Kazcropped.tif")
+# Need hi-res cropped raster? This one just encompasses the burial mounds with a 100
+KAZcropped <- brick("E:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/Kazcrop_adj.tif")
 

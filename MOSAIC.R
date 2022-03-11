@@ -6,7 +6,7 @@ library(easypackages)
 libraries("rgdal", "gdalUtils", "raster")
 #setwd("E:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac")
 
-# Create an extent for mounds
+# Create an extent for mounds, one tight, one with 1000m buffer
 extent <- st_make_grid(st_bbox(visible_mounds),n = 1)
 st_bbox(extent)
 extent_adj <- st_buffer(st_as_sf(extent), 1000)
