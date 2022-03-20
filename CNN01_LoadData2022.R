@@ -33,52 +33,49 @@ library(raster)
 # KAZcropped <- brick("E:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/Kazcropped.tif")
 
 # # Need hi-res mosaiced and adjusted raster to cover 100m of mounds?
-kaz <- brick("G:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/Kazcropped.tif")
+kaz <- brick("G:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/Kazcrop_adj.tif")
 
 
 #######################################LOAD PREDICTIONS
 
-# Load prediction data as points (left bottom corner of the evaluated cell)
-cnne_df <- read_csv("2021-10-25_predictions/results/east/east.csv")  # eastern half
-# 15334 points (origins in the raster cells)
-cnnw_df <- read_csv("2021-10-25_predictions/results/west/west.csv")  # western half
-# 15334 points (origins in the raster cells)
-
-
-# Combine the prediction data from E and W half into one dataset
-cnn_df <- rbind(cnne_df, cnnw_df)     # # 30504 rows, combined east and west (overlap!)
+# Bring in the 2022 prediction data for the entire image
 cnn_df <- read_csv("2022-03-10_predictions/2021-03-10.Predictions.csv")
 
-# Look at the distributionof the predictions
+# Look at the distribution of the 'corrected' predictions
 hist(1-cnn_df$`Raw Prediction`, main = "Probability of a mound") 
 which(is.na(1-cnn_df$`Raw Prediction`))
 
 # Create a grid of ALL the predictions to see where mounds are in relation to it (overlap!)
 # cnnall_sp <- st_as_sf(cnn_df, coords = c("coord_x","coord_y"), crs = 32635)
-# cnnall_grid <- st_make_grid(cnnall_sp, cellsize = 250, what = "polygons") 
-# cnnall_grid <- st_join(st_sf(cnnall_grid), cnnall_sp) # add attributes
-
+# cnnall_grid <- st_make_grid(cnnall_sp, cellsize = c(150,150), what = "polygons")
+# cnnall_grid <- st_join(st_sf(cnnall_grid), cnnall_sp) # add attributes does not work as four points are at edges
+mapview(cnnall_grid)+mapview(cnnall_sp)
 
 ##################################### SPATIAL GRIDS OUT OF PREDICTION 60% thresholds
 
 ### 60 THRESHOLD: Build a grid of those cells with 60%+ probability of containing a mound
 
 # Filter predictions to those that have 60+% likelihood of containing a mound
-cnn60_sp <- cnn_df %>% 
+# and make into points
+cnn60_pt <- cnn_df %>% 
   mutate(mound_probability = 1 - cnn_df$`Raw Prediction`) %>%  # in 2022, prob refers to not-mound, so inverting 
   filter(mound_probability > 0.59) %>% # 897 observations have 60+% proabbility of being mounds (very close to original)
   st_as_sf(coords = c("coord_x","coord_y"), crs = 32635)
 
 
-# Make a grid of 60%+ cells, 897 cells, all unique
-cnn_grid60 <- st_make_grid(cnn60_sp, cellsize = 250, what = "polygons")
 
-# Re-add probability data to the 60%+ grid, as the gridmaking stripped the values out
-cnn_grid60 <- st_join(st_sf(cnn_grid60), cnn60_sp)
+################################ GENERATE GRIDS MANUALLY
+side <- 150 #twice that is 150m per side of polygon
+cnn60_df <- cnn_df %>% 
+  mutate(mound_probability = 1 - cnn_df$`Raw Prediction`) %>%  # in 2022, prob refers to not-mound, so inverting 
+  filter(mound_probability > 0.59)
+git
+# Look at the polygons
+mapview(grid60)+mapview(cnn60_pt)
 
 # Visualize the grid cells with higher probability 
-ggplot(cnn_grid60) +
-  geom_sf(aes(color = mound_probability))
+ggplot(grid60) +
+  geom_sf(aes(color = probability))
 
 # 897 raster cells are predicted to contain mounds with greater 
 # than 60% likelihood. Archaeologists found 773 mounds in 
@@ -88,24 +85,65 @@ ggplot(cnn_grid60) +
 ##################################### SPATIAL GRIDS OUT OF PREDICTION 80% thresholds
 
 # Filter predictions to those that have 80+% likelihood of containing a mound
-cnn80_sp <- cnn_df %>% 
+cnn80_pt <- cnn_df %>% 
   mutate(mound_probability = 1 - cnn_df$`Raw Prediction`) %>%  # in 2022, prob refers to not-mound, so inverting 
   filter(mound_probability >0.799) %>%  # 78 observations
   st_as_sf(coords = c("coord_x","coord_y"), crs = 32635)
 
-# Make a grid of 80%+ cells, 78 cells
-cnn_grid80 <- st_make_grid(cnn80_sp, cellsize = 250, what = "polygons")
-#plot(cnn_grid80)
+############################# GRID MAKING MANUAL
+# create a df with only 80%+ probability, inverting the provided probability
+cnn80_df <- cnn_df %>% 
+  mutate(mound_probability = 1 - cnn_df$`Raw Prediction`) %>%  # in 2022, prob refers to not-mound, so inverting 
+  filter(mound_probability > 0.799)
 
-# Add probability data to the 80%+ grid 
-cnn_grid80 <- st_join(st_sf(cnn_grid80), cnn80_sp)
+side <- 150 #twice that is 150m per side of polygon
 
-# Visualize the grid cells with higher probability 
-ggplot(cnn_grid80) +
-  geom_sf(aes(color = mound_probability))
+y <- cnn80_df$coord_y
+x <- cnn80_df$coord_x
+
+
+# define the plot edges based upon the plot radius. 
+yPlus <- y+side
+xPlus <- x+side
+
+# calculate polygon coordinates for each plot centroid. 
+square <- cbind(x,yPlus,  # NW corner
+                xPlus, yPlus,  # NE corner
+                xPlus,y,  # SE corner
+                x,y, # SW corner
+                x,yPlus)  # NW corner again - close polygon
+
+# Extract the image ID information
+ID <- cnn80_df$`Image filename`
+
+# create spatial polygons (squares) from mound coordinates with mapply
+polys <- SpatialPolygons(mapply(function(poly, id) 
+{
+  xy <- matrix(poly, ncol=2, byrow=TRUE)
+  Polygons(list(Polygon(xy)), ID=id)
+}, 
+split(square, row(square)), ID),
+proj4string=CRS(as.character("+proj=utm +zone=35 +datum=WGS84 +units=m +no_defs +ellps=WGS84 +towgs84=0,0,0")))
+
+plot(polys)
+
+# Convert to sf feature via a SpatialDataframe (to preserve mound IDs)
+polys_df <- SpatialPolygonsDataFrame(polys, data.frame(id=ID, row.names = ID,
+                                                       mound_probability = cnn80_df$mound_probability))
+polys_df
+grid80 <- st_as_sf(polys_df)
+
+# Write to shapefile
+# st_write(grid60, "output_data/grid60_150.shp",driver = 'ESRI Shapefile', append=FALSE)
+
+# Clean up interim files
+remove(polys,polys_df, square, x,y,xPlus,yPlus,side)
+
+# Look at the polygons
+mapview(grid80)+mapview(cnn80_pt)
+
 
 ############################## FIELD SURVEY DATA FOR VALIDATION
-# Bring in mounds
 # Bring in all the mounds
 mounds <- st_read("../1_Teaching/cds-spatial-2022/data/KAZ_mounds.shp")
 mounddata <- read_csv("../1_Teaching/cds-spatial-2022/data/KAZ_mdata.csv")
@@ -131,6 +169,7 @@ farmounds <- which(far==0)  # these are the mounds that are mostly far from surv
 # convex hull of points without outliers
 survey_sm <- st_convex_hull(st_union(mounds$geometry[-farmounds]))
 
+# clean up
 rm(far, farmounds)
 
 #############################INTERSECT GRIDS WITH STUDY AREA
@@ -139,7 +178,7 @@ rm(far, farmounds)
 ### Crop 60%+ and 80% cell grid to TRAP study area
 # Let's see which of the grid cells with high probability of containing a mound are in the TRAP study area?
 
-survey_grids60 <- st_intersection(survey_ch, cnn_grid60) # 192 grid cells with 60%+
-survey_grids80 <- st_intersection(survey_ch, cnn_grid80) # 40 grid cells with 80%+
+survey_grid60 <- st_intersection(survey_ch, grid60) # 290 grid cells with 60%+
+survey_grid80 <- st_intersection(survey_ch, grid80) # 30 grid cells with 80%+
 
 
