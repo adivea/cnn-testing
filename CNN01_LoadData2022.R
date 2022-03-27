@@ -36,7 +36,7 @@ library(raster)
 kaz <- brick("G:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/Kazcrop_adj.tif")
 
 
-#######################################LOAD PREDICTIONS
+#######################################LOAD and TRANSFORM PREDICTIONS
 
 # Bring in the 2022 prediction data for the entire image
 cnn_df <- read_csv("2022-03-10_predictions/2021-03-10.Predictions.csv")
@@ -49,7 +49,7 @@ which(is.na(1-cnn_df$`Raw Prediction`))
 # cnnall_sp <- st_as_sf(cnn_df, coords = c("coord_x","coord_y"), crs = 32635)
 # cnnall_grid <- st_make_grid(cnnall_sp, cellsize = c(150,150), what = "polygons")
 # cnnall_grid <- st_join(st_sf(cnnall_grid), cnnall_sp) # add attributes does not work as four points are at edges
-mapview(cnnall_grid)+mapview(cnnall_sp)
+# mapview(cnnall_grid)+mapview(cnnall_sp)
 
 ##################################### SPATIAL GRIDS OUT OF PREDICTION 60% thresholds
 
@@ -64,18 +64,66 @@ cnn60_pt <- cnn_df %>%
 
 
 
-################################ GENERATE GRIDS MANUALLY
-side <- 150 #twice that is 150m per side of polygon
+################################ GENERATE 150m GRIDS MANUALLY
+
+side <- 150 # stamps are 150m per side of polygon
+
+
+######################### GRID MAKING MANUAL for 60%+ AREAS
+# create a df with only 60%+ probability, inverting the provided probability
 cnn60_df <- cnn_df %>% 
   mutate(mound_probability = 1 - cnn_df$`Raw Prediction`) %>%  # in 2022, prob refers to not-mound, so inverting 
-  filter(mound_probability > 0.59)
-git
+  filter(mound_probability > 0.599)
+
+y <- cnn60_df$coord_y
+x <- cnn60_df$coord_x
+
+
+# define the plot edges based upon the plot radius. 
+yPlus <- y+side
+xPlus <- x+side
+
+# calculate polygon coordinates for each plot centroid. 
+square <- cbind(x,yPlus,  # NW corner
+                xPlus, yPlus,  # NE corner
+                xPlus,y,  # SE corner
+                x,y, # SW corner
+                x,yPlus)  # NW corner again - close polygon
+
+# Extract the image ID information
+ID <- cnn60_df$`Image filename`
+
+# create spatial polygons (squares) from mound coordinates with mapply
+polys <- SpatialPolygons(mapply(function(poly, id) 
+{
+  xy <- matrix(poly, ncol=2, byrow=TRUE)
+  Polygons(list(Polygon(xy)), ID=id)
+}, 
+split(square, row(square)), ID),
+proj4string=CRS(as.character("+proj=utm +zone=35 +datum=WGS84 +units=m +no_defs +ellps=WGS84 +towgs84=0,0,0")))
+
+plot(polys)
+
+# Convert to sf feature via a SpatialDataframe (to preserve mound IDs)
+polys_df <- SpatialPolygonsDataFrame(polys, data.frame(id=ID, row.names = ID,
+                                                       mound_probability = cnn60_df$mound_probability))
+polys_df
+grid60 <- st_as_sf(polys_df)
+
+# Write to shapefile
+# st_write(grid60, "output_data/grid60_150.shp",driver = 'ESRI Shapefile', append=FALSE)
+
+# Clean up interim files
+remove(polys,polys_df, square, x,y,xPlus,yPlus,side)
+
+
 # Look at the polygons
+library(mapview)
 mapview(grid60)+mapview(cnn60_pt)
 
 # Visualize the grid cells with higher probability 
 ggplot(grid60) +
-  geom_sf(aes(color = probability))
+  geom_sf(aes(color = mound_probability))
 
 # 897 raster cells are predicted to contain mounds with greater 
 # than 60% likelihood. Archaeologists found 773 mounds in 
@@ -90,7 +138,8 @@ cnn80_pt <- cnn_df %>%
   filter(mound_probability >0.799) %>%  # 78 observations
   st_as_sf(coords = c("coord_x","coord_y"), crs = 32635)
 
-############################# GRID MAKING MANUAL
+
+############################# GRID MAKING MANUAL 80%
 # create a df with only 80%+ probability, inverting the provided probability
 cnn80_df <- cnn_df %>% 
   mutate(mound_probability = 1 - cnn_df$`Raw Prediction`) %>%  # in 2022, prob refers to not-mound, so inverting 

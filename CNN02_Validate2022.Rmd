@@ -85,7 +85,7 @@ success60 <- grid60 %>%
   slice(which(lengths(st_contains(grid60, mounds))>0)) # %>% distinct()
   #slice(which(lengths(st_intersects(grid60, mounds))>0))
 length(unique(success60$id))
-plot(success60)
+plot(success60$geometry, main = "60%+ p grids that actually contain mounds")
 
 # Which mounds are not-predicted? 
 `%nin%` = Negate(`%in%`)
@@ -124,26 +124,11 @@ In the 290 cells with 60%+ likelihood of mound, there were 16 successful cells (
 The numbers are worse than 2021 with the larger dataset. I wonder what is being detected? Are we using the NIR band? (Which the human readers were using as a verification)
 
 Continue:::
-The previous chunk shows that 22 of 773 mounds appear in 16 of the 290 grids with 60%+ probability of mounds and intersect with the TRAP study area. 
+The previous chunk shows that 21 of 773 mounds appear in 15 of the 288 grids with 60%+ probability of mounds and intersect with the TRAP study area. 
 
-
-
-
-### Write prediction status to mounds
-```{r write-predicted60-status}
-# Add the information on prediction to mound dataset
-mounds <- mounds %>% 
-  mutate(predictedat60 =  case_when(TRAP_Code %in% predictedat60$TRAP_Code ~ "yes",
-                                  TRAP_Code %nin% predictedat60$TRAP_Code ~ "no"
-                                  ))
-```
-
-
-
-## True Positives at 80% threshold  --- COMPLETION NEEDED
 ## False Negatives at 60% threshold
-Given 67 mounds were predicted by CNN, where are the remaining 627?
-Let's explore where the 627 missing mounds are and what probability has been assigned to the cells that contain them by CNN model.
+Given 21 mounds were predicted by CNN, where are the remaining ~750?
+Let's explore where the missing mounds are and what probability has been assigned to the cells that contain them by CNN model.
 
 ```{r recreate-complete-grid}
 side <- 150
@@ -181,7 +166,7 @@ polys_df
 cnnall_grid <- st_as_sf(polys_df)
 
 # Write to shapefile
-st_write(cnnall_grid, "output_data/cnngrid_150.shp",driver = 'ESRI Shapefile', append=FALSE)
+#st_write(cnnall_grid, "output_data/cnngrid_150.shp",driver = 'ESRI Shapefile', append=FALSE)
 
 # Remove interim files
 remove(polys,polys_df, square, x,y,xPlus,yPlus,side)
@@ -210,6 +195,7 @@ grids_FN_mounds <- missing60 %>%
 
 length(unique(grids_FN_mounds$id)) # 383 FN grids
 
+# Histograms of the FN grids and their probability
 hist(grids_FN_mounds$n, 
      #breaks = 40, 
      xlab = "Mound count per FN gridcell",
@@ -221,10 +207,20 @@ Undetected mounds appear in 383 gridcells, which contain between 1 and 20 mounds
 
 What is the probability of the cells that contain undetected mounds?
 ```{r missing-prob}
-# What is the mound_probability in these gridcells?
+# Histograms of the probability associated with the undetected mounds (same thing as above, only higher no)
 hist(missing60$mound_probability, main = "Probability of gridcells containing undetected mounds")
 ```
-## False Negatives at 80% threshold --- COMPLETION NEEDED
+
+
+### Write prediction status to mounds
+```{r write-predicted60-status, eval = FALSE}
+# Add the information on prediction to mound dataset
+mounds <- mounds %>% 
+  mutate(predictedat60 =  case_when(TRAP_Code %in% predictedat60$TRAP_Code ~ "yes",
+                                  TRAP_Code %nin% predictedat60$TRAP_Code ~ "no"
+                                  ))
+```
+
 ## Visualize results 
 ```{r mapview}
 # See the predicted mounds over grids with 60% likelihood of mound plus unpredicted mounds
@@ -238,6 +234,12 @@ mapview(unpredicted60, color = "orange", alpha= 0.5,
   mapview(survey_grid60, layer.name = "Gridcells with 60%+ probability")
 ```
 
+
+## True Positives at 80% threshold  --- COMPLETION NEEDED
+
+## False Negatives at 80% threshold --- COMPLETION NEEDED
+
+
 ### Explore impact of height on detectability
 Let's look at whether mound Height is a factor impacting detectability. (it is a factor for visual inspection as higher mounds are more visible in sat img.) 
 ```{r explore-height}
@@ -246,81 +248,40 @@ large <- mounds %>%
   filter(Height>=2) # 247 obs
 
 mounds %>% 
-  group_by(predicted60) %>% 
+  group_by(predictedat60) %>% tally() 
   summarize(min = min(Height), max = max(Height))
 
+
 # Check the height difference between un- and predicted mounds
-boxplot(Height~predicted60, data = mounds, xlab = "Was this field-confirmed mound detected with CNN?")
+boxplot(Height~predictedat60, data = mounds, xlab = "Was this mound detected with CNN?")
 
 # Check height distribution btw un- and predicted mounds
-hist(mounds$Height[mounds$predicted60 == "no"], col = "pink", breaks  = 20,main = "Histogram of detected (yellow) and undetected (pink) mounds by height",
+hist(mounds$Height[mounds$predictedat60 == "no"], col = "pink", breaks  = 20,main = "Histogram of detected (yellow) and undetected (pink) mounds by height",
      xlab = "Mound height (m)");
-hist(mounds$Height[mounds$predicted60 == "yes"], col = "yellow", add =TRUE, alpha = 0.5);
+hist(mounds$Height[mounds$predictedat60 == "yes"], col = "yellow", add =TRUE, alpha = 0.5);
 ```
 
 ### T-test on height
 ```{r ttest-height}
 # Is there a significant relationship between the Height of a mound and its detection?
-t.test(Height ~ as.factor(predicted60), data = mounds)
-str(t.test(Height ~ as.factor(predicted60), data = mounds))
-# ... the answer seems to be yes with p at 3.14e-05
+t.test(Height ~ as.factor(predictedat60), data = mounds)
+str(t.test(Height ~ as.factor(predictedat60), data = mounds))
+# ...  p at 0.2497 does not inspire confidence
 ```
 
 ## Summary of success rates - 2021 results
 
-146 mounds was detected out of 773, making the CNN predict (over 60% probability) ca 20% of mounds documented in the study area. Out of the 192 gridcells which are within the archaeological study area and have 60%+ probabilty of containing a mound, 50 actually contained between 1 and 29 mounds. 
-Smaller mounds seem to enjoy higher detection rate according to the t-test, but that may not be the right metric. Let's say that surprisingly, the large mounds are not detected as frequently as I would expect, and as human would detect them.
+21 mounds was detected out of 773, 752 remain undetected. Out of the 288 gridcells which are within the archaeological study area and have 60%+ probability of containing a mound, 15 actually contained between 1 and 4 mounds. 
 
-The remaining undetected 620 mounds were found in 259 gridcells, clustered from 1 to 28 specimen. Their exploration shows a problem with underlying grid overlap which cause reduplication of probability values (which are not identical) and proliferation of mound duplicates which each have different probability value! See section `discrepancy` above.
+The remaining undetected 752 mounds were found in 384 gridcells with probability below 60%, clustered from 1 to 28 specimen. 
 
-Once overlap is resolved, I can slide the probability downwards and downwards and see if I get higher veracity (more cells will be TPs) with higher probability or decrease missing values (fewer FNs) with lower probability cells.
 
 ### What is the model succeeding at and what not?
-Look at the NW cluster and see that many mounds sit on the border of polygons, and so get counted twice > ca 20 mounds, so the numbers of predicted are slightly exaggerated
-In NE we are missing a lot of very large 20m diameter+ mounds that are covered with scrub (look forested) 
-In the south a lot of forest patches and beach boundaries are getting picked up that are false positives. Here the overlap may be at play !! REVISIT.
-All in all the model seems to pick on the bright signatures rather than round shapes and there is an odd combination of large forested lozenges and small bare spots picked up, but somehow round forested images with little excavated (bright) trenches on the south side is not getting picked up.
+NW cluster is not getting detected unlike in 2021 dataset.
+Large mounds under and around Shipka are not getting detected.
+Grids with 60%+p appear in the middle of the reservoir, which makes the 'what is the CNN detecting' a big question
 
-
-
-## Additional visualisations
-
-```{r viz-mounds-cnn}
-
-# Where are the mounds vis-a-vis the probability values
-cnnall_grid %>% 
-  ggplot()+
-  geom_sf(aes(color = mound_probability))+
-  scale_color_gradient(low = "green", 
-                       high = "red",
-                       "Mound probability")+
-  geom_sf(data = mounds) +
-  ggtitle("Location of known mounds vis-a-vis the CNN predictions")
-
-
-# See the 146/166 mound features predicted with 60%+ probability 
-grid60 %>% 
- # filter(mound_probability>0.5) %>% 
-  ggplot()+
-  geom_sf(aes(color = mound_probability))+
-  scale_color_gradient(low = "green", 
-                       high = "red",
-                       "Mound probability")+
-  geom_sf(data = mounds$geometry[mounds$predicted60 == "yes"], size = mounds$Height[mounds$predicted60 == "yes"], col = "lightgrey", alpha = 0.5) +
-  ggtitle("Predicted mounds in Kazanlak")
-
-# See the 627 mounds not caught by the cells with 60%+ probability 
-grid60 %>% 
-  # filter(mound_probability>0.5) %>% 
-  ggplot()+
-  geom_sf(aes(color = mound_probability))+
-  scale_color_gradient(low = "green", 
-                       high = "red",
-                       "Mound probability")+
-  #geom_sf(data = unpredicted60$geometry)+
-  geom_sf(data = mounds$geometry[mounds$predicted60 == "no"], size = mounds$Height[mounds$predicted60 == "no"], col = "lightgrey", alpha = 0.5)+
-  ggtitle("Unpredicted mounds in Kazanlak")
-```
+All in all, I cannot see a logic behind the model (unlike in 2021, when the model seemed to pick on the bright signatures of roads). The round shapes don't seem to be it.
 
 ## Side-by-side views 
 These images take mound height into account and split the results into facets
@@ -333,11 +294,12 @@ ggplot()+
   # add mounds
   geom_sf(data = mounds, 
           aes(size = Height, col = "red",  alpha = 0.6)) +
-  facet_wrap(~predicted60)+
+  facet_wrap(~predictedat60)+
   theme_bw() + 
   guides(color = FALSE,
          size = guide_legend(order = 1),
          fill = guide_legend(order = 2),
          alpha = FALSE)+
-  ggtitle("Mounds located in gridcells with 60%+ probability (no=620, yes=146)")
+  ggtitle(paste0("Mounds located in gridcells with 60%+ 
+          probability (no=",nrow(predictedat60),",yes=",nrow(missing60),")"))
 ```
