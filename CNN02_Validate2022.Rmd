@@ -235,11 +235,6 @@ mapview(unpredicted60, color = "orange", alpha= 0.5,
 ```
 
 
-## True Positives at 80% threshold  --- COMPLETION NEEDED
-
-## False Negatives at 80% threshold --- COMPLETION NEEDED
-
-
 ### Explore impact of height on detectability
 Let's look at whether mound Height is a factor impacting detectability. (it is a factor for visual inspection as higher mounds are more visible in sat img.) 
 ```{r explore-height}
@@ -271,7 +266,7 @@ str(t.test(Height ~ as.factor(predictedat60), data = mounds))
 
 ## Summary of success rates - 2021 results
 
-21 mounds was detected out of 773, 752 remain undetected. Out of the 288 gridcells which are within the archaeological study area and have 60%+ probability of containing a mound, 15 actually contained between 1 and 4 mounds. 
+21 mounds was detected out of 773 (2.7% success), 752 remain undetected. Out of the 288 gridcells which are within the archaeological study area and have 60%+ probability of containing a mound, 15 (5.2%) actually contained between 1 and 4 mounds. 
 
 The remaining undetected 752 mounds were found in 384 gridcells with probability below 60%, clustered from 1 to 28 specimen. 
 
@@ -303,3 +298,36 @@ ggplot()+
   ggtitle(paste0("Mounds located in gridcells with 60%+ 
           probability (no=",nrow(predictedat60),",yes=",nrow(missing60),")"))
 ```
+
+## True Positives at 80% threshold  
+
+
+```{r overlap-80}
+# Check spatial overlap between 80%+ grid cells and all 773 mounds 
+predicted80 <- st_intersection(mounds, grid80)# %>% distinct() # 5 predicted
+
+# Which ones are not-predicted? 
+`%nin%` = Negate(`%in%`)
+unpredicted80 <- mounds[mounds$TRAP_Code%nin%predicted80$TRAP_Code,] # 768 not predicted
+
+# Inspect
+length(unique(predicted80$TRAP_Code)) #  unique mounds
+length(grid80$id) #   cells with 80%p in the whole Kazanlak
+length(survey_grid80) # cells with 80%p in survey area
+
+# How many gridcells with 80% probability actually contain mounds? 
+grids_n_mounds8 <- predicted80 %>% 
+  group_by(id) %>% 
+  count()
+
+length(unique(grids_n_mounds8$id)) #   grids within study area catch mounds
+
+hist(grids_n_mounds8$n, breaks = 40, 
+     xlab = "Mound count in grid",
+     ylab = "Grid count",
+     main = paste0("Number of predicted mounds (n = ",length(unique(predicted80$TRAP_Code)), ") per grid cell ( ",nrow(grids_n_mounds8)," TP) \n among a total of ",length(survey_grid80)," grid cells in the study area with 80% likelihood"))
+```
+
+## False Negatives at 80% threshold --- COMPLETION NEEDED
+
+
