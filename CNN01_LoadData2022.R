@@ -33,7 +33,7 @@ library(raster)
 # KAZcropped <- brick("E:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/Kazcropped.tif")
 
 # # Need hi-res mosaiced and adjusted raster to cover 100m of mounds?
-kaz <- brick("G:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/Kazcrop_adj.tif")
+#kaz <- brick("G:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/Kazcrop_adj.tif")
 
 
 #######################################LOAD and TRANSFORM PREDICTIONS

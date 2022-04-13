@@ -278,6 +278,33 @@ Grids with 60%+p appear in the middle of the reservoir, which makes the 'what is
 
 All in all, I cannot see a logic behind the model (unlike in 2021, when the model seemed to pick on the bright signatures of roads). The round shapes don't seem to be it.
 
+
+report on 
+
+- objective
+- data
+- how the model is learning: charts and classification of learning
+- how the model performs vis-a-vis field data: what is it finding?
+- assessment
+
+Non-detection of the large mounds - could be because mounds are splitting across stamp edges and so not the whole circle is in the picture. The nature of the training data is also problematic as non-mounds can be confusing. Features are different size and some are minuscule, others 150m across, so CNN is confusing.
+We either need to increase the granularity or take the second approach- representative dataset for different typologies or sample only large mounds at the scale at which they appear. 
+CNN cannot 'ignore" . Would need to be trained all over again on higher grain data 10x10m.
+
+Experiment : can we train a model    that performs better?
+One would need to put in tremendous effort into picking and creating the training dataset, and finessing the model.
+It is feasible to train a model to acceptable standard, however, it is diminishing return. 
+
+Model learns to predict class membership based on features that are not straight related to the class itself but accompanying. Features are indistinct, roads and forests are more distinct. 
+
+We are using non-overlapping stamps, which means that mounds in the target image end up split and undetected. We need a moving window that moves a pixel a slide. Substantial computational overhead, exponentially increasing the images needing analysis. Not-Runnable on a laptop, virtual environment needed.
+Overlapping window might also help with detection of mounds in the corner of the stamps.
+
+What we computationally need is not practically feasible.
+
+
+Wrap the article around the comparison: more representative training data not necessarily better. Slightly more effort.
+
 ## Side-by-side views 
 These images take mound height into account and split the results into facets
 ```{r ggplot-facet}
