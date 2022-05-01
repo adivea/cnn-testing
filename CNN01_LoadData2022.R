@@ -39,7 +39,7 @@ library(raster)
 #######################################LOAD and TRANSFORM PREDICTIONS
 
 # Bring in the 2022 prediction data for the entire image
-cnn_df <- read_csv("2022-03-10_predictions/2021-03-10.Predictions.csv")
+cnn_df <- read_csv("data/2022-03-10_predictions/2021-03-10.Predictions.csv")
 
 # Look at the distribution of the 'corrected' predictions
 hist(1-cnn_df$`Raw Prediction`, main = "Probability of a mound") 
@@ -59,7 +59,7 @@ which(is.na(1-cnn_df$`Raw Prediction`))
 # and make into points
 cnn60_pt <- cnn_df %>% 
   mutate(mound_probability = 1 - cnn_df$`Raw Prediction`) %>%  # in 2022, prob refers to not-mound, so inverting 
-  filter(mound_probability > 0.59) %>% # 897 observations have 60+% proabbility of being mounds (very close to original)
+  filter(mound_probability > 0.59) %>% # 897 observations have 60+% probability of being mounds (very close to original)
   st_as_sf(coords = c("coord_x","coord_y"), crs = 32635)
 
 
@@ -73,7 +73,7 @@ side <- 150 # stamps are 150m per side of polygon
 # create a df with only 60%+ probability, inverting the provided probability
 cnn60_df <- cnn_df %>% 
   mutate(mound_probability = 1 - cnn_df$`Raw Prediction`) %>%  # in 2022, prob refers to not-mound, so inverting 
-  filter(mound_probability > 0.599)
+  filter(mound_probability > 0.599) #886 observations have 60+% prob
 
 y <- cnn60_df$coord_y
 x <- cnn60_df$coord_x
@@ -194,8 +194,8 @@ mapview(grid80)+mapview(cnn80_pt)
 
 ############################## FIELD SURVEY DATA FOR VALIDATION
 # Bring in all the mounds
-mounds <- st_read("../1_Teaching/cds-spatial-2022/data/KAZ_mounds.shp")
-mounddata <- read_csv("../1_Teaching/cds-spatial-2022/data/KAZ_mdata.csv")
+mounds <- st_read("data/KAZ_mounds.shp")
+mounddata <- read_csv("data/KAZ_mdata.csv")
 
 # join attributes to shapefile
 mounds <- mounds %>% 
@@ -203,7 +203,7 @@ mounds <- mounds %>%
 
 
 # Bring in survey area to see overall coverage
-survey <- st_read("../1_Teaching/cds-spatial-2021/data/KAZ_surveyarea.shp")
+survey <- st_read("data/KAZ_surveyarea.shp")
 plot(survey$geometry, main = "Area covered by survey")
 
 # convex hull of survey polygons 

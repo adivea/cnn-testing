@@ -1,7 +1,8 @@
 ##### This script loads all the data necessary for mound validation
-# including both individual and composite adjusted Kaz valley rasters
+
+# including both individual and composite adjusted Kaz valley rasters (commented out as non-essential)
 # including mounds and survey area boundary and grids
-# Some of this data is redundant (depending on analysis), and so it's recomended to 
+# Some of this data is redundant (depending on analysis), and so it's recommended to 
 # pick the data you need or face high memory take
 
 library(tidyverse)
@@ -39,9 +40,9 @@ library(raster)
 #######################################LOAD PREDICTIONS
 
 # Load prediction data as points (left bottom corner of the evaluated cell)
-cnne_df <- read_csv("2021-10-25_predictions/results/east/east.csv")  # eastern half
+cnne_df <- read_csv("data/2021-10-25_predictions/results/east/east.csv")  # eastern half
 # 15334 points (origins in the raster cells)
-cnnw_df <- read_csv("2021-10-25_predictions/results/west/west.csv")  # western half
+cnnw_df <- read_csv("data/2021-10-25_predictions/results/west/west.csv")  # western half
 # 15170 points (origins in the raster cells)
 
 # Datasets have repeating numeric ID, add 100000 to differentiate West for later poly creation
@@ -97,7 +98,7 @@ side <- 150 # stamps are 150m per side of polygon
 
 
 ######################### GRID MAKING MANUAL for 60%+ AREAS
-# create a df with only 60%+ probability, inverting the provided probability
+# create a df with only 60%+ probability
 cnn60_df <- cnn_df %>% 
   mutate(mound_probability = cnn_df$mound_probability) %>%   
   filter(mound_probability > 0.599)
@@ -156,15 +157,15 @@ ggplot(grid60) +
 
 # Filter predictions to those that have 80+% likelihood of containing a mound
 cnn80_pt <- cnn_df %>% 
-  mutate(mound_probability = cnn_df$mound_probability) %>%  # in 2022, prob refers to not-mound, so inverting 
-  filter(mound_probability >0.799) %>%  # 78 observations
+  mutate(mound_probability = cnn_df$mound_probability) %>% 
+  filter(mound_probability >0.799) %>%  # 40 observations
   st_as_sf(coords = c("x","y"), crs = 32635)
 
 
 ############################# GRID MAKING MANUAL 80%
-# create a df with only 80%+ probability, inverting the provided probability
+# create a df with only 80%+ probability
 cnn80_df <- cnn_df %>% 
-  mutate(mound_probability = cnn_df$mound_probability) %>%  # in 2022, prob refers to not-mound, so inverting 
+  mutate(mound_probability = cnn_df$mound_probability) %>%
   filter(mound_probability > 0.799)
 
 side <- 150 #choose the length of polygon side in m
@@ -219,7 +220,7 @@ mapview(grid80)+mapview(cnn80_pt)
 
 
 # Bring in survey area to see overall coverage
-survey <- st_read("../1_Teaching/cds-spatial-2021/data/KAZ_surveyarea.shp")
+survey <- st_read("data/KAZ_surveyarea.shp")
 plot(survey$geometry, main = "Area covered by survey")
 
 # convex hull of survey polygons 
@@ -236,8 +237,8 @@ survey_ch <- st_convex_hull(st_union(survey$geometry))
 
 ################################    GET MOUND DATA
 # Bring in all the mounds
-mounds <- st_read("../1_Teaching/cds-spatial-2022/data/KAZ_mounds.shp")
-mounddata <- read_csv("../1_Teaching/cds-spatial-2022/data/KAZ_mdata.csv")
+mounds <- st_read("data/KAZ_mounds.shp")
+mounddata <- read_csv("data/KAZ_mdata.csv")
 # filter the noticeable ones (2+ meters)
 mounds <- mounds %>% 
   left_join(mounddata, by = c("TRAP_Code"="MoundID"))
