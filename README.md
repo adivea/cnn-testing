@@ -51,7 +51,7 @@ To run the validation, you need to have R software and a couple of libraries, su
 
 
 ## Data
-Point, polygon, and prediction data are in the data folder. Spatial data were collected by the [Tundzha Regional Archaeological Project] (https://tundzha.org). The Kazanlak mosaiced satellite image is not needed for the validation. It may be used for visualisation but can be substituted with interactive mapview(). 
+Point, polygon, and prediction data are in the data folder. Spatial data were collected by the [Tundzha Regional Archaeological Project](https://tundzha.org). The Kazanlak mosaiced satellite image is not needed for the validation. It may be used for visualisation but can be substituted with interactive mapview(). 
 
 If you would like to create your own mosaic of the IKONOS scenes, you can download the full-resolution images manually from our public archive at [www.sciencedata.dk](https://sciencedata.dk/shared/104dc1b7a08529650379d858979ae104) folder, or directly with with `file.download()` using these direct links for [West](https://sciencedata.dk/public/104dc1b7a08529650379d858979ae104/KazWestfused.tif) and [East](https://sciencedata.dk/public/104dc1b7a08529650379d858979ae104/KazEastfused.tif) respectively. Beware of 2Gb file size.
 
