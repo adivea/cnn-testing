@@ -1,51 +1,54 @@
-PROCESSED SRTM DATA VERSION 4.1
+# Archeological Burial Mounds CNN Classifier
 
-The data  distributed here  are in  ARC GRID,  ARC ASCII  and Geotiff format, in
-decimal degrees and datum WGS84.  They are derived from the USGS/NASA SRTM data.
-CIAT  have  processed  this  data  to  provide  seamless  continuous  topography
-surfaces.  Areas with  regions of no  data in the  original SRTM data  have been
-filled using interpolation methods described by Reuter et al. (2007).
+The goal of this project was to build a machine learning system that could identify potential burial mounds in satellite images to a high degree of accuracy. The IKONOS satellite images used come from the GeoEye Foundation and cover the Upper Tundzha watershed in the Kazanlak Valley, Bulgaria. Burial mounds dating back 2000+ thousand years are found across the valley, with the largest and richest giving the valley the nickname "Valley of the Thracian Kings".
 
-Version 4.1 has the following enhancements over V4.0:
-- Improved ocean mask used, which includes some small islands  previously  being 
-  lost in the cut data.
-- Single no-data line of pixels along meridians fixed.
-- All GeoTiffs with 6000 x 6000 pixels.
-- For ASCII format files the projection definition is included in .prj files.
-- For GeoTiff format files the projection definition is in the .tfw  (ESRI TIFF 
-  World) and a .hdr file that reports PROJ.4 equivelent projection definitions.
+To accomplish this goal, the project builds a CNN classifier model which takes in cropped tiles of a satellite image and predicts whether the area within is likely to contain a mound or not. The image's projected coordinates can then be used to determine the exact location of the mound. While the project focused on this one region, the greater interest lay in whether machine learning tools could be used to assist archeological teams in their field work, by identifying areas of interest before teams have to be sent out or, furthermore, to detect change to the surface mounds and thus help direct resources to where they were most needed
 
-DISTRIBUTION
+## The Repository
 
-Users are  prohibited from  any commercial,  non-free resale,  or redistribution
-without explicit written permission from CIAT. Users should acknowledge CIAT  as
-the source used  in the creation  of any reports,  publications, new data  sets,
-derived products, or services resulting from the use of this data set. CIAT also
-request  reprints of  any publications  and notification  of any  redistributing
-efforts.   For commercial  access to  the data,  send requests  to Andy   Jarvis
-(a.jarvis@cgiar.org).
+This repository serves for 
 
-NO WARRANTY OR LIABILITY
+1. training data generation and 
+2. validation purposes
 
-CIAT provides  these data  without any  warranty of  any kind whatsoever, either
-express or implied,  including warranties of  merchantability and fitness  for a
-particular purpose. CIAT shall not  be liable for incidental, consequential,  or
-special damages arising out of the use of any data.
+## 1. Training data generation
 
-ACKNOWLEDGMENT AND CITATION
+To generate training data for CNN classifier, we mosaic the two scenes of IKONOS satellite imagery and then cut out stamps of 150x side centered over the 773 points that mark documented burial mounds. In 2022 rerun of the classifier the 773 cutouts are further filtered for those where a mound is clearly visible in the centre of the image. These two scripts help with te training data generation
 
-We kindly ask  any users to  cite this data  in any published  material produced
-using this data,  and if possible  link web pages  to the CIAT-CSI  SRTM website
-(http://srtm.csi.cgiar.org).
+- MOSAIC.R - pipeline to mosaic the two scenes of the IKONOS image into one merged and cropped image
+- STAMPS.R - workflow to generate polygons of 150x150m for satellite image cutouts. Locations of burial mounds are used as centroids for polygon generation 
 
-Citations should be made as follows:
+## 2. Validation 
 
-Jarvis A., H.I. Reuter, A.  Nelson, E. Guevara, 2008, Hole-filled  seamless SRTM
-data V4, International  Centre for Tropical  Agriculture (CIAT), available  from
-http://srtm.csi.cgiar.org.
+We load the classification csv with predictions of a 'mound' or 'not a mound' for each 150x150px tile in the satellite image. We select the records where mound-probability is 60% and higher and then create a grid of polygons grown out of each qualifying coordinate as from origin. The resulting polygons mark spatial boundaries of tiles classified as containing a mound. These polygons are intersected with the archaeological record of burial mound, in the shape of points. Points that intersect the polygons are true positives, or detected mounds. Points outside the polygons are missed, false negative, mounds.
 
-REFERENCES
+Validation is performed twice in this repository: 
 
-Reuter  H.I,  A.  Nelson,  A.  Jarvis,  2007,  An  evaluation  of  void  filling
-interpolation  methods  for  SRTM  data,  International  Journal  of  Geographic
-Information Science, 21:9, 983-1008.
+- First time for 2021 CNN predictions trained on a cumulative collection of training data based on all 773 field points (2021-10-25_predictions). In this dataset the mound-probability comes in eponymous columns with values from 0-1
+- Second time for 2022 CNN predictions trained on a selection of training data (n=249), filtered for mounds actually visible in the satellite image(2022-03-10_predictions). In this dataset, mound-probability values are coded with MOUND being 0 and NOT MOUND being 1, and thus require inversion. 
+
+The mechanics of validation follow the workflow the two iterations: For 2021, the validation grid is build from two sets of predictions, while in 2022, only a single grid is created and probability values are inverted to correspond to mound-probability. 
+
+## License
+[CC-BY-SA 4.0]
+
+## DOI
+[Here will be DOI or some other identifier once we have it]
+
+### References
+[Here will go related articles or other sources we will publish/create]
+
+---
+# How to use this repository
+
+## Sources and prerequisites
+To run the validation, you need to have R software and a couple of libraries, such as sf, raster, mapview or leaflet, and the tidyverse. They are listed at the start of the scripts. While you would benefit from having access to the Kazanlak satellite image, it is only included for visualisation of some of the studye areas. The validation does not depend on it and its results can be plotted more interactive using the mapview().
+There are two scripts for the validation:
+
+- CNN01_LoadData2021.R and CNN01_LoadData2022.R where prediction data are loaded and polygon grids constructed
+- CNN02_Validate2021.Rmd and CNN02_Validate2022.Rmd where the prediction data are intersected with mound data and evaluated for success
+
+There are additional scripts in this repository: 
+
+- MOSAIC.R - to mosaic the two scenes of the IKONOS image
+- STAMPS.R - to cut out 150x150px stamps over the location of burial mounds (all or the visible in the imagery)

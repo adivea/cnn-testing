@@ -33,7 +33,7 @@ library(raster)
 # KAZcropped <- brick("E:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/Kazcropped.tif")
 
 # # Need hi-res mosaiced and adjusted raster to cover 100m of mounds?
-kaz <- brick("G:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/Kazcropped.tif")
+#kaz <- brick("G:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/Kazcropped.tif")
 
 
 #######################################LOAD PREDICTIONS
@@ -63,14 +63,14 @@ which(is.na(cnn_df$mound_probability))
 # KAZcropped <- brick("E:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/Kazcropped.tif")
 
 # # Need hi-res mosaiced and adjusted raster to cover 100m of mounds?
-kaz <- brick("G:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/Kazcrop_adj.tif")
+#kaz <- brick("G:/TRAP Workstation/Shared GIS/Satellite imagery/IKONOS/Kazanlak/ERDAS/Cormac/Kazcrop_adj.tif")
 
 
 #######################################LOAD and TRANSFORM PREDICTIONS
 
-# Look at the distribution of the 'corrected' predictions
-hist(1-cnn_df$mound_probability, main = "Probability of a mound") 
-which(is.na(1-cnn_df$mound_probability))
+# Look at the distribution of mound probability among the results
+hist(cnn_df$mound_probability, main = "Probability of a mound") 
+which(is.na(cnn_df$mound_probability))
 
 # Create a grid of ALL the predictions to see where mounds are in relation to it (overlap!)
 # cnnall_sp <- st_as_sf(cnn_df, coords = c("x","y"), crs = 32635)
@@ -85,13 +85,13 @@ which(is.na(1-cnn_df$mound_probability))
 # Filter predictions to those that have 60+% likelihood of containing a mound
 # and make into points
 cnn60_pt <- cnn_df %>% 
-  mutate(mound_probability = cnn_df$mound_probability) %>%  # in 2022, prob refers to not-mound, so inverting 
-  filter(mound_probability > 0.59) %>% # 897 observations have 60+% proabbility of being mounds (very close to original)
+  mutate(mound_probability = cnn_df$mound_probability) %>%  
+  filter(mound_probability > 0.59) %>% # 295 observations have 60+% probability of being mounds (very close to original)
   st_as_sf(coords = c("x","y"), crs = 32635)
 
 
 
-################################ GENERATE 150m GRIDS MANUALLY
+################################ GENERATE 150x150mm GRIDS MANUALLY
 
 side <- 150 # stamps are 150m per side of polygon
 
@@ -99,7 +99,7 @@ side <- 150 # stamps are 150m per side of polygon
 ######################### GRID MAKING MANUAL for 60%+ AREAS
 # create a df with only 60%+ probability, inverting the provided probability
 cnn60_df <- cnn_df %>% 
-  mutate(mound_probability = cnn_df$mound_probability) %>%  # Ross suggests mound_prob field refers to not-mound, so inverting 
+  mutate(mound_probability = cnn_df$mound_probability) %>%   
   filter(mound_probability > 0.599)
 
 y <- cnn60_df$y
@@ -167,7 +167,7 @@ cnn80_df <- cnn_df %>%
   mutate(mound_probability = cnn_df$mound_probability) %>%  # in 2022, prob refers to not-mound, so inverting 
   filter(mound_probability > 0.799)
 
-side <- 150 #twice that is 150m per side of polygon
+side <- 150 #choose the length of polygon side in m
 
 y <- cnn80_df$y
 x <- cnn80_df$x
