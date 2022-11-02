@@ -12,7 +12,7 @@ library(raster)
 
 # # Load the merged Satellite image for Kazanlak Valley, Bulgaria
 # # use cds-spatial repo from github https://github.com/CDS-AU-DK/cds-spatial-2022
-# kaz <-brick("../1_Teaching/cds-spatial-2022/data/Kaz.tif")
+kaz <-brick("../1_Teaching/cds-spatial-2021/data/Kaz.tif")
 # plotRGB(kaz, stretch= "lin")
 # crs(kaz)
 # 
@@ -46,11 +46,12 @@ hist(1-cnn_df$`Raw Prediction`, main = "Probability of a mound")
 which(is.na(1-cnn_df$`Raw Prediction`))
 
 # Create a grid of ALL the predictions to see where mounds are in relation to it (overlap!)
-# cnnall_sp <- st_as_sf(cnn_df, coords = c("coord_x","coord_y"), crs = 32635)
-# cnnall_grid <- st_make_grid(cnnall_sp, cellsize = c(150,150), what = "polygons")
-# cnnall_grid <- st_join(st_sf(cnnall_grid), cnnall_sp) # add attributes does not work as four points are at edges
-# mapview(cnnall_grid)+mapview(cnnall_sp)
-
+ cnnall_sp <- st_as_sf(cnn_df, coords = c("coord_x","coord_y"), crs = 32635)
+ cnnall_grid <- st_make_grid(cnnall_sp, cellsize = 150, what = "polygons")
+cnnall_grid <- st_join(st_sf(cnnall_grid), cnnall_sp) # add attributes does not work as four points are at edges
+ #plot(cnnall_grid)
+ #mapview(cnnall_grid)
+cnnall_grid
 ##################################### SPATIAL GRIDS OUT OF PREDICTION 60% thresholds
 
 ### 60 THRESHOLD: Build a grid of those cells with 60%+ probability of containing a mound

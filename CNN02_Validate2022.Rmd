@@ -94,6 +94,14 @@ unpredicted60 <- mounds[mounds$TRAP_Code%nin%predictedat60$TRAP_Code,] # 706 not
 
 `dim(predictedat60)[1]` mounds of the 773 intersect `length(unique(success60$id))` of the 430 grids with 60+% probability of containing a mound. `dim(unpredicted60)[1]` mounds across remain unpredicted. With 773 burial mounds and at least 350 visible ones, this produces a  `dim(predictedat60)[1]/773*100` % success rate on total and `dim(predictedat60)[1]/350*100` % on visible features.
 
+How many grids should contain mounds?
+```{r}
+# total number of grids that intersect with known mounds
+should_be_TP <- st_intersection(mounds, cnnall_grid)
+should_be_TP %>% group_by(Image.filename) %>% count()
+```
+
+
 Having checked the mounds dataset, let's now check how many of the 60%+ grids were successful in containing mounds. 
 And afterwards, are smaller or bigger mounds being predicted? 
 
@@ -101,7 +109,7 @@ And afterwards, are smaller or bigger mounds being predicted?
 # Inspect
 length(unique(predictedat60$TRAP_Code)) # 22 unique mounds
 
-# Summarize how many mounds each TP gridcell contains 
+# Summarize across how many TP grids the mounds are distributed 
 grids_n_mounds <- predictedat60 %>% 
   group_by(id) %>% 
   count()
