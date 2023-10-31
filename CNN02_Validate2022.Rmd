@@ -76,7 +76,7 @@ Let's explore how many mounds are found inside these 0.6+p grid cells and which 
 Archaeological survey documented 773 mounds in the study area, half of which are visible by naked eye on the surface. Mounds from this dataset that fall in the 60%+ probability grid cells form the true positives and represent the recall(?) of the CNN model.
 
 ```{r overlap}
-# 22 out of 773 mounds are found in 60%+ grid cells
+# 21 out of 773 mounds are found in 60%+ grid cells
 predictedat60 <- st_intersection(mounds, grid60)
 
 
@@ -89,16 +89,23 @@ plot(success60$geometry, main = "60%+ p grids that actually contain mounds")
 
 # Which mounds are not-predicted? 
 `%nin%` = Negate(`%in%`)
-unpredicted60 <- mounds[mounds$TRAP_Code%nin%predictedat60$TRAP_Code,] # 706 not predicted
+unpredicted60 <- mounds[mounds$TRAP_Code%nin%predictedat60$TRAP_Code,] # 752 not predicted
 ```
 
 `dim(predictedat60)[1]` mounds of the 773 intersect `length(unique(success60$id))` of the 430 grids with 60+% probability of containing a mound. `dim(unpredicted60)[1]` mounds across remain unpredicted. With 773 burial mounds and at least 350 visible ones, this produces a  `dim(predictedat60)[1]/773*100` % success rate on total and `dim(predictedat60)[1]/350*100` % on visible features.
 
-How many grids should contain mounds?
+How many grids should contain mounds? 399 tiles of the mosaiced IKONOS image should contain mounds
 ```{r}
 # total number of grids that intersect with known mounds
-should_be_TP <- st_intersection(mounds, cnnall_grid)
-should_be_TP %>% group_by(Image.filename) %>% count()
+should_be_TP <- st_intersection(mounds, cnnall_grid) # link mounds to containing tile id
+
+should_be_TP %>% group_by(id) %>% count() %>% pull(n) %>% hist(main= "Frequency of mounds in should-be-TP tiles (n=399)") # count the unique containing tiles >> 399
+
+mapview(should_be_TP)
+
+should_be_TP %>% 
+  pull(mound_probability) %>% 
+  hist(main= "Probability of mound existence in should-be-TP tiles (n=399)")
 ```
 
 

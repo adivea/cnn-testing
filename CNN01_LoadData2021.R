@@ -12,8 +12,8 @@ library(raster)
 #######################################LOAD SMALLER SATELLITE IMAGE
 
 # Load the merged Satellite image for Kazanlak Valley, Bulgaria
-# use cds-spatial repo from github https://github.com/CDS-AU-DK/cds-spatial-2022
-# kaz <-brick("../1_Teaching/cds-spatial-2022/data/Kaz.tif")
+# # use cds-spatial repo from github https://github.com/CDS-AU-DK/cds-spatial-2021
+kaz <-brick("../1_Teaching/cds-spatial-2021/data/Kaz.tif")
 # plotRGB(kaz, stretch= "lin")
 # crs(kaz)
 
@@ -48,9 +48,18 @@ cnnw_df <- read_csv("data/2021-10-25_predictions/results/west/west.csv")  # west
 # Datasets have repeating numeric ID, add 100000 to differentiate West for later poly creation
 cnnw_df[,1] <- cnnw_df[,1] +100000 
 
+# Filter west to not overlap with East
+# cnnw_df <- cnnw_df %>% 
+#   filter(...1 <112765)
+
+# Filter west to not overlap with East
+cnne_df <- cnne_df %>%
+  filter(...1 > 2432)
+
 # Combine the prediction data from E and W half into one dataset
 cnn_df <- rbind(cnne_df, cnnw_df)     # # 30504 rows, combined east and west (overlap!)
 names(cnn_df)[1] <- "Image filename"
+
 
 # Look at the distribution of the predictions
 hist(cnn_df$mound_probability, main = "Probability of a mound") 
@@ -74,10 +83,11 @@ hist(cnn_df$mound_probability, main = "Probability of a mound")
 which(is.na(cnn_df$mound_probability))
 
 # Create a grid of ALL the predictions to see where mounds are in relation to it (overlap!)
-# cnnall_sp <- st_as_sf(cnn_df, coords = c("x","y"), crs = 32635)
-# cnnall_grid <- st_make_grid(cnnall_sp, cellsize = c(150,150), what = "polygons")
-# cnnall_grid <- st_join(st_sf(cnnall_grid), cnnall_sp) # add attributes does not work as four points are at edges
-# mapview(cnnall_grid)+mapview(cnnall_sp)
+cnnall_sp <- st_as_sf(cnn_df, coords = c("x","y"), crs = 32635)
+cnnall_grid <- st_make_grid(cnnall_sp, cellsize = c(150,150), what = "polygons")
+cnnall_grid <- st_join(st_sf(cnnall_grid), cnnall_sp, join = st_contains) # add attributes does not work as four points are at edges
+which(is.na(cnnall_grid$`Image filename`))
+mapview(cnnall_sp, zcol = "mound_probability")
 
 ##################################### SPATIAL GRIDS OUT OF PREDICTION 60% thresholds
 
@@ -251,5 +261,4 @@ mounds <- mounds %>%
 
 survey_grid60 <- st_intersection(survey_ch, grid60) # 151 grid cells with 60%+
 survey_grid80 <- st_intersection(survey_ch, grid80) # 33 grid cells with 80%+
-
-
+mapview(cnnall_grid)+mapview(mounds)

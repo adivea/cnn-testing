@@ -42,6 +42,7 @@ kaz <-brick("../1_Teaching/cds-spatial-2021/data/Kaz.tif")
 cnn_df <- read_csv("data/2022-03-10_predictions/2021-03-10.Predictions.csv")
 
 # Look at the distribution of the 'corrected' predictions
+hist(cnn_df$`Raw Prediction`, main = "Probability of a mound") # too many hits, mounds are everywhere, swapped response?
 hist(1-cnn_df$`Raw Prediction`, main = "Probability of a mound") 
 which(is.na(1-cnn_df$`Raw Prediction`))
 
@@ -230,5 +231,5 @@ rm(far, farmounds)
 
 survey_grid60 <- st_intersection(survey_ch, grid60) # 290 grid cells with 60%+
 survey_grid80 <- st_intersection(survey_ch, grid80) # 30 grid cells with 80%+
-
+survey_grid_all <- st_intersection(survey_ch, cnnall_sp)
 

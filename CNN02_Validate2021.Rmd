@@ -58,25 +58,26 @@ Let's explore how many of these mounds are inside and outside grid cells with 60
 
 
 ## True Positives at 60% threshold
-Archaeological survey documented 773 mounds in the study area. Mounds from this dataset that fall in the 60%+ probability gridcells form the true positives and comprise the success of the CNN model.
+Archaeological survey documented 773 mounds in the study area. 37 mounds from this dataset that fall in the 60%+ probability gridcells form the true positives and comprise the success of the CNN model.
 ```{r overlap}
 # Check spatial overlap between 60%+ grid cells and all 773 mounds 
-predicted60 <- st_intersection(mounds, grid60)# %>% distinct() # 38 predicted
+predicted60 <- st_intersection(mounds, grid60)# %>% distinct() # 37 predicted
 
 # Which ones are not-predicted? 
 `%nin%` = Negate(`%in%`)
-unpredicted60 <- mounds[mounds$TRAP_Code%nin%predicted60$TRAP_Code,] # 735 not predicted
+unpredicted60 <- mounds[mounds$TRAP_Code%nin%predicted60$TRAP_Code,] # 736 not predicted
 
 # Inspect
-length(unique(predicted60$TRAP_Code)) # 38 unique mounds
-length(grid60$id) # 295 cells with 60%p in the whole Kazanlak
-length(survey_grid60) #151 cells with 60%p in survey area
+length(unique(predicted60$TRAP_Code)) # 37 unique mounds
+length(grid60$id) # 270 cells with 60%p in the whole Kazanlak IKONOS
+length(survey_grid60) #134 cells with 60%p in survey area
 
 # How many gridcells with 60% probability actually contain mounds? 
 grids_n_mounds <- predicted60 %>% 
-#  st_drop_geometry() %>% 
-  group_by(id) %>% 
-  count()
+ #st_drop_geometry() %>% 
+  group_by(id) %>%
+  count() 
+mapview(grids_n_mounds) 
 
 length(unique(grids_n_mounds$id)) # 50 grids within study area catch mounds
 
@@ -88,8 +89,10 @@ hist(grids_n_mounds$n, breaks = 40,
 # Summary: 50 out of 332 Grid cells with 60%+ probability contain between 1 and 29 detected mounds, which makes sense for the necropolis of little 10m diameter mounds in the NW
 ```
 
-The previous chunk shows that 38 of 773 unique mounds appear in 19 of the 151 "survey" (`r nrow(grids_n_mounds)/length(survey_grid60)`gridcells are TP) grids that have 60% or higher probability of mounds and are at least partially within the TRAP study area. 
-The entire satellite image contains 295 grids with 60%+ probability of mounds, 151 fall in the TRAP study area and 19 of these contain 38 mounds.
+The previous chunk shows that 37 of 773 unique mounds appear in 18 of the 134 deduplicated "survey" (`r nrow(grids_n_mounds)/length(survey_grid60)`gridcells are TP) grids that have 60% or higher probability of mounds and are at least partially within the TRAP study area. 
+
+In summary:
+The entire satellite image contains `length(grid60$id)` 270 grids with 60%+ probability of mounds, 134 fall in the TRAP study area and 18 of these contain 37 mounds.
 
 
 ### Write prediction status to mounds
@@ -120,7 +123,7 @@ mapview(unpredicted60, color = "orange", alpha= 0.5,
 Given 38 mounds were predicted by CNN, where are the remaining 735?
 Let's explore where the missing mounds are and what probability has been assigned to the cells that contain them by CNN model.
 
-```{r find-missing}
+```{r find-missing-I-problematic}
 # Find missing mound information regarding prediction in the overall grid cnn_all
 # Need to eliminate overlap in gridcells!
 # eliminating id duplicates is nonsensical as the two datasets have same ids, I  must aggregate spatially, e.g. st_union or st_difference, or relabel the datasets before merging, or crop to a shared non-overlapping border.
@@ -129,7 +132,26 @@ missing60 <- st_intersection(unpredicted60, cnnall_grid) # 2158, clearly duplica
 # Check for duplicates
 #?distinct()
 length(duplicated(missing60$TRAP_Code)) # 2158 points to duplication
-missing60 <- missing60[!duplicated(missing60$TRAP_Code),] #620 undetected mounds
+missing60 <- missing60[!duplicated(missing60$TRAP_Code),] #745 undetected mounds
+```
+
+```{r find-missing-I}
+# Find missing mound information regarding prediction in the overall grid cnn_all
+# Need to eliminate overlap in gridcells!
+# eliminating id duplicates is nonsensical as the two datasets have same ids, I  must aggregate spatially, e.g. st_union or st_difference, or relabel the datasets before merging, or crop to a shared non-overlapping border.
+missing60 <- mounds %>%
+             dplyr::filter(TRAP_Code %nin% predicted60$TRAP_Code) # 752, clearly duplicates
+
+unpredicted60 # 736
+
+# Check for duplicates
+sum(duplicated(unpredicted60$TRAP_Code)) # no duplicates
+
+# Tile success rates
+all_tiles <- st_intersection(mounds, cnnall_grid) %>% group_by(id) %>% count()
+fp_tiles <- st_intersection(unpredicted60, cnnall_grid)
+fp_tiles %>% group_by(id) %>% count()
+
 ```
 
 ```{r missing-in-grids}
