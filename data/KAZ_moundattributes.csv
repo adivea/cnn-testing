@@ -1,0 +1,775 @@
+TRAP_ID,BG Name,Campaign,Certainty,Source,Municipality,Lat,Long,Elevation,Length,Width,Height,HeightBin,RT,Effect,Impact,LU_Around,LU_OnMound,LU_origin,Photo,AKB Code,BG Code,Mound Date,Notes
+1000,,2009,C,Survey,Dolno Sahrane,"42°37'42.568""","25°14'39.091""",373,34,34,6,3,Yes,2,1,Agriculture,High vegetation or scrub,Photo,Y ,,DS001,N/A,Visible soil structure in large RT on the top
+1001,,2009,C,Survey,Dolno Sahrane,"42°37'37.596""","25°14'47.761""",370,15,15,0.5,1,Yes,5,5,Agriculture,High vegetation or scrub,Photo,Y ,,DS002,N/A,Stones covering the surface of the flat mound
+1002,,2009,C,Survey,Dolno Sahrane,"42°37'35.706""","25°15'1.068""",363,25,25,4,2,No,1,1,Agriculture,High vegetation or scrub,Photo,Prob,,DS003,N/A,Tree on the top
+1003,,2009,C,Survey,Dolno Sahrane,"42°37'33.294""","25°14'58.092""",371,18,18,4,2,Yes,2,2,Agriculture,High vegetation or scrub,Photo,Prob,,DS004,N/A,Visible soil structure in large RT in the eastern part
+1004,,2009,C,RS,Dolno Sahrane,"42°37'31.38""","25°14'55.237""",375,25,25,3,2,Yes,2,1,Agriculture,High vegetation or scrub,Photo,Y ,,DS005,N/A,Huge RT in the centre
+1010,,2009,C,RS,Dunavtsi,"42°37'41.892""","25°17'3.222""E",395,30,17,2,2,No,3,2,Agriculture,High vegetation or scrub,Photo,Y ,,DUN011,N/A,small to middle size stones spread all over the surface
+1011,,2009,C,RS,Dunavtsi,"42°37'35.931""","25°17'35.553""",376,35,35,3.5,2,No,2,1,Pasture,High vegetation or scrub,Photo,Y ,5500097,DUN012,N/A,"Entirely overgrown, not accesible, destroyed by machine."
+1016,,2009,C,Survey,Dunavtsi,"42°38'13.193""","25°16'40.204""",362,37,28,5,2,Yes,2,1,Pasture,High vegetation or scrub,Photo,Y ,5500099,DUN002,N/A,
+1017,,2009,C,RS,Dunavtsi,"42°37'34.875""","25°16'49.719""",347,30,30,4,2,Yes,3,1,Forest,High vegetation or scrub,Photo,Y ,,DUN003,N/A,"Very large stones in the profile, composed of yellow sandy soil. RT's from N to S."
+1018,,2009,C,RS,Dunavtsi,"42°37'34.873""","25°16'49.717""",352,20,15,2,2,Yes,2,1,Forest,High vegetation or scrub,Photo,Y ,,DUN004,N/A,"RT on the top, shallow but in the shape of grave"
+1019,Trite mogili,2009,C,AKB,Dunavtsi,"42°37'24.085""","25°17'22.822""",402,28,27,6,3,Yes,3,2,Forest,High vegetation or scrub,Photo,Y ,5500094,DUN006,N/A,
+1020,Trite mogili,2009,C,AKB,Dunavtsi,"42°37'24.36""","25°17'25.952""",403,25,20,6,3,Yes,4,3,Forest,High vegetation or scrub,Photo,Y ,5500095,DUN007,N/A,
+1021,Trite mogili,2009,C,AKB,Dunavtsi,"42°37'22.976""","25°17'29.95""",395,33,30,3,2,Yes,3,1,Forest,High vegetation or scrub,Photo,Y ,5500093,DUN008,N/A,
+1022,,2009,C,AKB,Dunavtsi,"42°37'21.289""","25°17'44.19""",375,25,16,3,2,No,1,1,Forest,High vegetation or scrub,Photo,Y ,5500096,DUN009,N/A,
+1023,,2009,C,AKB,Dunavtsi,"42°37'15.776""","25°17'52.644""",379,25,25,3,2,Yes,2,1,Scrub,High vegetation or scrub,Photo,Y ,5500100,DUN010,N/A,
+1024,,2010,U,Survey,Kran,"42°41'12.59""","25°22'27.214""",492,37,35,1,1,No,5,5,Agriculture,Ploughed,Photo,Prob,,KRAN 50 ,N/A,On the photo it is the bad visible hill in the field - agricultured to death
+1025,,2010,C,Survey,Kran,42°41.291',25°22.378',491,32,30,0.7,1,No,4,4,Agriculture,Ploughed,Photo,Y,,KRAN 52,N/A,Concentration of stones on the surface
+1026,,2010,C,AKB,Kran,42°41.361',25°22.304',491,25,25,8,3,Yes,3,2,Agriculture,Pasture,Photo,Y ,5500087,KRAN 53 ,N/A,Southern part of the mound was taken by machine
+1031,,2010,C,Survey,Shipka,42°42.081',25°21.186',519,69,67,1,1,Yes,4,4,Agriculture,Ploughed,Photo,Y ,,SHIPKA 01 ,N/A,"excavated down the middle of the mound, now the middle is used as part of the field; was it done by TEMP"
+1032,,2010,C,Survey,Shipka,42°42.187',25°21.119',531,36,32,4,2,Yes,2,1,Pasture,High vegetation or scrub,Photo,Y ,,SHIPKA 02 ,N/A,partially destroyed by robbers
+1034,,2010,C,Survey,Shipka,42°42.161',25°20.880',538,35,31,2,2,Yes,3,2,Pasture,Pasture,Photo,Y ,,SHIPKA 05 ,N/A,"uneven surface of mound, earth has been pushed back into mound, previously excavated"
+1035,,2010,C,Survey,Shipka,42°42.141',25°20.847',529,21,20,8,3,Yes,3,2,Pasture,Pasture,Photo,Y ,,SHIPKA 06 ,N/A,"Digged through - E side steep and uneven/W side has even slope, possibly left unexcavated."
+1036,,2010,C,Survey,Shipka,42°42.163',25°20.843',530,46,37,2,2,Yes,3,2,Pasture,Pasture,Survey,Y,,SHIPKA 07 ,N/A,"Mound likely to be on the West side, earth from excavation moved to pile in the East, tree in the middle."
+1037,,2010,C,Survey,Shipka,42°42.291',25°20.929',533,34,26,4,2,Yes,3,2,Pasture,High vegetation or scrub,Photo,Y ,,SHIPKА 08 ,N/A,"located in private property, beehives and small house on it"
+1038,Shushmanets ,2010,C ,Survey,Shipka,42°42.428',25°20.921',541,104,88,15,3,Yes,1,1,Pasture,High vegetation or scrub,Photo,Prob,,SHIPKA 09 ,5./4. C BC,"Excavated 1996, Tomb/Temple inside"
+1039,Helvetsia,2010,C,Survey,Shipka,42°42.333',25°20.783',527,45,35,12,3,Yes,1,1,Pasture,High vegetation or scrub,Photo,Y,,SHIPKA 10 ,5./4. C BC,"Excavated 1996, Tomb inside"
+1040,Grifonite,2010,C,Survey,Shipka,42°42.330',25°20.680',530,36,32,10,3,Yes,1,1,Pasture,Pasture,Photo,Y,,SHIPKA 11 ,5./4. C BC,"Excavated 1996, Tomb/Temple inside, nearby the factory."
+1041,,2010,U,Survey,Shipka,42°42.378',25°20.744',537,42,34,3,2,Yes,2,1,Pasture,Pasture,Survey,N,,SHIPKA 12 ,N/A,probably digged through - mound surface very uneven
+1042,,2010,U,Survey,Shipka,42°42.008',25°20.902',502,10,8,2,2,No,3,1,Pasture,Pasture,Photo,Prob,,SHIPKA 03 ,N/A,"recent activity or ancient - modern monument on the top, staircase leading to it, marked on the map 1:25000."
+1046,,2009,C,AKB,Dunavtsi,"42°37'40.139""","25°17'39.379""",367,35,35,3,2,Yes,2,1,Forest,High vegetation or scrub,Photo,Y,5500098,,N/A,Recent rubbish near 1 RT.
+1047,,2009,C,Survey,Dunavtsi,"42°37'38.645""","25°17'41.133""",362,20,20,1.5,2,Yes,3,1,Forest,High vegetation or scrub,Photo,Y,,,N/A,"Overgrown with undefined boundaries, Very wide mound with spread out soil with 2 possible RT's. 2 very shallow trenches on South side."
+1048,,2009,C,Survey,Dunavtsi,"42°37'34.288""","25°17'44.629""",368,35,20,2,2,Yes,3,1,Forest,High vegetation or scrub,Photo,Y,,,N/A,"Can see some stone  in trench, overgrown with old RT, West side cut ; large furrough (assumed RT)"
+1055,,2011,C,AKB,Sheynovo,"42°39'53.251""","25°18'23.705""",402,77,63,1.5,2,No,4,4,Agriculture,Ploughed,Survey,Y,5500062,,N/A,entirely destroyed by agriculture
+1057,,2011,C,Survey,Sheynovo,"42°40'10.93""","25°19'0.946""",404,53,44,1,1,No,4,5,Agriculture,Ploughed,Survey,N,,,N/A,
+1059,Sheynovskata mogila,2011,C,AKB,Sheynovo,"42°40'53.61""","25°19'30.642""",444,26,25,5,2,Yes,3,3,Urban,Pasture,Survey,Y,5500063,,N/A,"Covered with plants, stairs going up to a comunist momument, earth is mixed, looks like it has been destroyed but replaced"
+1060,,2011,C,AKB,Sheynovo,42°40'43.782,"25°18'58.122""",437,30,26,5,2,Yes,3,3,Pasture,High vegetation or scrub,Survey,Y,5500061,,N/A,"Completely covered with plants/trees, etc. Top of the mound was removed by R.'s"
+1063,,2011,C,Survey,Sheynovo,"42°40'2.733""","25°19'21.109""",378,50,40,0.5,1,No,4,5,Perennial,Ploughed,Survey,N,,,N/A,
+1066,,2011,U ,Survey,Golyamo Dryanovo," 42°40'26.133""","25°14'42.861""",419,16,12,0.6,1,No,4,4,Pasture,Pasture,Survey,N,,,N/A,"defunct mound in a very disrupted environment;  no obvious RTs if any, they are old and lost in the general disuption of the mound and surrounding area."
+1067,,2011,C ,RS,Golyamo Dryanovo," 42°40'26.133""","25°14'42.861""",433,22,18,0.5,1,Yes,4,4,Pasture,Pasture,Survey,N,,,N/A,mostly excavated defunct mound with large crater in the center and trench to the SW; large stone blocks (unworked) in trench; no ancient material visible
+1068,,2011,C ,Survey,Yasenovo Region," 42°40'50.985""","25°14'4.084""",434,22,18,5,2,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"fairly well preserved mound; W side cut away, two recent RTs; perhaps some old RTs on south"
+1069,,2011,C ,Survey,Yasenovo Region,"42°40'50.985""","25°14'4.084""",441,22,22,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"large but low mound, no obvious robbing"
+1070,,2011,U,Survey,Yasenovo Region," 42°40'48.777""","25°14'0.572""",436,18,13,0.8,1,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,"mound with flattened top, field stones piled on top and around; odd shape - squarish and flattened"
+1071,,2010,C,Survey,Gorno Sahrane,"42°39'22.917""","25°12'55.003""",474,16,15,2,2,Yes,2,1,Forest,Forest,Photo,Y,,GS 006-13,N/A,"1RT, earth mound with large river stones in profile"
+2001,,2009,C ,Survey,Koprinka,"42°38'10.962""","25°19'11.965""",368,19,16,5,2,No,4,4,Agriculture,Ploughed,Photo,Y,,KOP001,N/A,"Destroyed by plaughing, now overgrown"
+2002,Golyamata mogila,2009,C ,Survey,Koprinka,"42°37'32.946""","25°19'33.812""",405,40,30,15,3,Yes,3,3,Pasture,Pasture,Photo,Y,,KOP002,N/A,
+2003,,2009,C ,Survey,Koprinka,"42°37'35.035""","25°19'41.919""",395,30,25,5,2,Yes,3,1,Pasture,Pasture,Photo,Y,,KOOP003,N/A,
+2004,,2009,C ,Survey,Koprinka,"42°37'35.082""","25°19'26.531""",397,28,28,2,2,No,3,1,Pasture,Pasture,Photo,Prob,,KOOP004,N/A,
+2005,,2009,C ,Survey,Koprinka,"42°37'33.927""","25°19'10.125""",390,41,35,7,3,Yes,3,1,Pasture,Pasture,Photo,Y,,KOOP005,N/A,
+2006,,2009,C ,Survey,Koprinka,"42°37'34.457""","25°19'8.3""",388,22,15,4,2,Yes,3,1,Pasture,Pasture,Photo,Y,,KOOP006,N/A,
+2007,,2009,C ,Survey,Koprinka,"42°37'36.931""","25°19'7.825""",386,15,15,5,2,No,2,1,Pasture,Pasture,Photo,Y,,KOOP007,N/A,Covered with grass
+2008,,2009,C ,Survey,Koprinka,"42°37'40.391""","25°19'2.691""",363,18,15,2,2,No,2,1,Pasture,Pasture,Photo,Prob,,KOOP008,N/A,
+2013,,2009,C ,Survey,Koprinka,"42°37'26.207""","25°18'34.164""",366,50,45,6,3,Yes,2,1,Agriculture,High vegetation or scrub,Photo,Y,,KOOP009,N/A,Roman/Thracian sherds found next to it - flat site
+2014,Devette mogili,2009,C ,Survey,Koprinka,"42°37'13.481""","25°18'38.372""",357,20,15,6,3,Yes,3,1,Pasture,High vegetation or scrub,Photo,Y,,KOOP010,N/A,
+2015,Devette mogili,2009,C ,Survey,Koprinka,"42°37'22.422""","25°18'40.062""",376,25,20,2,2,Yes,4,3,Pasture,High vegetation or scrub,Photo,Y,,KOOP011,N/A,
+2016,Devette mogili,2009,U,Survey,Koprinka,"42°37'34.763""","25°18'44.839""",359,18,18,0.5,1,No,5,5,Pasture,Pasture,Photo,Y,,KOOP012,N/A,
+2017,Devette mogili,2009,C,Survey,Koprinka,"42°37'37.851""","25°18'39.576""",370,24,24,3,2,Yes,2,1,Pasture,Pasture,Photo,Y,,KOOP013,N/A,"massive stones scattered all around and in the section, almost unrecognizable (vegetation)"
+2018,Devette mogili,2009,C,Survey,Koprinka,"42°37'31.523""","25°18'31.718""",360,14,12,8,3,Yes,2,1,Pasture,Pasture,Photo,Y,,KOOP014,N/A,
+2020,,2009,C,Survey,Koprinka," 42°37'59.857""","25°19'12.53""",381,29,20,7,3,Yes,3,2,Pasture,Pasture,Photo,Y,,KOOP016,N/A,RT on the top.
+2021,,2009,C,Survey,Koprinka,"42°38'1.135""","25°19'9.861""",368,15,10,1,1,Yes,2,1,Pasture,Pasture,Photo,Y,,KOOP017,N/A,RT on the S.
+2022,,2009,C,Survey,Koprinka,"42°38'0.824""","25°19'8.338""",354,22,13,2,2,No,2,1,Pasture,Pasture,Photo,Y,,KOOP018,N/A,"RT on the top, rectangular shape (1.6x2.2x1 m)"
+2023,,2009,C,Survey,Koprinka,"42°38'0.975""","25°19'5.866""",348,29,22,5,2,Yes,2,1,Pasture,Pasture,Photo,Y,,KOOP019,N/A,RT on the S (1.5x1.5)
+2027,,2009,C,Survey,Kazanlak,"42°37'3.858""","25°21'4.939""",347,20,20,1,1,Yes,4,2,Agriculture,Ploughed,Photo,Y,,KAZ006,N/A,
+2028,,2009,C,Survey,Kazanlak,"42°37'7.833""","25°21'24.293""",352,28,26,5,2,No,2,1,Agriculture,High vegetation or scrub,Photo,Y,,KAZ007,N/A,
+2029,,2009,C,Survey,Kazanlak,"42°37'7.714""","25°21'37.566""",341,41,28,2,2,No,2,1,Agriculture,High vegetation or scrub,Photo,Y,,KAZ008,N/A,
+2030,Bikchiysuka mogila,2009,C,Survey,Kazanlak,"42°36'53.953""","25°21'37.031""",346,57,51,4,2,No,2,1,Agriculture,Pasture,Photo,Y,,KAZ009,N/A,
+2033,,2010,C,AKB,Kazanlak,42°37.462',25°21.488',338,70,50,1,1,No,5,4,Agriculture,Ploughed,Photo,Y,,,N/A,Destroyed by agriculture
+2034,,2010,C,AKB,Hadzhidimitrovo,42°38.580',25°20.508',373,35,35,0.3,1,No,5,5,Agriculture,Ploughed,Photo,Y,5510249,HadzXXXC197,N/A,"Destroyed by agriculture, mound and scatter"
+2041,,2010,C,AKB,Kran,42°48. 539',25°21.597',374,40,33,1,1,Yes,4,4,Agriculture,Ploughed,Photo,Y,5510254,Kran024,N/A,"Almost defunct mound, robber trench E side ( 2.8 length x 0.8 width x 0.8 depth), which has been buldozed off, W side ploughed out. "
+2042,,2010,C,Survey,Kazanlak,42°48. 189',25°21.530',371,30,30,1,1,Yes,4,3,Agriculture,Ploughed,Photo,Y,,,N/A,"Destroyed by agriculture, huge RT in the middle, full of water, going to the bedrock"
+2043,,2010,U,AKB,Hadzhidimitrovo,42°38. 886',25°20.491',374,50,44,1,1,Yes,5,5,Agriculture,Ploughed,Photo,Y,5510255,Hadz001,N/A,entirely destroyed by agriculture
+2047,,2010,U,AKB,Kran,42°39.488',25°21.361',394,55,39,0.5,1,No,5,5,Agriculture,Ploughed,Photo,Y,5500101,Kran026,N/A,"mound, almost invisible, destroyed by agriculture"
+2050,Chelecheto/Chelyacheto,2010,C,AKB,Enina,42°40.418239',25°25.286432',637,9,5,2,2,No,2,1,Pasture,Pasture,Photo,Y,5510258,Enina011,N/A,Trees on the top
+2052,,2010,C,AKB,Koprinka,42°36.925',25°20.931',347,30,27,4,2,Yes,3,2,Pasture,Pasture,Photo,Y,5510262,Kop021,N/A,"New treasure hunters big trench on the W side, new 3 holes - seems like garbage holes, modern debris on the surface, digged thtough? - uneven surface"
+2053,,2010,C,AKB,Kazanlak,42°36.859',25°20.871',340,52,45,4,2,Yes,2,1,Agriculture,High vegetation or scrub,Photo,Y,5510263,Kaz010,N/A,"New robber trench on the S slope, deep inside (tunnel to the centre of the mound 220x170), overgrown with scrub, access easy, prehistoric shards in RT. Old trench on top 1.5mx1.5mx0.30m, bones in profile"
+2063,,2009,U,RS,Hadzhidimitrovo," 42°40'52.006""","25°20'43.184""",452,50,50,2,2,No,4,5,Pasture,High vegetation or scrub,Survey,N,,,N/A,
+2072,,2009,U,RS,Sheynovo,"42°41'10.587""","25°20'12.816""",462,25,15,0.2,1,Yes,4,3,Agriculture,Ploughed,Photo,Y,,,N/A,Burial chamber from defunct mound - cut away by agriculture and robbed / or part of the house ?
+2080,,2011,U,RS,Shipka,"42°41'30.083""","25°21'8.788""",484,40,40,1,1,No,4,4,Agriculture,Ploughed,Photo,Y,,,N/A,"Heavily ploughed, rocky soil"
+2081,,2011,C,RS,Shipka ,"42°41'57.565""","25°20'20.366""",479,20,15,2.5,2,Yes,3,2,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,Old RT on the top.
+2082,Atyuvska mogila,2011,C,RS,Gorno Sahrane necropolis,"42°40'13.952""","25°13'31.938""",451,35,35,6,3,Yes,3,3,Pasture,Pasture,Photo,Y,,,N/A,"Robbed mound, RT on north side, stone ring around the mound, earth taken next to the mound"
+2083,,2011,C,RS,Gorno Sahrane necropolis,"42°39'50.096""","25°12'51.592""",451,10,10,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,small stones on the surface of the mound
+2084,,2011,C,RS,Gorno Sahrane necropolis,"42°39'50.384""","25°12'50.547""",452,10,10,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,small stones on the surface
+2085,,2011,C,RS,Gorno Sahrane necropolis,"42°39'50.537""",25°12'55.894,449,7,7,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,large stones on the surface of the mound
+2086,,2011,C,RS,Gorno Sahrane necropolis,"42°39'50.534""","25°12'59.471""",448,15,15,0.5,1,No,3,2,Pasture,Pasture,Photo,Y,,,N/A,destroyed by a power lines tower; large stones encopass the mound area
+2091,,2011,C,RS,Gorno Sahrane necropolis,"42°39'45.768""","25°13'3.709""",446,10,10,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,destroyed by a water canal; overgrown
+2092,,2011,C,RS,Gorno Sahrane necropolis,"42°39'45.313""","25°13'6.859""",404,10,10,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,large stones on the surface of the mound
+2093,,2011,C,RS,Gorno Sahrane necropolis,"42°39'48.507""","25°13'20.616""",437,5,5,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,small stones on the surface
+2094,,2011,C,RS,Gorno Sahrane necropolis,"25°13'14.221""","25°13'14.221""",440,10,10,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,large stones on the surface of the mound
+2097,,2011,C,RS,Gorno Sahrane necropolis,"42°39'46.983""","25°12'50.68""",450,16,8,0.8,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,stones spread all over the surface
+2098,,2011,C,RS,Gorno Sahrane necropolis,"42°39'44.726""","25°12'52.084""",444,20,18,1,1,No,3,2,Perennial,High vegetation or scrub,Photo,Y,,,N/A,"flat, round mound, stony"
+2099,,2011,C,RS,Gorno Sahrane necropolis,"42°39'41.483""","25°12'54.888""",448,17,13,1,1,No,3,2,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,"low, covered with vegetation ovoid "
+2100,,2011,U,RS,Gorno Sahrane necropolis,"42°39'41.832""","25°12'56.07""",447,15,9,0.5,1,No,4,4,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+2102,,2011,C,RS,Gorno Sahrane necropolis,"42°39'39.619""","25°12'57.212""",448,10,10,1,1,No,3,2,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+2103,,2010,U,Survey,Gorno Sahrane,"42°39'35.43""","25°12'59.97""",448,52,8,1.5,2,Yes,4,3,Agriculture,High vegetation or scrub,Photo,Y,,GS 006-3,N/A,"positive form, could be rest of the wall, modern debris, one large trench"
+2104,,2011,U,RS,Gorno Sahrane necropolis,"42°39'34.621""","25°12'58.879""",447,16,10,0.2,1,No,4,4,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+2105,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'33.69""","25°13'1.524""",443,8,7,0.5,1,No,2,1,Pasture,Pasture,Photo,N,,,N/A,water drainage channel going through it
+2106,,2011,C,RS,Gorno Sahrane necropolis,"42°39'33.82""","25°13'2.529""",443,15,12,1,1,Yes,3,2,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,"flat, stony, medium-large, ovoid, some vegetation"
+2108,,2011,U,RS,Gorno Sahrane necropolis,"42°39'31.028""","25°13'10.815""",432,22,22,0.3,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"round, flat mound, looks likes it's divided into two mounds but it is one mound"
+2109,,2011,C,RS,Gorno Sahrane necropolis,"42°39'30.781""","25°13'11.517""",432,15,14,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"medium sized stones, low flat mound"
+2110,,2011,C,RS,Gorno Sahrane necropolis,"42°39'29.885""","25°13'11.952""",432,17,14,0.6,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"no trenches, small stones"
+2113,,2011,C,RS,Gorno Sahrane necropolis,"42°39'33.567""","25°13'7.616""",438,16,13,5,2,Yes,3,2,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+2115,,2011,C,RS,Gorno Sahrane necropolis,"42°39'37.213""","25°13'5.599""",442,24,16,0.2,1,No,2,2,Agriculture,Ploughed,Photo,Y,,,N/A,"very low, flat, long, grassy mound, some med-sized rocks"
+2116,,2011,C,RS,Gorno Sahrane necropolis,"42°39'40.464""","25°12'59.419""",444,15,11,0.7,1,Yes,3,3,Agriculture,Ploughed,Photo,Y,,,N/A,"large flat mound, some vegetation. Large stones, 2 trenches"
+2117,,2011,C,RS,Gorno Sahrane necropolis,"42°39'44.328""","25°13'2.021""",444,20,15,1,1,No,2,2,Agriculture,Ploughed,Photo,Y,,,N/A,"flat mound, pile of stones on the top, small size, no obvious RTs"
+2118,,2011,C,RS,Gorno Sahrane necropolis,"42°39'44.24""","25°12'56.416""",444,21,20,0.5,1,Yes,4,3,Agriculture,Pasture,Photo,Y,,,N/A,"large overgrown mound, one RT"
+2119,,2011,C,RS,Gorno Sahrane necropolis,"42°39'41.896""","25°12'58.105""",444,26,21,0.5,1,Yes,3,3,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+2120,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'0.619""","25°13'4.354""",452,4,4,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"low, flat, round, some vegetation"
+2121,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'1.788""","25°13'0.983""",451,2,2,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"low, flat, possibly bulldozed"
+2123,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'55.692""","25°13'28.413""",436,3,2,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,stones spread all over the surface
+2124,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'57.428""","25°13'30.03""",436,5,3,0.6,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"small stones on top, some vegeation, larger stones loose on sides"
+2125,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'54.848""","25°13'33.333""",435,5,3,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,stones spread all over the surface
+2126,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'51.825""","25°13'40.407""",437,2,2,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"could be a dug out ditch (agricultural), few stones"
+2127,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'52.783""","25°13'42.143""",435,12,10,0.5,1,Yes,4,3,Pasture,Pasture,Photo,Y,,,N/A,"big pile of stones, freshly dug, enlarged from original RT, vegetation on the bottom of the mound; visible structure, looks like freshly and entirely robbed"
+2128,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'57.522""","25°13'32.904""",435,3,3,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"small stones on top, some vegeation, larger stones loose on sides"
+2129,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'1.677""","25°13'32.092""",436,4,3,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"few small stones on top, slight indent in the centre of mound"
+2130,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'59.576""","25°13'29.886""",437,14,12,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"round, fairly low, scattered med-large stones, very small hole"
+2131,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'1.678""","25°13'28.292""",437,5,4,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"long flat, oval shaped, some vegetation, very few stones (small)"
+2132,,2011,U,Survey,Gorno Sahrane necropolis,"42°40'6.732""","25°13'0.795""",458,3,2,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"almost flat, round, small"
+2134,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'6.989""","25°12'38.365""",466,21,7,0.7,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"two mounds close to each other, large and round, many small-medium sized stones on top, some vegetation"
+2135,,2011,U,Survey,Gorno Sahrane necropolis,"42°40'7.461""","25°12'42.024""",466,10,9,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"vegetation, stones on top"
+2136,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'7.431""","25°12'43.031""",465,6,5,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"low, many small stones, two large rocks, vegetation"
+2137,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'8.555""","25°12'41.96""",467,9,9,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,stones spread all over the surface
+2139,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'9.039""","25°12'34.572""",470,20,4,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"long, many med-large size stones, vegetation "
+2140,,2011,C,Survey,Skobelevo ,"42°40'8.647""","25°12'33.781""",469,3,2,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"small RT on top, many stones surrounding it and much vegetation"
+2141,,2011,C,Survey,Skobelevo ,"42°40'7.897""","25°12'34.258""",469,10,9,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"very low, round"
+2142,,2011,C,Survey,Skobelevo ,"42°40'8.711""","25°12'36.389""",469,3,2,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,stones spread all over the surface
+2143,,2011,C,Survey,Skobelevo ,"42°40'7.567""","25°12'36.713""",467,10,5,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,stones spread all over the surface
+2144,,2011,C,Survey,Skobelevo ,"42°40'8.287""","25°12'32.2""",469,8,5,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"worked stone in the middle, vegetation on top"
+2146,,2011,C,Survey,Skobelevo ,"42°40'8.287""","25°12'32.2""",469,9,9,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"very few stones, lots of vegetation, one large stone"
+2147,,2011,C,Survey,Skobelevo ,"42°40'10.895""","25°12'30.025""",469,8,7,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"large stones around the mound, round, low and flat"
+2148,,2011,U,Survey,Skobelevo ,"42°40'10.153""","25°12'34.414""",471,10,8,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"barely visible, very overgrown with vegetation"
+2150,,2011,C,Survey,Skobelevo ,"42°40'10.3""","25°12'37.246""",472,4,3,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"low, fla, long, small and medium sized stones"
+2151,,2011,C,Survey,Skobelevo ,"42°40'11.444""","25°12'37.518""",473,8,8,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"round. Two large stones, many small rocks on top"
+2152,,2011,C,Survey,Skobelevo ,"42°40'11.891""","25°12'37.457""",473,5,4,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"overgrown, barely visible, many stones, lots of vegetation"
+2153,,2011,C,RS,Skobelevo ,"42°40'12.301""","25°12'39.743""",473,7,7,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"barely visible, many stones, lots of vegetation"
+2154,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'9.544""","25°12'59.55""",466,7,6,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"small indent in the entre, vegetation"
+2158,,2011,C,RS,Gorno Sahrane necropolis,"42°40'8.687""","25°13'4.24""",460,16,8,0.8,1,Yes,4,4,Pasture,Pasture,Photo,Y,,,N/A,"2RT-one on the top, one on the side"
+2159,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'7.537""","25°13'12.918""",458,6,6,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"barely visible, overgrown with vegetation"
+2161,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'2.997""","25°13'27.032""",436,3,3,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"very low, flat and circular, stones"
+2162,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'4.441""","25°13'31.688""",438,2,2,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"lots of vegetation, circular, low"
+2163,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'4.441""","25°13'31.688""",437,4,2,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"many small-md stones on side, vegetation"
+2164,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'4.678""","25°13'29.969"" ",437,3,3,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"circular, flat"
+2166,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'2.349""","25°13'39.065""",437,3,1,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"flat, long, almost invisible"
+2167,,2011,U,Survey,Gorno Sahrane necropolis,"42°40'2.245""","25°13'37.812""",432,5,3,0.1,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,very flat
+2169,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'59.65""","25°13'36.928""",431,2,2,0.2,1,Yes,4,4,Pasture,Pasture,Photo,Y,,,N/A,"Very small, lots of vegetation, large RT taking almost all the mound"
+2170,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'55.775""","25°13'46.185""",436,3,2,0.5,1,No,4,5,Pasture,High vegetation or scrub,Survey,N ,,,N/A,"big pile of medium stones on top, one side surrounded by rose bushes"
+2171,,2011,U,Survey,Gorno Sahrane necropolis,"42°40'2.885""","25°13'46.03""",435,6,5,0.1,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"some pottery (modern), overgrown, barely visible, long, flat, large stones and rose bushes. Worked stone?"
+2172,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'9.69""","25°13'15.677""",455,6,5,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"long, flat, lots of vegetation"
+2173,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'9.748""","25°13'14.058""",454,5,3,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"barely visible, long, oval shaped, vegetation, almost flat"
+2174,,2011,C,Survey,Gorno Sahrane necropolis," 42°40'11.65""","25°13'10.03""",458,7,5,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"no stones, vegetation, round, flat"
+2175,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'11.973""","25°13'4.659""",462,7,5,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"round, vegetation, medium stones"
+2176,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'13.374""","25°13'13.112""",456,15,10,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"long, flat, hardly any stones, some vegetation"
+2181,,2011,C,RS,Gorno Sahrane necropolis,"42°40'10.463""","25°13'38.319""",440,15,12,5,2,Yes,3,3,Pasture,Pasture,Photo,Y,,,N/A,"Several RT's, the largest one taking N side of the mound"
+2184,,2011,C,RS,Skobelevo ,"42°40'20.639""","25°12'23.538""",451,6,6,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Round, flat, low, medium stones on top. "
+2186,,2011,C,Survey,Skobelevo ,"42°40'24.906""","25°12'33.322""",483,8,7,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Long, flat, some large stones on top."
+2187,,2011,C,Survey,Skobelevo ,"42°40'29.481""","25°12'31.955""",448,40,35,5,2,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,"Indented on top, many large and medium stones surround the mound; digged through with soil returned, uneven surface"
+2191,,2011,C,Survey,Skobelevo ,"42°40'15.992""","25°12'33.274""",477,6,4,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Small hole near mound. Medium stones surrounding the mound
+2192,,2011,C,Survey,Skobelevo ,"42°40'20.206""","25°12'43.114""",477,5,3,0.2,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,One small old robbers trench
+2193,,2011,C,Survey,Skobelevo ,"42°40'18.921""","25°12'44.535""",474,4,3,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Medium stones on top
+2194,,2011,C,Survey,Skobelevo ,"42°40'21.398""","25°12'50.861""",477,7,3,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Very flat on top, many medium sized stones on top."
+2195,,2011,C,Survey,Skobelevo ,"42°40'22.169""","25°12'56.936""",469,8,4,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"long, oval shaped, large stones"
+2196,,2011,C,Survey,Skobelevo ,"42°40'20.394""","25°12'53.761""",475,4,4,0.3,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,One small RT
+3000,Gichova mogila,2009,C,Survey,Viden,"42°36'46.566""","25°14'48.85""",379,30,20,4,2,Yes,3,2,Forest,High vegetation or scrub,Photo,Y,,VID001,N/A,According to informant I.Dechev there was a mound destroyed by robbers in 1990's.
+3001,,2009,U,Survey,Viden,"42°36'42.341""","25°14'542.485""",367,40,20,5,2,Yes,4,4,Forest,Forest,Photo,Y,,VID002,N/A,Possibly only hill. Undefined boundaries.
+3009,,2009,C,Survey,Viden,"42°36'33.956""","25°14'50.916""",383,15,15,5,2,No,2,1,Forest,High vegetation or scrub,Photo,Y,,VID003,N/A,covered with vegetation
+3011,,2009,C,Survey,Vidin,"42º36.699""","25º15.088""",448,15,15,2,2,Yes,4,3,Pasture,Scrub,N/A,N,,VID005,N/A,old RT's 
+3012,,2009,C,Survey,Viden,"42°36'47.679""","25°15'3.949""",409,15,15,5,2,Yes,4,3,Forest,High vegetation or scrub,Photo,Y,,VID052,N/A,small; hardly visible; next to a road which destroyed it;
+3015,,2009,C,Survey,Dolno Sahrane,"42°36'34.546""","25°15'55.294""",452,15,15,1,1,No,3,2,Pasture,Pasture,Photo,Y,,VID071,N/A,"large stones arranged in a circle along the E and N. The top is dug trough. GPS point 1 - 50 m to the E, another group of large stones. Lot of shallow old RTs. Covered in vegetation."
+3020,,2009,C,Survey,Dolno Sahrane,"42°36'38.206""","25°15'48.823""",449,25,25,2,2,Yes,2,1,Forest,High vegetation or scrub,Photo,Y,,VID072,N/A,"Covered in vegetation. Small shallow RTs at the top, large stones covering the surface of the mound; Large stones encompassing the area of the mound. "
+3024,,2009,C,Survey,Viden,"42°36'9.966""","25°16'5.843""",460,20,20,0.5,1,Yes,2,1,Forest,High vegetation or scrub,Photo,Y,,VID009,N/A,completely destroyed;
+3026,,2009,C,Survey,Gorno Cherkhovishte,"42°36'15.12""","25°16'30.534""",458,25,25,5,2,No,5,5,Forest,High vegetation or scrub,Photo,Y,,GCH051,N/A,undetermined boundaries. The mound is completely destroyed. Large stones encompass the area. 20 m (E direction) there is another stone circle
+3032,,2009,C,Survey,Gorno Cherkhovishte,"42°36'8.714"" ","25°17'0.46""",410,20,20,2,2,Yes,2,2,Forest,High vegetation or scrub,Survey,N,,GCH056_01,N/A,old shallow RT (1.5x1.5x0.3)
+3033,,2009,C,Survey,Gorno Cherkhovishte,"42°36'9.165"" ","25°17'2.149""",411,17,17,3,2,Yes,2,2,Forest,High vegetation or scrub,Survey,N,,GCH056_02,N/A,old RT
+3043,,2009,C,Survey,Viden,"42°36'44.388""","25°14'52.957""",390,19,16,5,2,Yes,2,1,Forest,High vegetation or scrub,Photo,Y,,VID012,N/A,"Minimal, small old RT's. Few rocks."
+3046,,2009,C,Survey,Viden,"42°36'30.544""","25°15'8.721""",432,20,20,5,2,No,2,1,Forest,High vegetation or scrub,Photo,Y,,VID061,N/A,3 old RTs on top
+3047,,2009,C,Survey,Viden,"42°36'29.525""","25°15'9.275""",430,20,20,3,2,No,2,1,Forest,High vegetation or scrub,Photo,Y,,VID062,N/A,old shallow RTs on the top; large stones around the mound
+3048,,2009,C,Survey,Viden,"42°36'29.729""","25°15'8.024""",425,10,10,0.5,1,No,2,1,Forest,High vegetation or scrub,Photo,Y,,VID063,N/A,two old RTs; bad visibility
+3049,,2009,C,Survey,Dolno Sahrane,"42°37'3.906""","25°15'54.5""",434,40,40,10,3,Yes,3,2,Forest,High vegetation or scrub,Photo,Y,,VID081,N/A,"Enormous RT dug through the mound. Ongoing robbery. In the profile are visible layers small stones, chamber was made by large slab stones."
+3050,,2009,C,Survey,Dolno Sahrane,"42°37'3.612""","25°15'52.849""",433,30,30,4,2,Yes,3,2,Forest,High vegetation or scrub,Photo,Y,,VID082,N/A,The central area is destroyed. Large stones encompass the mound. Visible soil structure in profile
+3051,,2009,C,Survey,Dolno Sahrane,"42°37'5.727""","25°15'54.302""",429,15,15,1,1,Yes,3,2,Forest,High vegetation or scrub,Photo,Y,,VID083,N/A,The central area is destroyed. Large stones around the RT from the burial chamber.
+3054,,2009,C,Survey,Viden,"42°36'37.537""","25°14'55.292""",401,30,25,3,2,Yes,3,3,Forest,High vegetation or scrub,Photo,Y,,VID004,N/A,The central area completely destroyed by RT
+3061,,2010,C,Survey,Yasenovo,"  42°41'07.8""",25°15'21.208,468,27,20,3,2,Yes,2,2,Pasture,Stones,Photo,Y,,,N/A,Excavated by TEMP
+3064,,2010,C,Survey,Yasenovo,"42°40'48.805""","25°14'39.975""",449,10,6,5,2,Yes,3,2,Pasture,High vegetation or scrub,Photo,Y,,Yasn 007,N/A,"very demaged because of agricultural work, stones on top"
+3065,,2010,C,Survey,Yasenovo,"42°40'51.4""","25°14'36.4""",453,12,5,5,2,Yes,4,4,Pasture,Pasture,Photo,Y,,Yasn 007,N/A,described by Domaradski
+3066,,2010,C,Survey,Yasenovo,"42°40'55.4""","25°14'37.1""",451,19,17,0.1,3,No,5,5,Agriculture,Ploughed,Photo,Y,,Yasn 007,N/A,described by Domaradski
+3067,,2010,C,Survey,Yasenovo,"42°40'46.3""","25°14'34.7""",440,8,8,0.5,1,Yes,4,5,Pasture,Stones,Photo,Y,,Yasn 007,N/A,described by Domaradski
+3068,,2010,C,Survey,Yasenovo,"42°40'44.7""","25°14'32.9""",432,11,11,1,1,Yes,3,4,Pasture,Pasture,Photo,Y,,Yasn 007,N/A,described by Domaradski
+3069,,2010,C,Survey,Yasenovo,"42°40'45.1""","25°14'32.4""",434,10,9,0.2,1,Yes,5,5,Pasture,Pasture,Photo,Y,,Yasn 007,N/A,described by Domaradski
+3070,,2010,C,Survey,Yasenovo,"42°40'43.7""","25°14'39.9""",427,16,12,2,2,Yes,3,2,Pasture,Pasture,Photo,Y,,Yasn 007,EIA,described by Domaradski; stone structure inside
+3071,,2010,C,Survey,Yasenovo,"42°41'5.31""","25°14'50.417""",457,19,18,5,2,Yes,2,1,Pasture,Pasture,Photo,Y,,Yasn 007,N/A,described by Domaradski; at least 4 RTs
+3072,,2010,C,Survey,Yasenovo,"42°41'06.1""","25°14'34.7""",449,30,28,3,2,Yes,3,2,Pasture,Pasture,Photo,Y,,Yasn 007,N/A,described by Domaradski
+3073,Mogila Manda Tepe,2010,C,Survey,Yasenovo,"42°39'54.7""","25°15'53""",400,24,20,2,2,Yes,2,4,Pasture,Pasture,Photo,Y,,Yasn 022,N/A,
+3074,Belichinova mogila,2010,C,Survey,Yasenovo,"42°40'28.6""","25°15'03.1""",434,40,39,5,2,Yes,3,2,Pasture,Pasture,Photo,Y,,Yasn 010,EIA,Excavated by TEMP in 2006
+3075,,2010,C,Survey,Yasenovo,"42°41'18.4""","25°15'29.9""",492,30,26,3,2,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,excavated by TEMP in 1995
+3076,,2010,C,Survey,Yasenovo,"42°41'17.0""","25°15'35.6""",492,24,18,2,2,Yes,4,3,Pasture,Pasture,Photo,Y,,,N/A,excavated by TEMP in 1995
+3077,Dorina mogila,2010,C,Survey,Yasenovo,"42°41'14.9""","25°15'33.7""",485,22,16,5,2,Yes,4,5,Pasture,Pasture,Photo,Y,,,N/A,"excavated by TEMP in 1999, Tumulus with 4 graves"
+3081,,2010,C,Survey,Gorno Sahrane,"42°39'13.7""","25°13'40.4""",423,30,30,4,2,Yes,2,2,Pasture,Pasture,Photo,Y,,GS002_1,N/A,"Old RT's, completely digged through"
+3082,,2010,C,Survey,Gorno Sahrane,"42°39'15.2""","25°13'40.2""",424,23,20,4,2,Yes,2,1,Pasture,Pasture,Photo,Y,,GS002_2,N/A,
+3088,,2010,C,Survey,Golyamo Dryano vo,"42°39'57.2""","25°22'18.3""",430,35,23,1,1,Yes,3,3,Pasture,Pasture,Photo,Y,,GD 008-1,N/A,Heavily destructed by several RT's
+3089,,2010,C,Survey,Golyamo Dryano vo,"42°40'08.0""","25°14'32.5""",432,28,19,0.8,1,Yes,3,3,Pasture,Pasture,Photo,Y,,GD 008-2,N/A,Many old small RT's
+3090,,2010,C,Survey,Gorno Sahrane,"42°39'03.1""","25°14'00.3""",418,20,16,0.5,1,Yes,4,3,Pasture,Pasture,Survey,N,,GS 003,N/A,"Mound heavily distructed/spread around, stones spread all over the surface"
+3091,,2010,C,Survey,Gorno Sahrane,"42°39'25.2""","25°14'08.5""",420,22,22,2,2,Yes,2,1,Pasture,Pasture,Survey,N,,GS 004,N/A,1 old and 1 fresh RT
+3092,,2010,U,Survey,Gorno Sahrane,"42°39'08.1""","25°14'28.6""",404,13,11,1.7,2,Yes,4,3,Pasture,Pasture,Survey,N,,GS 005,N/A,
+3093,,2010,U,Survey,Gorno Sahrane,"42°39'33.435""","25°13'1.407""",427,11,7,0.4,1,No,2,2,Pasture,Pasture,Survey,Y,,GS 006-2,N/A,"3 similar structures next to each other, maybe necopolis"
+3095,,2010,C,Survey,Gorno Sahrane,"42°39'35.3""","25°12'50.7""",451,27,26,6,3,Yes,3,2,Forest,Pasture/Trees,Photo,Y,,GS 006-4,N/A,"tunnel going through the mound, stony structures to be seen in the profile"
+3096,,2010,C,Survey,Gorno Sahrane,"42°39'41.5""","25°12'46.7""",447,20,15,1,1,Yes,3,2,Pasture,Pasture,Photo,Y,,GS 006-5,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3097,,2010,C,Survey,Gorno Sahrane,"42°39'30.5""","25°12'48.5""",454,18,17,2,2,Yes,2,2,Forest,Forest,Photo,Y,,GS 006-6,N/A,"No stone structures, only earth to be seen in robbers trenches"
+3099,,2010,C,Survey,Gorno Sahrane,"42°39'42.9""","25°12'42.3""",451,10,12,1,1,No,4,1,Pasture,Pasture,Photo,Prob,,GS 006-7,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3100,,2010,C,Survey,Gorno Sahrane,"42°39'42.439""","25°12'43.297""",447,11,9,0.5,1,Yes,4,5,Pasture,Pasture,Photo,Y,,GS 006-8,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3101,,2010,C,Survey,Gorno Sahrane,"42°39'46.171""","25°12'32.957""",449,16,13,1,1,Yes,4,1,Pasture,Scrub,Photo,Y,,GS 006-9,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3102,,2010,C,Survey,Gorno Sahrane," 42°39'46.316""","25°12'28.612""",452,14,8,1,1,Yes,4,5,Pasture,Pasture,Photo,Y,,GS 006-10,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3103,,2010,C,Survey,Gorno Sahrane,"42°39'44.471""","25°12'30.71""",448,12,9,1,1,Yes,3,2,Pasture,Scrub,Photo,Prob,,GS 006-11,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3104,,2010,C,Survey,Gorno Sahrane,"42°39'33.0""","25°12'32.0""",447,25,25,5,2,Yes,2,1,Pasture,Pasture and some scrub,Photo,Y,,GS 006-12,N/A,"1 RT very deep, going to bedrock"
+3105,,2010,U,Survey,Gorno Sahrane,"42°39'23.5""","25°12'55.0""",456,12,8,1.2,2,Yes,4,3,Forest,Forest,Photo,N,,GS 006-3,N/A,"very destructed, maybe by army"
+3108,,2010,C,Survey,Gorno Sahrane,"42°39'40.1""","25°12'22.0""",453,14,11,0.8,1,Yes,4,2,pasture,Scrub,Photo,Y,,GS 006-14,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3109,,2010,C,Survey,Gorno Sahrane,"42°39'39.0""","25°12'21.8""",454,9,9,1,1,Yes,3,2,pasture,Scrub,Photo,Y,,GS 006-15,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3110,,2010,C,Survey,Gorno Sahrane,"42°39'40.0""","25°12'23.6""",453,13,13,1,1,No,3,2,Pasture,Pasture and some scrub,Photo,Y,,GS 006-16,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3111,,2010,C,Survey,Gorno Sahrane,"42°39'34.7""","25°12'18.6""",456,15,15,2,2,Yes,2,1,Forest,Forest,Photo,Y,,GS 006-17,N/A,"RT made with machine 3m deep, destructed from the southern part"
+3112,,2010,C,Survey,Gorno Sahrane,"42°39'24.0""","25°12'28.6""",459,7,10,0.5,1,No,4,4,Forest,Forest,Photo,Y,,GS 006-18,N/A,stone on the surface of destructed mound 
+3113,,2010,C,Survey,Golyamo Dryano vo,"42°40'18.2""","25°14'33.2""",436,13,8.5,0.8,1,Yes,3,3,Pasture,Pasture,Photo,Y,,GD 010,N/A,"Digged through, looks like already excavated - maybe Kitov ?"
+3114,,2010,C,Survey,Golyamo Dryano vo,"42°40'28.7""","25°14'25.8""",419,30,25,2,2,Yes,3,2,Pasture,Pasture,Photo,Y,,GD 011,N/A,"old RT going through the middle of the mound, several stones on the top, looks like already excavated - Kiotv?"
+3115,,2010,U,Survey,Yasenovo,"42°40'40.0""","25°14'23.1""",428,31,23,2,2,No,1,1,Pasture,Pasture,Photo,Y,,Yasn 024-1,N/A,"mound is very spread around, looks like already excavated - Kitov?"
+3116,,2010,C,Survey,Yasenovo,"42°40'37.9""","25°14'20.7""",429,19,13,5,2,No,1,1,Pasture,Pasture,Photo,Y,,Yasn 024-2,N/A,small stones on the surface
+3117,,2010,C,Survey,Yasenovo,"42°40'24.4""","25°14'05.9""",430,16,10,1,1,No,5,4,Agriculture,Pasture,Photo,Y,,Skb 001 - 1,N/A,small stones on the surface
+3118,,2010,C,Survey,Golyamo Dryano vo,"42°40'19.4""","25°14'04.8""",432,17,13,5,2,No,2,1,Agriculture,Pasture,Photo,Y,,GD 007-2,N/A,small stones on the surface
+3119,,2010,C,Survey,Golyamo Dryano vo,"42°40'18.7""","25°14'06.2""",431,12,11,1,1,No,2,1,Pasture,Pasture,Photo,Prob,,GD 007-3,N/A,small stones on the surface
+3120,,2010,C,Survey,Golyamo Dryano vo,"42°40'20.2""","25°14'01.2""",429,19,13,1,1,No,4,4,Agriculture,Ploughed,Photo,Y,,GD 007-4,N/A,"Stone structure on the top, spread around because of heavy agriculture activities"
+3123,,2010,C,Survey,Golyamo Dryano vo,"42°40'19.2""","25°13'58.7""",430,10,10,1,1,No,4,4,Agriculture,Ploughed,Photo,Y,,GD 007-5,N/A,"Stone structure on the top, part of tumulus necropolis"
+3125,,2010,C,Survey,Golyamo Dryanovo,"42°40'49.8""","25°13'33.3""",454,19,14,2,2,No,3,1,Agriculture,Scrub,Photo,Y,,Skb 003-1,N/A,"Ploughed stones all around top, flat top, stone and earth structure"
+3127,,2010,C,Survey,Yasenovo,"42°41'36.2""","25°15'37.5""",534,20,18,6,3,Yes,2,2,Pasture,Pasture and some scrub,Photo,Y,,Yasn 020,N/A,Northern part of the mound destroyed by the dirt road
+3128,,2010,C,Survey,Yasenovo,"42°40'57.6""","25°13'53.6""",469,21,15,2.5,2,Yes,3,2,Pasture,Pasture and some scrub,Photo,Y,,YAS021_1,N/A,"Many RT's on the surface, stone structure inside, stones on the surface"
+3129,,2010,C,Survey,Yasenovo,"42°41'02.5""","25°13'53.5""",461,30,30,4,2,Yes,3,2,Pasture,Scrub,Photo,Y,,YAS021_2,N/A,"Many trenches of different sizes going to the base of mound, overgrown with trees and bushes, clusters of big stones"
+3131,,2010,C,Survey,Yasenovo,"42°41'11.1""","25°13'41.7""",480,18,13,2,2,Yes,2,1,Agriculture,Pasture,Photo,Y,,YAS021_3,N/A,"earth structure to be seen,  geographic point on top"
+3132,,2010,C,Survey,Golyamo Dryanovo,"42°40'51.6""","25°13'28.2""",460,12,10,1,1,Yes,2,2,Agriculture,Pasture and some scrub,Photo,Y,,YAS021_4,N/A,"earth and stone structure, geographic point on the top"
+3134,,2010,C,Survey,Yasenovo,"42°41'16.9""","25°14'05.6""",477,10,10,2,2,Yes,3,2,Pasture,High vegetation or scrub,Photo,Y,,Yasn 002,N/A,"Stone and earth structure, mound registered by Domaradski in AKB"
+3136,,2010,C,Survey,Golyamo Dryanovo,42°41.061',25°13.230',475,21,20,2,2,Yes,3,2,Agriculture,Pasture,Photo,Y,,Skb 003-3,N/A,"Stones on the surface, stone structure in the mouind - visible profile in RT"
+3137,,2010,C,Survey,Golyamo Dryanovo,42°41.009',25°13.229',466,32,20,2,2,Yes,3,1,Agriculture,Pasture and some scrub,Photo,Y,,Skb 003-4,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3138,,2010,U,Survey,Golyamo Dryanovo,42°41.019',25°13.367',463,60,60,0.2,1,No,5,5,Agriculture,Pasture,Photo,Y,,Skb 003-5,N/A,"very destroyed, we recognized it by many stones on the field. Destructed by agricultural work"
+3139,,2010,U,Survey,Golyamo Dryanovo,42°41.015',25°13.321',459,25,20,1,1,No,4,3,Pasture,Pasture,Photo,Prob,,Skb 003-6,N/A,"Heavily destroyed by agriculture, spread to the North."
+3140,,2010,C,Survey,Skobelevo,42°40.490',25°13.262',465,27,26,3.5,2,Yes,2,1,Pasture,Pasture,Photo,Y,,Skb 003-7,N/A,Large RT on the TOP.
+3141,,2010,C,Survey,Skobelevo,42°40.492',25°13.160',468,15,12,1,1,No,1,1,Pasture,Pasture,Photo,Y,,Skb 003-8,N/A,
+3142,,2010,C,Survey,Skobelevo,42°40.515',25°13.178',469,20,17,2,2,No,2,1,Pasture,Pasture,Photo,Y,,Skb 003-9,N/A,"Uneven surface, looks like digged through and the earth then piled back to the shape of mound."
+3143,,2010,C,Survey,Skobelevo,42°40.521',25°13.126',477,15,15,1.5,2,Yes,2,1,Pasture,Pasture,Photo,Y,,Skb 003-10,N/A,1 Old RT.
+3144,,2010,C,Survey,Skobelevo,42°40.520',25°13.072',479,25,20,3,2,Yes,2,1,Pasture,Pasture,Photo,Y,,Skb 003-11,N/A,1 old RT. Destroyed by army ? Stone structures.
+3145,,2010,C,Survey,Skobelevo,42°40.501',25°13.031',482,20,20,3,2,Yes,3,2,Pasture,Pasture,Survey,Y,,Skb 003-12,N/A,"Stone structure, some bones on the surface - large teeth cow/horse? 1 huge fresh trench on the top, 4x3, 2m deep/in 2011 another fresh RT"
+3146,,2010,C,Survey,Skobelevo,"42°40'58.206""","25°13'15.818""",470,30,30,5,2,Yes,3,3,Perennial,Pasture and some scrub,Photo,Y,,Skb 003-13,N/A,"stones/earth structure, heavily destroyed with mounds of earth around, very spread to the south, around 15 m long and 20m wide"
+3147,,2010,C,Survey,Skobelevo,"42°41'0.899""","25°13'7.6""",493,17,15,1,1,Yes,4,3,Perennial,High vegetation or scrub,Photo,Y,,Skb 003-14,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3148,,2010,C,Survey,Skobelevo,42°40.57.7',25°12.59.5',489,10,8,1.5,2,Yes,3,1,Perennial,High vegetation or scrub,Photo,Y,,Skb 003-15,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3149,,2010,C,Survey,Skobelevo,"42°40'55.64""","25°13'1.292""",488,10,8,1,1,No,3,1,Perennial,Pasture and some scrub,Photo,Y,,Skb 003-16,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3150,,2010,C,Survey,Skobelevo,"42°40'54.778""","25°12'58.971""",484,13,10,1,1,No,3,1,Perennial,Pasture and some scrub,Photo,Y,,Skb 003-17,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3151,,2010,C,Survey,Skobelevo,"42°40'54.14""","25°12'59.291""",482,11,11,1,1,No,3,1,Perennial,High vegetation or scrub,Photo,Prob,,Skb 003-18,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3153,,2010,C,Survey,Skobelevo,42°40.58.3',25°13.05.5',487,9,7,0.5,1,No,4,4,Perennial,Scrub,Photo,Y,,Skb 003-20,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3154,,2010,C,Survey,Skobelevo,"42°40'59.88""","25°13'13.928""",471,12,10,1,1,No,3,1,Perennial,Scrub,Photo,Y,,Skb 003-21,N/A,Surface of the mound covered with ca 0.5m layer of stones/either from the surrounding pasture or from the mound
+3155,,2010,C,Survey,Skobelevo,"42°41'0.009""","25°13'10.451""",486,10,8,5,2,No,4,3,Perennial,Pasture,Photo,Y,,Skb 003-22,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3156,,2010,C,Survey,Skobelevo,"42°40'58.584""","25°13'12.953""",478,8,6,1,1,No,3,1,Perennial,Scrub,Photo,Y,,Skb 003-23,N/A,Surface of the mound covered with ca 0.5m layer of stones/either from the surrounding pasture or from the mound
+3157,,2010,C,Survey,Skobelevo,"42°40'52.408""","25°13'1.816""",483,8,7,1,1,No,3,1,Perennial,Scrub,Photo,Y,,Skb 003-24,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3158,,2010,C,Survey,Skobelevo,"42°40'53.042""","25°13'1.149""",483,10,10,0.5,1,No,4,2,Perennial,Scrub,Photo,Y,,Skb 003-25,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3159,,2010,C,Survey,Skobelevo,"42°40'53.281""","25°13'2.394""",484,16,11,0.5,1,No,4,4,Perennial,Scrub,Photo,Y,5500092,Skb 003-26,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3160,,2010,C,Survey,Skobelevo,"42°40'51.888""","25°13'3.839""",483,11,10,1,1,No,3,1,Perennial,Scrub,Photo,Y,,Skb 003-27,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3161,,2010,C,Survey,Skobelevo,42°40.55.5',25°13.04.1',480,13,9,1.5,2,No,3,2,Perennial,Scrub,Photo,Y,5500067,Skb 003-28,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3162,,2010,C,Survey,Skobelevo," 42°40'55.389""","25°13'6.17""",476,9,7,0.5,1,No,3,2,Perennial,Scrub,Photo,Y,5500078,Skb 003-29,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3163,,2010,C,Survey,Skobelevo,"42°40'54.65""","25°13'6.697""",473,12,7,0.2,1,Yes,4,4,Perennial,Scrub,Photo,Y,,Skb 003-30,N/A,"heavily destructed by machines from the west, mound is negative, by the mound are piles of stones and earth originally from the mound"
+3164,,2010,C,Survey,Skobelevo,42°40.53.4',25°13.07.8',476,13,12,1,1,No,3,1,Perennial,Scrub,Photo,Y,,Skb 003-31,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3165,,2010,C,Survey,Skobelevo,42°40.57.0',25°13.08.7',473,27,12,2,2,No,3,1,Perennial,Scrub,Photo,Y,,Skb 003-32,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3166,,2010,C,Survey,Skobelevo,"42°40'54.927""","25°13'11.159""",475,8,7,0.5,1,No,4,1,Perennial,Scrub,Photo,Y,,Skb 003-33,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3167,,2010,C,Survey,Skobelevo,"42°40'55.312""","25°13'12.976""",475,9,8,1,1,No,4,3,Perennial,Scrub,Photo,Y,,Skb 003-34,N/A,Distracted by agriculture activities
+3168,,2010,C,Survey,Skobelevo,"42°40'55.287""","25°12'53.552""",486,20,15,5,2,No,3,2,Pasture,Scrub,Photo,Y,,Skb 003-35,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3170,,2010,U,Survey,Skobelevo,42°40.07.6',25°22.22.2',504,30,20,2,2,Yes,4,3,Forest,Scrub,Photo,Y,,,N/A,Hidden in the forest
+3171,,2010,C,RS,Skobelevo,42°40.57.9',25°12.22.9',502,24,20,3,2,Yes,3,2,Forest,Scrub,Photo,Y,,,N/A,"1 old RT 2.5 diameter, 1 m deep. Stone piled ontop of mound, scrub"
+3172,,2010,U,Survey,Skobelevo,42°40.58.8',25°12.27.4',505,13,10,5,2,Yes,3,2,Forest,Scrub,Photo,Y,,,N/A,military entrenchment
+3173,,2010,U,Survey,Skobelevo,42°40.58.9',25°12.27.9',505,10,8,1,1,No,3,2,Forest,Scrub,Photo,Y,,,N/A,"scrub, military entrenchment"
+3174,,2010,U,Survey,Skobelevo,42°40.59.8',25°12.27.3',506,18,14,1.5,2,No,2,1,Forest,Scrub,Photo,Y,,,N/A,Surface of the mound covered with lots of stones
+3175,,2010,U,Survey,Skobelevo,42°41.00.1',25°12.27.9',506,11,10,1,1,Yes,3,2,Forest,Scrub,Photo,Y,,,N/A,"1 old RT, 1 tree on top"
+3176,,2010,C,Survey,Skobelevo,42°41.00.6',25°12.28.7',505,16,13,1.2,2,No,4,2,Forest,Scrub,Photo,Y,,,N/A,large stones on outside - krepis?
+3177,,2010,C,Survey,Skobelevo,42°41.01.2',25°12.29.4',505,20,20,6,3,No,2,2,Forest,Scrub,Survey,N,,,N/A,"pile of stones on south side, 1m thick, dense scrub"
+3178,,2010,C,Survey,Skobelevo,42°41.01.3',25°12.31.1',504,20,20,1.5,2,No,3,2,Forest,Scrub,Photo,Y,,,N/A,"Surface of the mound covered with lots of stones, connected with previous object, part of military structure?"
+3179,,2010,U,Survey,Skobelevo,42°41.00.2',25°12.32.1',506,30,20,1,1,Yes,2,1,Forest,Scrub,Photo,Y,,,N/A,Mound or military structure?
+3180,,2010,U,Survey,Skobelevo,42°41.04.8',25°12.34.4',503,3,3,0,1,Yes,5,5,Pasture,Pasture,Photo,Y,,,N/A,"Defunct mound, hole around 3m diameter, 1m deep"
+3182,,2010,C,Survey,Skobelevo,42°41.00.0',25°12.36.9',499,20,20,2,2,No,3,2,Forest,Pasture,Photo,Prob,,,N/A,mound used for military purposes
+3183,,2010,C,Survey,Skobelevo,42°41.00.1',25°12.40.4',491,25,20,2,2,Yes,4,4,Pasture,Pasture,Photo,N,,,N/A,"mound spread to the south, earth from mound been removed, southern part of mound is 10 meters of earth"
+3184,,2010,C,Survey,Skobelevo,42°41.01.8',25°12.42.9',490,20,20,4,2,Yes,3,3,Pasture,Scrub,Photo,Y,,,N/A,"1 huge RT 5m diameter 2 m deep, lot of stones, some bricks and tiles"
+3185,,2010,C,Survey,Skobelevo,42°41.01.5',25°12.45.0',490,15,10,1,1,No,4,3,Pasture,Scrub,Photo,Prob,,,N/A,heavily distracted by agriculture
+3186,,2010,C,Survey,Skobelevo,42°41.01.1',25°12.45.8',488,20,20,1,1,Yes,4,3,Pasture,Scrub,Photo,Prob,,,N/A,2 old small RT
+3187,,2010,C,RS,Skobelevo,42°40.59.2',25°12.43.9',490,10,10,0.5,1,No,3,2,Pasture,Scrub,Photo,Y,,,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3189,,2010,U,RS,Skobelevo,42°40.58.0',25°12.45.8',490,20,10,1,1,No,3,3,Pasture,Scrub,Photo,Y,,,N/A,uneven shape
+3190,,2010,U,RS,Skobelevo,42°40.57.5',25°12.44.3',489,20,10,0.5,1,No,4,4,Pasture,Pasture,Photo,Y,,,N/A,Several stones on the surface
+3191,,2010,U,RS,Skobelevo,42°40.56.6',25°12.43.5',487,18,15,0.6,1,No,4,4,Pasture,Pasture,Photo,Y,,,N/A,Several stones on the surface
+3192,,2010,U,RS,Skobelevo,42°40.57.5',25°12.40.3',489,18,16,2,2,Yes,4,3,Pasture,Pasture and some scrub,Photo,Y,,,N/A,Surface of the mound covered with lots of stones (20x20x30cm)/either from the surrounding pasture or from the mound
+3193,,2010,U,Survey,Skobelevo,42°40.55.5',25°12.42.8',486,14,12,1,1,Yes,4,4,Pasture,Pasture and some scrub,Photo,Y,,,N/A,low mound with low RT full of stones
+3194,,2010,U,Survey,Skobelevo,42°40.54.5',25°12.44.7',487,25,12,0.8,1,Yes,4,3,Forest,Scrub,Photo,Y,,,N/A,mound secondary used by military?
+3195,,2010,U,Survey,Skobelevo,42°40.55.0',25°12.47.2',490,20,12,0.6,1,No,3,2,Forest,Scrub,Survey,N,,,N/A,"lot of small stones on surface, used by military/military structure?"
+3196,,2010,U,Survey,Skobelevo,42°40.59.0',25°12.50.8',481,11,10,0.8,1,No,4,4,Pasture,Scrub,Photo,Y,,,N/A,Destroyed by machine
+3197,,2010,U,RS,Skobelevo,"42°40'58.467""","25°12'47.992""",488,9,6,0.5,1,No,4,4,Pasture,Scrub,Photo,Y,,,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3198,,2010,U,RS,Skobelevo,"42°40'59.5""","25°12'47.948""",486,10,10,0.5,1,No,3,2,Pasture,Scrub,Photo,Y,,,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3199,,2010,C,RS,Skobelevo,"42°40'58.746""","25°12'50.954""",482,14,12,1,1,No,3,2,Pasture,Pasture,Photo,Y,,,N/A,Surface of the mound covered with lots of stones/either from the surrounding pasture or from the mound
+3200,,2010,U,RS,Skobelevo,42°41.02.6',25°12.47.2',489,25,17,1,1,Yes,3,3,Pasture,Pasture,Photo,Y,,,N/A,"defunct mound, almost destroyed, middle is carved out, military purpose ?"
+3201,,2010,C,RS,Skobelevo,42°41.04.0',25°12.58.1',490,20,15,1,1,Yes,3,3,Pasture,Scrub,Photo,Y,,,N/A,large RT on south side
+3203,,2010,C,RS,Sheynovo,42°41'48.926,25°17'39.14 ,477,30,30,4,2,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,Mound secondary used by army? Piles of earth from the mound spread around. Very destructed.
+3204,,2010,C,RS,Sheynovo,"42°42'7.952""","25°17'33.881""",489,15,12,1,1,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,destructed and spread around
+3205,,2010,C,RS,Sheynovo,"42°42'5.794"" ","25°17'35.081""",485,20,20,2,2,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,stone and earth structure.Pile of earth north of mound
+3206,,2010,U,RS,Sheynovo,42°42'8.339 ,"25°17'27.047""",487,10,8,1.5,2,Yes,3,3,Pasture,Pasture,Photo,Y,,,N/A,RT is from West
+3207,,2010,C,RS,Sheynovo,"42°41'52.093"" ","25°18'1.312""",482,35,35,5,2,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,on the top geodetic point PT 23. In the profile of RT very fine soil with small stones.
+3208,,2010,C,RS,Sheynovo,"42°41'43.271"" ","25°18'13.064"" ",476,35,30,4.5,2,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,"Very destructed from the southern part by robbers. Earth mixed up, looks like it was digged throught and put back."
+3209,,2010,C,RS,Sheynovo,"42°41'48.015"" ","25°18'23.315""",479,35,30,4,2,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,Pile of earth next to the mound- on the west side
+3210,Golyama Arzenalka,2010,C,RS,Sheynovo,"42°41'58.616"" ","25°18'33.691""",497,60,60,7,3,Yes,3,1,Pasture,Pasture,Photo,Y,,,4th C BC,Excavated by TEMP. Tomb inside. Outside Sarcophagus brought from Malkata mogila. On the top geodetic point PT 3
+3211,,2010,C,RS,Sheynovo,"42°42'5.084"" ","25°18'41.009"" ",500,30,30,5,2,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,On the top geodetic point PT 21.Very destructed and spread around
+3212,,2010,C,RS,Sheynovo,"42°42'16.38"" ","25°17'50.387"" ",502,26,26,6,3,Yes,3,2,Perennial,Scrub,Photo,Y,,,N/A,One big mound with 2 big piles of earth on the sides.Mound already excavated or secondary used
+3213,,2010,U,RS,Shipka,"42°42'18.758"" ","25°17'52.375""",504,17,17,2,2,Yes,3,2,Pasture,Scrub,Photo,Y,,,N/A,Looks like it was digged through and soil put back
+3214,Ilyevata mogila,2010,U,RS,Shipka,"42°42'29.748"" ","25°17'57.738"" ",529,70,50,4,2,Yes,3,2,Pasture,Scrub,Photo,Y,,,N/A,"destroyed by machines, road going through the middle, excavated by Kitov ?"
+3215,,2010,C,RS,Shipka,"42°42'5.09""","25°18'36.291"" ",499,25,25,4,2,Yes,4,3,Pasture,Pasture,Photo,Y,,,N/A,"RT took Northern part, geodetic point on top TP2"
+3216,,2010,U,RS,Shipka,"42°42'7.274"" ","25°18'28.891"" ",509,25,25,0.8,1,Yes,4,4,Pasture,Pasture,Photo,Y,,,N/A,"ploughed out and destroyed, many small RT's after work with metal detector"
+3217,,2010,U,RS,Shipka,"42°42'19.863"" ","25°18'37.894""",503,15,3,1.5,2,Yes,4,3,Agriculture,Scrub,Photo,Y,,,N/A,half of the mound in the N missing
+3218,Donkova mogila,2010,C,RS,Shipka,"42°42'23.692"" ","25°18'43.908""",516,50,50,10,3,Yes,1,1,Agriculture,Scrub,Photo,Y,,,2nd half of 4th C. B.C.,Excavated by TEMP. Large stone structure on the top - temple. Pithoi found in the mound.
+3219,,2010,C,RS,Shipka,"42°42'27.011"" ","25°18'50.477""",516,20,20,2,2,Yes,3,2,Agriculture,Scrub,Photo,Y,,,N/A,Pile of earth on the South side of the mound
+3220,,2010,C,RS,Shipka,"42°42'30.905"" ","25°18'47.315""",513,40,40,8,3,Yes,3,3,Pasture,Scrub,Photo,Y,,,N/A,"heavily destroyed by machine, robber's trench 3-4m deep going through the middle of the mound"
+3221,,2010,C,RS,Shipka,"42°42'32.857"" ","25°18'45.655""",517,20,20,3.5,2,Yes,4,3,Pasture,Scrub,Photo,Y,,,N/A,"twice crossed by machine, very heavily destroyed"
+3222,,2010,C,RS,Shipka,"42°42'37.198""","25°18'46.105"" ",530,35,35,4,2,Yes,3,2,Pasture,Scrub,Photo,Y,,,N/A,"buldozed, 1 old RT made by machine from the North. "
+3223,,2010,C,RS,Shipka,"42°42'3.611"" ","25°18'52.587""",495,30,20,3,2,Yes,3,2,Agriculture,Pasture,Photo,Y,,,N/A,"old RT on the West side, 2 brand new (2011) small test trenches on E side"
+3224,,2010,C,RS,Yasenovo,"42°41'37.55"" ","25°16'58.566""",472,15,15,2,2,No,2,1,Perennial,Pasture,Photo,Y,,,N/A,"well preserved, guardspot on top"
+3242,,2011,C,RS,Gorno Sahrane necropolis,"42°39'44.052""","25°13'7.352""",442,30,30,3,2,Yes,2,1,Agriculture,Pasture,Photo,Y,,,N/A,Very good condition. Few RT's (old). Scattered medium-sized stones. High priority conservation recommended.
+3243,,2011,C,RS,Gorno Sahrane necropolis,"42°39'43.476""","25°13'9.81""",442,26,26,1,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Old shallow RT's. Good conditions.
+3244,Gashtova mogila,2011,C,RS,Gorno Sahrane,"42°41'30.018""","25°21'14.086""",455,25,25,4,2,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,Old RT on top I middle. Smaller mound next to the main RT on the south side. Side of mound taken off on western side.
+3250,,2011,C,Survey,Shipka,"42°41'42.708""","25°20'55.576""",490,36,31,4,2,No,1,1,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,"No obvious robbers trenches, scrap bushes everywhere, medium size stones, Ottomanic green pottery"
+3251,Svetica,2011,C,Survey,Kran,"42°41'16.5""","25°22'8.063""",488,40,40,10,3,Yes,1,1,Agriculture,High vegetation or scrub,Photo,Y,,,2nd half of 5th C BC,"Excavated by TEMP in 2004, museum inside"
+3252,,2011,C,Survey,Shipka,"42°41'58.594""","25°20'34.376""",496,33,15,5,2,Yes,4,3,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,"Appears to be a mound that has been completely destroyed in the middle. Surrounded by a lot of stones, covered in bush. "
+3254,Ostrusha,2011,C,Survey,Shipka,"42°41'23.105""","25°21'3.587""",472,85,60,20,3,Yes,1,1,Agriculture,Pasture,Photo,Y,,,350 BC,"Excavated by TEMP. Flat top, dug out"
+3255,,2011,C,Survey,Shipka,"42°41'23.344""","25°21'11.155""",478,40,40,8,3,No,2,1,Agriculture,Scrub,Photo,Y,,,N/A,"Flat top, 1877 Russian memorial at the top"
+3256,,2011,C,Survey,Shipka,"42°41'24.022""","25°21'15.644""",482,15,15,2.5,2,Yes,3,1,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,Multiple robbers trenches all over the surface
+3257,,2011,C,Survey,Shipka,"42°41'28.107""","25°21'3.494""",479,35,32,8,3,Yes,3,2,Agriculture,Scrub,Photo,Y,,,N/A,"Large RT on S side, flattened top"
+3258,,2011,C,Survey,Shipka,"42°41'29.929""","25°21'14.558""",482,37,36,5,2,Yes,3,2,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,"Flat top, small monument with cross on the top"
+3259,,2011,C,Survey,Shipka,"42°41'30.851""","25°21'4.59""",386,35,25,8,3,Yes,3,1,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,Dug out mound with pile of soil next to it
+3260,Golyama Kosmatka,2011,C,Survey,Shipka,"42°41'59.976""","25°20'0.69""",491,130,130,20,3,No,1,1,Pasture,Pasture,Photo,Y,,,5th C BC,"Excavated by TEMP 2004, Museum inside"
+3261,Malka Kosmatka,2011,C,Survey,Shipka,"42°42'0.214""","25°20'8.098""",495,72,65,10,3,Yes,3,2,Pasture,High vegetation or scrub,Photo,Y,,,4th C BC,Partly excavated by TEMP. Southern part of the mound was taken by machine (1/3 of the mound)
+3262,,2011,C,Survey,Shipka,"42°41'58.384""","25°19'53.434""",489,32,29,4,2,Yes,2,1,Pasture,High vegetation or scrub,Photo,Y,,,N/A,RT on the top (1x2x0.5)
+3263,,2011,C,Survey,Shipka,"42°41'58.315""","25°19'49.836""",494,40,31,4,2,Yes,3,2,Pasture,High vegetation or scrub,Photo,Y,,,N/A,"Many old trenches, flat on top"
+3264,,2011,C,Survey,Shipka,"42°42'3.719""","25°22'18.3""",488,36,32,5,2,Yes,3,2,Pasture,High vegetation or scrub,Photo,Y,,,N/A,Huge RT on S
+3266,,2011,C,Survey,Sheynovo,"42°41'20.087""","25°18'7.841""",458,25,25,1,1,No,5,5,Agriculture,Ploughed,Photo,Y,,,N/A,"Heavily destroyed by agriculture, harrowed and ploughed, stones scattered around, medium to small"
+3267,,2011,C,Survey,Sheynovo,"42°41'19.034""","25°18'8.012""",454,25,24,3,2,Yes,3,2,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,"RT on the top and fom the N side, old shallow RT's, animal burrows on S side"
+3269,,2011,C,Survey,Sheynovo,"42°41'17.692""","25°18'8.381""",452,25,20,0.5,1,No,5,5,Agriculture,Ploughed,Photo,Y,,,N/A,"Destroyed by agriculture, lots of stones of medium sizes spread around"
+3270,,2011,C,Survey,Sheynovo,"42°41'33.063""","25°18'26.103""",468,30,30,4,2,Yes,2,1,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,"flat top=probably excavated-robbed, smaller all over the top 5x shallow, old vegetation grass"
+3271,,2011,C,Survey,Sheynovo,"42°41'40.651""","25°18'35.366""",472,25,19,5,2,Yes,4,2,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,"mound next to the factory=GUN factory, RT with concrete, tiles, burnt wood (rebuilt into toilet), excavated by Kitov"
+3272,,2011,C,Survey,Sheynovo,"42°41'33.603""","25°18'36.056""",470,37,33,2,2,Yes,4,2,Agriculture,High vegetation or scrub,Photo,Y,,,Roman,"excavated by Kitov, not originally preserved, soil put back, data told by Nikolay - excvavated with Kitov"
+3273,,2011,C,Survey,Shipka,"42°41'38.448""","25°20'24.33""",476,40,30,2,2,Yes,2,2,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,"low spread mound, no obvious RTs BUT highly probable that N part was disturbed by robbers"
+3275,,2011,C,Survey,Dolno Sahrane,"42°37'34.018""","25°16'14.423""",407,15,15,1,1,No,4,4,Beach,Scrub,Photo,Y,,,N/A,"flat mound, scattered stones of medium size"
+3276,,2011,C,Survey,Dolno Sahrane,"42°37'31.281""","25°16'34.205""",405,30,20,3,2,Yes,2,1,Beach,Stones,Photo,Y,,,N/A,stony huge mound on the beach of Koprinka
+3277,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'59.022""","25°12'47.839""",455,10,10,0.6,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,tyre tracks through the middle and side of the mound
+3278,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'59.148""","25°12'49.482""",455,12,12,0.5,1,No,2,2,Pasture,Pasture,Photo,N,,,N/A,no RTs or stones on surface 
+3279,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'55.598""","25°12'48.598""",453,6,6,0.3,1,No,4,5,Pasture,Pasture,Photo,Y,,,N/A,"no RT, very low"
+3280,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'56.302""","25°12'51.323""",453,8,8,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,only a couple of stones on surface
+3281,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'57.146""","25°12'53.569""",453,15,15,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,very shallow depression at the top
+3283,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'55.48""","25°13'0.15""",449,8,6,0.3,1,Yes,3,3,Pasture,Pasture,Photo,Y,,,N/A,"Boundaries undefinable, most of the mound taken out (RT in the middle)."
+3284,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'54.187""","25°13'6.123""",445,8,8,0.2,1,No,2,4,Pasture,Pasture,Photo,Y,,,N/A,some stones (big) on surface
+3286,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'55.186""","25°13'6.415""",446,8,7,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Several stones on the top, undefinable boundaries "
+3287,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'55.365""","25°13'7.701""",446,4,4,0.2,1,Yes,3,3,Pasture,Pasture,Photo,Y,,,N/A,RT taken to alternate side (w) of mound and sol deposited on east side
+3288,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'54.006""","25°13'10.836""",444,6,6,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Several stones on the top.
+3289,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'52.704""","25°13'13.11""",442,8,8,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"some stones on surface, eneven suface, shallow and old RT on side "
+3291,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'51.306""","25°13'17.384""",439,4,4,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,some small stones on surface
+3293,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'51.24""","25°13'23.782""",437,23,14,1,1,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,"possibly military use , many stones"
+3294,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'47.946""","25°13'31.894""",432,15,15,1,1,No,1,1,Pasture,Pasture,Photo,Y,,,N/A,few stones on surface
+3296,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'49.008""","25°13'38.948""",438,10,10,0.3,1,No,1,1,Pasture,Pasture,Photo,Y,,,N/A,on edge of ploughed feld with many stones
+3297,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'49.722""","25°13'38.666""",437,10,8,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"low mound barely viible, no stones on the surface"
+3299,,2011,C,RS,Gorno Sahrane necropolis,"42°39'53.766""","25°13'15.778""",442,15,15,1,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,many stones found spread all over the surface
+3301,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'58.068""","25°13'7.02""",448,10,10,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"small/shallow pit on east side, no stones"
+3302,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'59.55""","25°13'1.024""",449,10,10,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,no stones or visible RTs
+3303,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'58.572""","25°13'1.95""",448,4,4,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"barely visible, no stones, undefined boundaries "
+3304,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'1.032""","25°12'59.49""",451,6,6,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,no stones or RTs
+3305,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'58.566""","25°13'1.942""",457,6,6,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"barely visible, no stones, undefined boundaries "
+3307,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'59.676""","25°12'47.05""",455,10,10,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,no trench or stones 
+3308,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'1.797""","25°12'48.098""",456,6,5,0.2,1,Yes,4,4,Pasture,Pasture,Photo,Y,,,N/A,"RT on top took whole mound, deposit on side"
+3309,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'59.056""","25°12'44.751""",454,8,6,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"barely visible, no stones or obvious RTs"
+3310,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'59.89""","25°12'42.23""",458,11,5,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,no stones or RTs on surface
+3311,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'0.641""","25°12'41.324""",462,8,8,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,stones spread all over the surface
+3312,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'1.937""","25°12'41.097""",463,22,4,3,2,Yes,4,3,Pasture,Pasture,Photo,Y,,,N/A,"Only large trench left (15x2x1m), pile of soil on N side, stones in RT."
+3315,,2011,C,RS,Gorno Sahrane necropolis,"42°39'32.744"" ","25°13'33.387""",425,23,20,2,2,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,"Scatter of medium-sized stones. Bulldozed extensively on western side. North-eastern side taken off in past (but is uniform in removal of earth, showing possible excavation work). Many old RT's. New RT on top (RT3)."
+3316,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'36.34""","25°13'23.714""",436,11,11,0.9,1,No,4,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized stones. Old RT on top.
+3317,,2011,C,RS,Gorno Sahrane necropolis,"42°39'38.747""","25°13'17.984""",435,13,13,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Old RT. Flattened on top.
+3318,,2011,C,RS,Gorno Sahrane necropolis,"42°39'38.249""","25°13'14.228""",436,17,15,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized rocks. One old crater (RT1) on top.
+3319,,2011,C,RS,Gorno Sahrane necropolis,"42°39'34.619""","25°13'24.094""",435,18,18,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Old RT's (very shallow). Scatter of medium-sized stones. 
+3320,,2011,C,RS,Gorno Sahrane necropolis,"42°39'31.764""","25°13'34.737""",426,10,8,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized stones. No obvious RT's.
+3321,,2011,C,RS,Gorno Sahrane necropolis,"42°39'32.389""","25°13'34.508""",425,10,10,0.4,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Top cut off. Old RT.
+3322,,2011,C,RS,Gorno Sahrane necropolis,"42°39'30.353""","25°13'32.782""",426,17,17,0.6,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized stones. RT1 almost taken off top.
+3323,,2011,C,RS,Gorno Sahrane necropolis,"42°39'29.753""","25°13'36.314""",427,10,10,0.4,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Old, shallow RT's. Scatter of medium-sized stones. "
+3324,,2011,C,RS,Gorno Sahrane necropolis,"42°39'33.757""","25°13'31.214""",427,15,15,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Scatter of medium-sized stones. Old damage on south and east side, nothing fresh however."
+3325,,2011,C,RS,Gorno Sahrane necropolis,"42°39'40.129"" ","25°13'28.611""",432,8,8,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,overgrown; small stones on the surface
+3326,,2011,C,RS,Gorno Sahrane necropolis,"42°39'42.188""","25°13'25.336""",437,10,10,1,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,large stones covering the surface
+3327,,2011,C,RS,Gorno Sahrane necropolis,"42°39'19.772""","25°13'26.775""",428,15,15,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized stones. No obvious RT's.
+3328,,2011,C,RS,Gorno Sahrane necropolis,"42°39'20.956""","25°13'24.447""",427,17,13,0.7,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized stones. Recent geodetic marker placed on top of mound (origin-2008). Built on natural slope-hard to determine some aspects. No obvious RT's.
+3329,,2011,C,RS,Gorno Sahrane necropolis,"42°39'22.06""","25°13'22.701""",428,6,6,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized stones. No obvious RT's.
+3331,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'2.802""","25°12'49.168""",458,6,6,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,vey few small stones
+3332,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'3.156""","25°12'48.876""",458,8,8,0.3,1,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,2 stones on top ver shalow ad over grown ditch (RT?) on top and east
+3334,,2011,C,Survey,Gorno Sahrane,"42°40'3.27""","25°12'59.812""",453,23,23,2,2,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,only a small/shallow/old trench on west side
+3336,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'2.976""","25°12'57.624""",454,9,7,1,1,Yes,4,2,Pasture,Pasture,Photo,Y,,,N/A,Many stones
+3337,,2011,C,RS,Gorno Sahrane necropolis,"42°39'22.074""","25°13'14.586""",433,7,7,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized rocks. No obvious RT's.
+3338,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'23.639""","25°13'16.386""",431,16,15,0.7,1,No,4,2,Pasture,Pasture,Photo,Y,,,N/A,"Scatter of medium-sized stones. Large, round mound. Old RT's."
+3339,,2011,C,RS,Gorno Sahrane necropolis,"42°39'24.816""","25°13'18.308""",431,14,14,1,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Scatter of medium-sized rocks. 2 small, shallow RT's)."
+3340,,2011,C,RS,Gorno Sahrane necropolis,"42°39'27.15""","25°13'21.666""",431,10,8,0.9,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Scatter of medium-sized stones. 2 old, shallow RT's."
+3341,,2011,C,RS,Gorno Sahrane necropolis,"42°39'27.887""","25°13'24.876""",429,15,15,0.8,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized stones. No obvious RT's. Slightly taprs off on north side.
+3342,,2011,C,RS,Gorno Sahrane necropolis,"42°39'26.788""","25°13'13.795""",437,13,10,0.7,1,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,"Scatter of medium-sized rocks. Small, old RT on east side. Reasonable good condition."
+3343,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'25.736""","25°13'14.717""",436,14,13,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized rocks all over the surface.
+3344,,2011,C,RS,Gorno Sahrane necropolis,"42°39'24.961""","25°13'15.492""",436,12,4,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Scatter of medium-sized stones. Lots of old, scattered RT's."
+3345,,2011,C,RS,Gorno Sahrane necropolis,"42°39'29.711""","25°13'19.908""",431,9,9,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized stones. No obvious RT's.
+3346,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'19.531""","25°13'15.21""",433,6,6,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scattered medium-sized rocks. Custer of four mounds close together. Very small mound conjoined with 2 other nearby mounds.
+3347,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'41.01""","25°13'19.878""",433,9,9,0.4,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized stones. 1 old RT on top. Joined with smaller mound on south side.
+3349,,2011,C,RS,Gorno Sahrane necropolis," 42°39'34.373""","25°13'34.624"" ",422,10,10,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"small stones on the surface, partially destroyed by agriculture"
+3350,,2011,C,RS,Gorno Sahrane necropolis,"42°39'33.727""","25°13'33.816""",424,15,15,0.5,1,No,4,3,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. Scatter of medium-sized rocks. Canal cut straight through middle (running north-south).
+3351,,2011,C,RS,Gorno Sahrane necropolis,"42°39'44.295""","25°13'8.225""",443,15,7,0.5,1,No,3,2,Pasture,Pasture,Photo,Y,,,N/A,Canal cut through (running N-S). 
+3352,,2011,C,RS,Gorno Sahrane necropolis,"42°39'38.468""","25°13'22.733""",436,5,5,0.3,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized stones. Extremely small RT (old).
+3353,,2011,C,RS,Gorno Sahrane necropolis,"42°39'36.001""","25°13'33.426""",421,8,8,0.5,1,No,2,2,Agriculture,Pasture/Ploughed,Photo,Y,,,N/A,partially destroyed by agriculture
+3354,,2011,U,Survey,Gorno Cherkhovishte,"42°34'59.409""","25°16'16.381""",430,7,5,0.5,1,Yes,1,1,Pasture,Pasture and some scrub,Photo,Y,,,N/A,low and almost invisible mound
+3355,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'11.945""","25°13'22.842""",422,15,13,0.3,1,No,3,3,Perennial,Ploughed,Photo,Y,,,N/A,Almost invisible due to agriculture work.
+3356,,2011,C,RS,Gorno Sahrane necropolis,"42°39'12.419""","25°13'21.475""",424,9,9,0.4,1,No,5,5,Perennial,Perennial,Photo,Y,,,N/A,"Situated in lavender field. Scatter of medium-sized rocks. Defunct mound, ploughed up completely. No obvious RT's."
+3359,Mogila Drenaka,2011,C,AKB,Dunavzi,"42°40'49.8""","25°13'53.6""",380,25,25,5,2,Yes,2,1,Pasture,Pasture,Photo,Y,5500092,,N/A,Small stones on the surface and in the RT. Thracian? Elevation marker on the top.
+3361,,2011,C,AKB,Golyamo Dryanovo,"42°39'17.784""","25°16'24.042""",383,32,30,5,2,Yes,3,2,Agriculture,High vegetation or scrub,Photo,Y,5500067,,N/A,"Animal intrusions, RT from S"
+3367,,2011,C,RS,Gorno Sahrane necropolis,"42°39'20.022""","25°13'15.282""",433,15,8,1,1,Yes,4,4,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. Extremely bad condition. Has been bulldozed (possible excavation work).
+3368,,2011,C,RS,Gorno Sahrane necropolis,"42°39'24.912""","25°13'13.248""",437,18,11,1,1,Yes,4,4,Pasture,Pasture,Photo,Y,,,N/A,Dufunct mound. Bulldozed (possible excavation work).
+3375,,2011,C,RS,Gorno Sahrane necropolis,"42°39'41.737""","25°13'25.814""",437,12,10,0.5,1,Yes,3,3,Pasture,Pasture,Photo,Y,,,N/A,large RT destroyed the southern and central areas of the mound
+3391,,2011,C,Survey,Rozovo,"42°35'17.567""","25°24'24.73""",311,35,35,4,2,Yes,3,2,Agriculture,High vegetation or scrub,Photo,Y,5500071,,N/A,mound is digged trough; exposed burial chamber made of bricks.
+3394,,2011,C,Survey,Rozovo,"42°33'27.65""","25°25'20.466""",322,10,10,2,2,Yes,2,1,Pasture,High vegetation or scrub,Photo,Y,5500074,,N/A,overgrown with rose bushes; 1 RT visible (south) Stones from the burial chamber are visible on the surface;
+3395,,2011,C,Survey,Rozovo,"42°33'29.493""","25°25'27.171""",320,20,20,5,2,Yes,2,1,Forest,High vegetation or scrub,Photo,Prob,5500075,,N/A,Large stones covering the surface. One deep old RT at the top with several holes at the bottom of the trench (consequently made)
+3396,,2011,C,Survey,Rozovo,"42°33'24.361""","25°25'50.758""",316,50,50,5,2,Yes,3,2,Forest,High vegetation or scrub,Photo,Y,5500076,,N/A,"Hardly accessible; overgrow; S side take with machine; top looks intact with several test-pits, but locals told us that the chamber used to be exposed and then covered with soil again by the municipality (several years ago)."
+3397,,2011,C,Survey,Rozovo,"42°33'21.467""","25°25'49.089""",322,25,25,4,2,Yes,3,2,Agriculture,High vegetation or scrub,Photo,Y,5500072,,N/A,Hardly accessible. Two fresh RTs. Large stones at the bottom (probably from the chamber).
+3398,,2011,C,Survey,Rozovo,"42°33'23.458""","25°25'55.333""",315,50,50,6,3,Yes,3,2,Forest,High vegetation or scrub,Photo,Y,5500073,,N/A,"Several big RTs at the top;  1 going to the bedrock, stones from the chamber are visible on the surface; According to the land owner a copper axe has been found approx. 10 years ago. In the nearby rose fields ceramic shreds have been found (uknown period); nothing visible on the surface at the moment; "
+3400,,2011,C,Survey,Gorno Cherkhovishte,"42°33'3.218""","25°18'41.49""",481,10,10,1,1,Yes,4,2,Pasture,Pasture,Photo,Y,,,N/A,"Central area completely destroyed by RT 1, small rocks and sandy soil on surface."
+3406,,2011,U,Survey,Gorno Cherkhovishte,"42°35'0.51""","25°16'16.714""",432,30,20,2,2,Yes,3,2,Pasture,Pasture and some scrub,Photo,Y,,,N/A,Modern concrete structure/ cistern - reused mound ?
+3407,,2011,C,Survey,Gorno Cherkhovishte,"42°34'58.7""","25°16'16.538""",428,12,12,1,1,Yes,2,1,Pasture,Pasture,Photo,Y,,,N/A,1 old RT on the top.
+3408,,2011,C,Survey,Gorno Cherkhovishte,"42°34'58.226""","25°16'16.282""",428,30,30,2,2,Yes,2,1,Pasture,Pasture,Photo,Y,,,N/A,top was taken
+3409,,2011,C,Survey,Gorno Cherkhovishte,"42°35'0.099""","25°16'27.55""",410,12,12,5,2,Yes,2,1,Pasture,Pasture,Photo,Y,,,N/A,1 old RT (2x2x0.5).
+3410,,2011,C,Survey,Gorno Cherkhovishte,"42°34'59.006""","25°16'29.379""",411,35,35,4,2,Yes,3,2,Pasture,Forest,Photo,Y,,,N/A,overgrown with pine forest; central area is entirely destroyed by large RT (12x20x3); sandy soil and small stones on top;
+3417,,2011,C,Survey,Gorno Cherkhovishte,"42°35'28.701""","25°15'55.023""",454,30,30,4,2,Yes,3,1,Pasture,Pasture and some scrub,Photo,Y,,,N/A,next to a plaughed field; S part two RTs; 1 going to bedrock
+3418,,2011,C,Survey,Viden,"42°35'51.264""","25°15'29.435""",435,32,32,4,2,Yes,3,1,Pasture,High vegetation or scrub,Photo,Y,,,N/A,Deep RT on the top (1.5x2x3).
+3419,,2011,C,Survey,Viden,"42°35'23.745""","25°15'36.023""",454,20,20,5,2,Yes,3,3,Pasture,High vegetation or scrub,Photo,Y,,,N/A,dugged through; sandy redish soil with small stones on the surface
+3420,,2011,C,Survey,Viden,"42°35'23.015""","25°15'37.462""",453,12,10,1.5,2,No,4,3,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,"Entirely overgrown with thorny bushes, destructed by ploughing of surrounding field"
+3421,,2011,C,Survey,Viden,"42°35'16.715""","25°15'38.671""",455,20,20,2.5,2,No,2,1,Pasture,High vegetation or scrub,Photo,Y,,,N/A,Not accessible
+3422,,2011,C,RS,Gorno Sahrane necropolis,"42°39'20.612""","25°13'32.351""",427,24,18,0.9,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized stones. Geodetic marker (old) on top of mound. North side of mound ploughed away at past point. 1 old RT on top of existing mound.
+3423,,2011,C,RS,Gorno Sahrane necropolis,"42°39'18.392""","25°13'19.241""",428,8,5,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Scatter of medium-sized rocks. RT running E-W, tapers off mound at E side."
+3424,,2011,C,RS,Gorno Sahrane necropolis,"42°39'24.209""","25°13'16.026""",433,15,7,0.4,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized rocks. Defunct mound. Dissassembled into various piles.
+3426,,2011,C,RS,Gorno Sahrane necropolis,"42°39'35.362""","25°13'22.411""",437,6,5,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized stones. No obvious RT's.
+3428,,2011,C,RS,Gorno Sahrane necropolis,"42°39'21.699""","25°13'13.607""",435,12,12,0.1,1,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,"Defunct mound. High concentration of stones (large as well) are indicative of former presence of larger mound. Also some RT's confirming this, bu still hard to determine whether site is truly a mound or not."
+3429,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'19.74""","25°13'15.456""",433,10,10,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized rocks. No obvious RT's. Surrounded by 3 other mounds.
+3432,,2011,C,RS,Gorno Sahrane necropolis,"42°39'33.278""","25°13'16.817""",432,12,10,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized rocks. Road cuts through part of western side. No obvious RT's.
+3433,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'39.844""","25°13'15.875""",436,16,15,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized stones. 1 old RT.
+3434,,2011,C,RS,Gorno Sahrane necropolis,"42°39'36.424""","25°13'22.187""",437,10,10,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Very shallow, old RT. Scatter of medium-sized stones. "
+3435,,2011,C,RS,Gorno Sahrane necropolis,"42°39'35.834""","25°13'21.809""",435,10,10,0.4,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized stones. 1 old RT.
+3437,,2011,C,RS,Gorno Sahrane necropolis,"42°39'29.849""","25°13'15.642""",432,9,6,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized rocks. No obvious RT's.
+3438,,2011,C,RS,Gorno Sahrane necropolis,"42°39'38.92""","25°13'30.546""",430,15,10,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,scatter of small stones on the surface
+3439,,2011,C,RS,Gorno Sahrane necropolis,"42°39'48.123""","25°13'6.511""",446,12,10,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,small stones on the surface of the mound;
+3440,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'50.202""","25°13'6.789""",444,10,10,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of small stones all over the surface
+3441,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'53.157""","25°13'8.575""",444,12,12,1,1,No,4,2,Pasture,Pasture,Photo,Y,,,N/A,"some stones on top, uneven surface, small/ very shalow dips on top"
+3442,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'48.198""","25°13'4.142""",448,15,11,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,overgrown; large stones on the surface
+3443,,2011,C,RS,Gorno Sahrane necropolis,"42°39'48.525""","25°13'1.355""",448,15,10,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"overgrown, grass; small stones on the surface"
+3444,,2011,C,RS,Gorno Sahrane necropolis,"42°39'49.442"" ","25°13'1.043""",448,8,8,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,overgrown; small stones on the surface
+3445,,2011,C,RS,Gorno Sahrane,"42°39'50.016""","25°13'0.817""",447,8,8,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,large stones on the surface of the mound
+3446,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'48.062""","25°13'0.061""",448,10,10,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"overgrown, grass"
+3447,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'48.464""","25°12'58.665""",448,8,8,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,small stones on the surface
+3448,,2011,C,RS,Gorno Sahrane,"42°39'33.017""","25°12'36.706""",450,10,10,0.5,1,Yes,3,1,Pasture,High vegetation or scrub,Photo,Y,,,N/A,stones on the surface of RT
+3449,,2011,C,RS,Gorno Sahrane,"42°39'37.151""","25°12'25.268""",454,15,8,0.8,1,No,3,1,Pasture,High vegetation or scrub,Photo,Y,,,N/A,Stones on the surface.
+3450,form KURVA ZMATEK V CISLECH ??FOTO??,2011,C,RS,Gorno Sahrane,"42°39'37.39""","25°12'52.412""",447,8,5,0.3,1,No,4,2,Agriculture,Ploughed,Photo,N,,,N/A,No obvious RT's. Pile of stones on top of mound dumped by farmers from surrounding fields.
+3452,,2011,C,RS,Gorno Sahrane,"42°39'48.365""","25°12'53.378""",449,8,8,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,stones on the surface of the mound
+3453,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'48.983""","25°12'51.814""",451,9,8,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,partially destroyed by a nearby road; small stones on the surface
+3454,,2011,C,RS,Gorno Sahrane necropolis," 42°39'49.878""","25°12'46.674""",454,12,10,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,stones on the surface of the mound
+3455,,2011,C,RS,Gorno Sahrane necropolis,"42°39'34.371""","25°13'26.623""",430,6,6,0.4,1,No,4,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized stones. No obvious RT's.
+3461,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'32.611""","25°13'15.089""",433,7,5,0.2,1,Yes,5,5,Pasture,Pasture,Photo,Y,,,N/A,Almost defunct - the middle part taken by RT and test RT's around the mound.
+3500,,2011,C,RS,Gorno Sahrane,42°39'46.469,"25°12'44.28""",451,25,10,2.5,2,Yes,3,2,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,"Mound cut in half by road. Long RT on intact (eastern) side of mound, but overgrown with brambles (hard to accurately determine dimesions/take photos)."
+3501,,2011,C,RS,Gorno Sahrane," 42°39'48.788""","25°12'46.801""",454,13,6,0.5,1,No,5,5,Agriculture,Ploughed,Photo,Y,,,N/A,Completely destroyed (ploughed over repeatedly). Large stones on mound and immediate surrounds.
+3502,,2011,C,RS,Gorno Sahrane,"42°39'45.547""","25°12'44.948""",450,10,5,1.5,2,No,4,2,Pasture,High vegetation or scrub,Photo,Y,,,N/A,Scattered large rocks.
+3503,,2011,C,RS,Gorno Sahrane,"42°39'45.093""","25°12'45.276""",450,10,5,0.2,1,Yes,4,5,Agriculture,Ploughed,Photo,Y,,,N/A,"Drainage ditch on immediate eastern side, road on immediate western side and old RT on south side of mound."
+3504,,2011,C,RS,Gorno Sahrane,"42°39'36.968""","25°12'50.511""",449,20,20,1.2,2,No,4,5,Scrub,High vegetation or scrub,Photo,Y,,,N/A,"Defunct mound. Road built down middle of original mound, remains of mound split into 2 small mounds of on either side of road. Completely destroyed. Length best estimate to pre-destruction length."
+3505,,2011,C,RS,Gorno Sahrane,"42°39'39.352""","25°12'50.768""",447,8,4,0.5,1,No,5,5,Agriculture,Ploughed,Photo,Y,,,N/A,Ploughed into a lozenge shape. Overgrown with brambles.
+3506,,2011,C,RS,Gorno Sahrane,"42°39'35.171""","25°12'50.879""",451,10,8,0.5,1,No,4,5,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,Long grass and scatteed large stones.
+3507,,2011,C,RS,Gorno Sahrane,"42°39'41.445""","25°12'46.736""",447,45,45,7,3,Yes,3,2,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,"RT's almost broken into burial chamber. Fresh litter in and around RT's. Many exensive RT's (fresh, ~1 year old for 2 on side of mound). Urgent preservation needed, recent robbries."
+3509,,2011,U,RS,Gorno Sahrane,"42°39'55.876""","25°12'40.251""",456,10,5,0.6,1,Yes,5,5,Pasture,Pasture and some scrub,Photo,Y,,,N/A,Defunct mound. Destroyed by construction of  roads and drainage ditch. Pile of rocks on top. No RT's.
+3510,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'58.413""","25°12'36.863""",461,7,5,1,1,Yes,4,3,Agriculture,Ploughed,Survey,N,,,N/A,middle taken out of sides were mound earth
+3511,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'58.817""","25°12'36.683""",461,8,8,1,1,Yes,4,3,Pasture,Pasture,Photo,Y,,,N/A,"stones on top, trench through middle, earth moved to the side"
+3512,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'57.972""","25°12'43.192""",455,17,17,0.3,1,No,3,2,Pasture,Pasture,Photo,Y,,,N/A,"flat top, no visible RTs on side of trench"
+3513,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'57.759""","25°12'45.833""",454,10,10,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,no stones or RTs
+3514,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'57.261""","25°12'46.89""",453,10,7,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,RT neary takes up whole mound. The moved arth was deposited to the east
+3515,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'56.776""","25°12'47.364""",454,13,7,0.3,1,No,4,2,Pasture,Pasture,Photo,Y,,,N/A,uneven surface
+3516,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'0.288""","25°12'40.46""",463,2,2,0.1,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,mound was barely visible 
+3517,,2011,C,Survey,Gorno Sahrane necropolis," 42°40'0.822""","25°12'36.54""",463,2,2,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,mound was barely visible 
+3518,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'3.322""","25°12'46.975""",460,6,6,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"no RTs, barey visible, bundaries not completely clear"
+3519,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'15.135""","25°13'19.376""",428,10,8,0.3,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. Cut through by drainage ditch. Scatter of medium-sized rocks.
+3520,,2011,C,RS,Gorno Sahrane necropolis,"42°39'17.844""","25°13'21.01""",426,5,5,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,No obvious RT's. Scatter of medium-sized rocks.
+3521,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'17.262""","25°13'19.604""",428,9,8,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Badly eroded.
+3522,,2011,C,RS,Gorno Sahrane necropolis,"42°39'15.066""","25°13'22.015""",425,30,30,2,2,Yes,3,3,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized rocks. West side recently (~1 yr ago) bulldozed. Large hole filled with rubbish on N side and some old RT's. Urgent conservation recommended.
+3523,,2011,C,Survey,Gorno Sahrane necropolis," 42°39'16.479""","25°13'18.572""",429,20,20,0.7,1,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,Thoroughly robbed with multiple RT's. Mostly old RT's.
+3524,,2011,C,RS,Gorno Sahrane necropolis,"42°39'18.487""","25°13'14.904""",432,15,15,0.9,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized rocks. In good condition apart from drainage ditch just touching NE side. No obvious RT's.
+3525,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'19.399""","25°13'15.724""",433,21,21,5,2,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Cluster of four mounds close together.
+3526,,2011,C,RS,Gorno Sahrane necropolis,"42°39'21.107""","25°13'14.692""",432,14,14,0.6,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Scattered medium-sized rocks. More RT's present other than RT1, but impossible to determine borders of said RT's."
+3527,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'14.297""","25°13'18.968""",427,20,10,0.7,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. Scatter of medium-sized rocks. W side taken away in past. No obvious RT's.
+3528,,2011,C,RS,Gorno Sahrane necropolis,"42°39'41.829""","25°13'12.29""",440,10,10,0.5,1,Yes,4,3,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. Scatter of medium-sized rocks around base. Pile of large stones in RT1. Prior to destruction-0.8-0.9m tall. RT1 completely hollowed out mound. 
+3529,,2011,C,RS,Gorno Sahrane necropolis,"42°39'26.693""","25°13'18.091""",432,10,9,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of mediumsized rocks. No obvious or new RT's. Road cuts off part of west side.
+3530,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'33.925""","25°13'13.103""",436,4,4,0.2,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. Very small-low profile.
+3531,,2011,C,RS,Gorno Sahrane necropolis,"42°39'24.337""","25°13'21.701""",430,7,7,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. No RT's.
+3532,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'22.774""","25°13'22.393""",428,7,6,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound.
+3533,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'43.378""","25°13'12.541""",443,20,15,1,1,Yes,4,3,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. Cut through by canal (running east-west. Scatter of medium-sized stones. 
+3534,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'40.724""","25°13'20.216""",439,7,6,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Attached to the side of another larger mound (on northern side).
+3535,,2011,C,RS,Gorno Sahrane necropolis,"42°39'31.898""","25°13'30.228""",427,9,9,0.4,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"N edge cut by old drainage ditch, old RT"
+3536,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'38.738""","25°13'30.876""",430,6,6,0.2,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Multiple old RT's. Next to larer mound (on northern side).
+3537,,2011,C,Survey,Skobelevo,"42°40'6.755""","25°12'25.308""",473,10,10,0.3,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. Light scatter of medium-sized stones. Completely ploughed over.Very hard to determine if RT's are really RT's or remnants from past agricultural activity. Severely dame=aged from agricultural activity.
+3538,,2011,C,Survey,Skobelevo,"42°40'6.433""","25°12'26.789""",472,6,6,0.3,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. Canal cut through middle. Scatter of medium-sized stones.
+3539,,2011,C,Survey,Skobelevo,"42°40'6.264""","25°12'23.628""",472,6,6,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. No obvious RT's. Light scatter of medium-sized stones. Severely damaged by agricultural activity.
+3540,,2011,C,Survey,Skobelevo,"42°40'4.294""","25°12'16.926""",468,12,12,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. Recent ploughing along eastern edge. Severely damaged by agricultural activity.
+3541,,2011,C,Survey,Skobelevo,"42°40'1.825""","25°12'11.538""",468,8,8,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized stones. No obvious RT's. Slightly tapers off on east side.
+3542,,2011,C,Survey,Skobelevo,"42°40'2.225""","25°12'11.994""",468,9,7,0.4,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. Severely damaged from plowing. Light scatter of small stones.
+3543,,2011,C,Survey,Skobelevo,"42°40'1.41""","25°12'13.176""",466,19,19,1,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Light scatter of medium-sized stones. Few scattered large rocks. Possible excavation carried out on western side (old excavation work). Uniform earth displacement from mound suggests this excavation. Almost completely dug out side.
+3544,,2011,C,Survey,Skobelevo,"42°40'3.478""","25°12'12.733""",468,10,8,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. Overgrown. No obvious RT's. Scatter of various large stones.
+3545,,2011,C,Survey,Skobelevo,"42°40'2.863""","25°12'14.357""",467,14,14,0.6,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized stones. Drainage ditch running close to south-west side. Damaged by agricultual activity.
+3546,,2011,C,Survey,Skobelevo,"42°40'1.374""","25°12'15.198""",466,17,15,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. Severely damaged from plowing/flattening. Number of old RT's. Scatter of medium-sized stones.
+3547,,2011,C,Survey,Skobelevo,"42°40'1.568""","25°12'16.661""",466,13,13,0.3,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. Scatter of medium-sized stones. Severely damaged by agricultural activity and looting.
+3548,,2011,C,Survey,Skobelevo,"42°40'2.291""","25°12'16.435""",466,11,11,0.3,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. Scatter of medium-sized stones. Some larger rocks. Severely damaged by  agricultural activity.
+3549,,2011,C,Survey,Skobelevo,"42°40'2.975""","25°12'15.894""",467,7,7,0.2,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. Severely damaged from agricultural activity. Scatter of medium-sized stones.
+3550,,2011,C,Survey,Skobelevo,"42°39'59.157""","25°12'12.259""",465,10,10,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Scatter of medium-sized stones. No obvious RT's. Damaged by agricultural activity. Close to village, so may be somewhat disrupted."
+3551,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'58.379""","25°12'11.856""",464,16,16,0.6,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,North-west corner cut off by road. Damaged by agricultural activity. Scatter of medium-sized stones.
+3552,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'56.743""","25°12'15.402""",463,10,8,0.4,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Old RT's (very shallow). Plowed away on eastern side. Scatter of medium-sized stones.
+3553,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'56.628""","25°12'14.838""",463,7,7,0.4,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Scatter of medium-sized stones. 1 very small, old RT. Damaged by agricultural activity."
+3554,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'56.435""","25°12'14.028""",463,6,6,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"No obvious RT's. Scatter of medium-sized stones. Damaged by agricultural activity. Built on partial slope, west side higher than east."
+3555,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'57.071""","25°12'14.053""",463,7,6,0.3,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Large mound joined to TRAP #3556 (southern mound). Scatter of medium-sized stones.
+3556,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'57.308""","25°12'14.063""",463,8,7,0.4,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Large mound joined to TRAP #3555 (northern mound). Scatter of medium-sized stones.
+3557,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'57.726""","25°12'13.974""",463,9,9,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"No obvious RT's. Scatter of medium-sized stones. Damaged by agricultural activity. Built on partial slope, west side sloped down."
+3558,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'57.991""","25°12'13.811""",464,5,5,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,No obvious RT's Scatter of medium-sized stones. Plouhed over. Damaged by agricultural activity.
+3559,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'57.559""","25°12'12.929""",463,5,5,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. Heavily damaged by agricultural activity. Drainage ditch starting on western side. No obvious RT's.
+3560,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'57.938""","25°12'12.473""",464,10,10,0.2,1,Yes,4,3,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. Heavily robbed with huge crater in middle.
+3561,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'58.572""","25°12'14.388""",464,9,9,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Damaged by agicultural activity. No obvious RT's. Scatter of medium-sized stones.
+3562,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'58.938""","25°12'14.244""",465,6,5,0.3,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Low visibility for RT's. Slightly cut by road (IMG 0243). Scatter of medium-sized stones.
+3563,,2011,C,Survey,Skobelevo,"42°39'59.365""","25°12'14.178""",465,7,7,0.3,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. Damaged heavily by agricultural activity. Road scirts around (almost slightly touching) west and south-west sides.
+3564,,2011,C,Survey,Skobelevo,"42°39'59.896""","25°12'12.151""",466,5,5,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. Cut through by 2 roads on north-west and north-east sides. Heavily damaged by agricultural activity and r]construction of roads. No obvious RT's.
+3565,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'56.983""","25°12'11.892""",464,7,7,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,No visible RT's. Better preserved than most mounds of this side.
+3566,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'56.603""","25°12'11.221""",463,9,7,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. Cut through by road on east side. Scatter of medium-sized stones. No obvious RT's.
+3567,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'56.188""","25°12'11.676""",463,15,15,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Scatter of medium-sized stones. Some old RT's. Road on edge of western side (but does not cut through mound however).
+3568,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'56.413""","25°12'12.27""",463,8,8,0.4,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Defunct mound. Canal cut through north-western side.
+3569,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'58.289""","25°12'16.356""",464,18,16,0.6,1,Yes,4,3,Pasture,Pasture,Photo,Y,,,N/A,"damaged by agriculture-old looting, no RT. Some vegetation, 3-5 giant rocks, many small-med. Stones scattered around. Next to road (2m cut by road)"
+3570,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'57.442""","25°12'16.031""",463,6,6,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"no obvious RT-round, low, small-med. Stones scattered on top. Some damage by agricultural activity"
+3571,,2011,C,Survey,Skobelevo,"42°40'0.491""","25°12'14.724""",465,6,5,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"small defunct mound, large stone in centre, stony centre, damaged by agricultural acitivity. No visible RTs"
+3572,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'55.184""","25°12'9.701""",462,10,7,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"defunct mound, stony surface, canal running through (N-S), west side taken away, large stones around"
+3573,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'55.697""","25°12'10.416""",462,10,10,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"no new RTs, damaged by agricultural activity/robbing, uneven surface"
+3574,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'57.285""","25°12'10.403""",464,8,8,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"round, slope (east to west), damaged by agricultural activity"
+3575,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'57.76""","25°12'10.009""",465,10,6,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"elongated (E-W), disturbed by modern activity. Original centre at west end, concentration of stones, severaly worn, unevem "
+3576,,2011,C,Survey,Skobelevo,"42°39'58.386""","25°12'9.102""",465,8,8,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"round, N-side slightly cut off, med. Stones on top"
+3577,,2011,C,Survey,Skobelevo,"42°39'59.19""","25°12'9.546""",465,8,7,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"overgrown, round, small stones gathered, low and flat "
+3578,,2011,C,Survey,Skobelevo,"42°40'0.022""","25°12'9.079""",467,14,13,0.1,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"large stones on top, few rose bushes, flat"
+3579,,2011,C,Survey,Skobelevo,"42°40'1.122""","25°12'7.314""",467,11,10,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"severly worn (graze/burn), old robbing but uncertain where. Burnt"
+3580,,2011,U ,Survey,Skobelevo,"42°40'1.91""","25°12'9.599""",470,7,6,0.2,1,No,4,5,Pasture,Pasture,Photo,Y,,,N/A,"e-side overgrown, w-side burnt surface, defunct mound "
+3581,,2011,C,Survey,Skobelevo,"42°40'0.556""","25°12'7.879""",467,10,10,0.4,1,No,3,3,Pasture,Pasture,Photo,Y,,,N/A,"partly burnt, light stone scatter. Largely disrupted by modern activity. No visible RT"
+3582,,2011,C,Survey,Skobelevo,"42°40'1.136""","25°12'9.209""",468,12,10,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"overgrown-lots of vegetation, few large stones on S-side"
+3583,,2011,U,Survey,Skobelevo,"42°40'0.139""","25°12'8.292""",467,13,13,0.6,1,No,3,2,Pasture,Pasture,Photo,Y,,,N/A,"no recent RT-modern damage, damaged with modern earthwork extending south, pile of large stones on W-side"
+3584,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'55.328""","25°12'11.033""",462,8,8,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,heavily disrupted by modern use. No rrecent RT. Old agricultural activity and robbing. No visible RT
+3585,,2011,C,RS,Gorno Sahrane necropolis,"42°39'54.825""","25°12'13.685""",461,11,10,0.3,1,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,"badly eroded (agricultural), defunct-middle taken out, dirt trown NE, RT shallow, stony surface, group of very large stones"
+3586,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'53.58""","25°12'13.722""",461,9,8,0.4,1,Yes,4,3,Pasture,Pasture,Photo,Y,,,N/A,"old RT in centre and SE east, large stones scattered. No new RTs"
+3587,,2011,C,RS,Gorno Sahrane necropolis,"42°39'55.819""","25°12'13.638""",462,9,7,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"stony surface, one large stone in centre, roud, no RT"
+3588,,2011,C,RS,Gorno Sahrane necropolis,"42°39'53.272""","25°12'15.067""",461,7,6,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"few stones on surface, round, low, flat"
+3589,,2011,C,RS,Gorno Sahrane necropolis,"42°39'55.86""","25°12'14.85""",462,9,8,0.4,1,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,"stony surface, large stones aound mound (assist in identifying mound), no recent RT (all old) badly worn away"
+3590,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'54.501""","25°12'15.335""",461,14,14,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"very flat, less stony than average, large stone in centre. Ploughed over, badly eroded"
+3591,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'53.769""","25°12'15.755""",461,10,8,0.1,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,small stones on surface relatively flat and round
+3592,,2011,C,RS,Gorno Sahrane necropolis,"42°39'55.32""","25°12'16.194""",462,7,7,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"defunct, round, few stones on top, barely visible, one large stone on top, badly damaged (agricultural activity)"
+3593,,2011,C,RS,Gorno Sahrane necropolis,"42°39'56.249""","25°12'15.907""",463,10,10,0.3,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"large stones on surface, damaged by agriculture"
+3594,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'54.793""","25°12'17.52""",461,5,5,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"round, very flat, few stones on top, heavily damaged by agricultural activity"
+3595,,2011,C,RS,Gorno Sahrane necropolis,"42°39'56.934""","25°12'17.16""",462,7,7,0.3,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"uneven surface, stony surface, round, on slight slope"
+3596,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'57.062""","25°12'18.215""",461,6,6,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,end of terrain wave. Badly damaged by agriculture. No visible RTs
+3597,,2011,C,RS,Gorno Sahrane necropolis,"42°39'56.136""","25°12'18.12""",462,8,8,0.1,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"very flat, round, uneven surface, heavily damaged (agriculture activity)"
+3598,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'55.352""","25°12'19.163""",461,5,5,0.1,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"round, very flat, barely visible, stony surface"
+3599,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'55.966""","25°12'20.281""",460,12,12,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"flattened by agriculture, no visible RTs"
+3600,,2011,C,RS,Gorno Sahrane necropolis,"42°39'57.23""","25°12'24.227""",462,20,20,2,2,Yes,4,3,Pasture,Pasture,Photo,Y,,,N/A,"excavated mound, bulldozed"
+3601,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'56.725""","25°12'23.184""",460,16,16,0.8,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"damaged by the roads cutting through it. NE-cut by road, overgrown with vegetation, 2 roads on NW side, one road on SE side with no recent RT"
+3602,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'58.205""","25°12'25.488""",464,17,15,1.5,2,Yes,4,4,Pasture,Pasture,Photo,Y,,,N/A,"damage near mound, deep trench on top, large pile of stones near bottom"
+3603,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'58.959""","25°12'28.679""",464,5,5,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"stones on surface in overgrown field, defunct, difficult to see, badly damaged by agricultural activity "
+3604,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'0.136""","25°12'32.273""",464,10,8,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"overgrown with vegetation, round, damaged from agricultural activity "
+3605,,2011,U,Survey,Yasenovo Region,"42°40'55.804""","25°14'3.797""",447,13,10,0.8,1,No,3,3,Pasture,High vegetation or scrub,Photo,Y,,,N/A,"Uncertain, possibly a ottoman structure, medium sized field stones piled on top, flattened on top. No obvious rts"
+3606,,2011,U,Survey,Yasenovo Region,"42°40'56.934""","25°14'6.769""",444,10,10,0.8,1,No,3,2,Pasture,High vegetation or scrub,Photo,Y,,,N/A,"Field Stones piled on top. No obvious robbers trenches overgrown, sceptical should be investigated"
+3607,,2011,C,Survey,Yasenovo Region,"42°40'58.989""N ","25°14'3.366""E",453,10,10,0.4,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Field stones piled on top mostly overgrown. Large stones embedded in centre
+3608,,2011,C,Survey,Yasenovo Region,"42°41'0.225""N ","25°14'3.314""E  ",454,8,8,0.4,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,more certain. One old rt. Damaged by agricultural activity
+3609,,2011,U,RS,Yasenovo Region,"42°40'55.119""N ","25°14'5.414""E  ",444,12,11,0.7,1,Yes,4,3,Pasture,Pasture,Photo,Y,,,N/A,"flattened on top. Piled with field stones. Possibly ottoman, quite steep."
+3610,,2011,C,Survey,Yasenovo Region,"42°40'54.327""N ","25°14'3.536""E ",446,9,9,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Large stones and field stones, unveven surface due to agricultural activity"
+3611,,2011,U,Survey,Yasenovo Region,"42°40'53.061""N ","25°14'3.246""E ",445,8,7,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Unusually steep. Light covering with field stones. Large stones on top. Surface uneven, no visible robbers trenches"
+3612,,2011,U,Survey,Yasenovo Region,"42°40'52.281""N ","25°14'7.262""E  ",444,11,11,1,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Uncertain due to unusual height field stones piled on
+3613,,2011,U,Survey,Yasenovo Region,"42°40'51.729""N ","25°14'7.506""E  ",440,8,6,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Unusually steep. Light scatter of embedded stones. Damage on sides from agriculture
+3614,,2011,U,Survey,Yasenovo Region," 42°40'51.489""N ","25°14'6.995""E ",441,12,11,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Highly disturbed, most of south side removed. Overgrown, covered with field stone, no obvious robbers trenches"
+3615,,2011,U,Survey,Yasenovo Region,"42°40'51.099""N ","25°14'7.484""E  ",436,8,8,0.5,1,No,3,2,Pasture,High vegetation or scrub,Photo,Y,,,N/A,field stones dumped. Overgrown. Unusually high for mound.
+3616,,2011,U,Survey,Yasenovo Region,"42°40'47.817""N ","25°14'8.02""E  ",426,7,7,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Partly overgrown, piled with field stones. No obvious robbers trenches, damaged by agriculture unusually steep."
+3617,,2011,C,Survey,Yasenovo Region,"42°40'47.415""N ","25°14'8.046""E ",426,10,8,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Unusually steep for size, west side cut away, uneven surface from agriculture"
+3618,,2011,U,Survey,Yasenovo Region," 42°40'46.209""N ","25°14'5.798""E ",433,10,9,3,2,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Uneven surface. Possible artificial build up. Large stones, south east side cut away. No obvious robbers trench. Unusually steep."
+3619,,2011,C,Survey,Yasenovo Region," 42°40'44.745""N ","25°14'6.474""E ",429,11,11,0.8,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Covered Field Stones, Uneven due to terrain wave"
+3620,,2011,C,Survey,Yasenovo Region," 42°40'44.337""N ","25°14'4.885""E ",436,9,8,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Damage on SW side
+3621,,2011,U,Survey,Yasenovo Region,"42°40'41.853""N ","25°14'11.082""E  ",418,7,5,0.2,1,No,2,4,Pasture,Pasture,Photo,Y,,,N/A,Defunct Mound of low confidence. Severely damaged by agricultural activity
+3622,,2011,U,Survey,Golyamo Dryanovo," 42°40'41.853""N ","25°14'11.082""E ",421,7,6,0.9,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Unusually steep. Light scattering of stones. Damage from agriculture, uneven surface"
+3623,,2011,U,Survey,Golyamo Dryanovo," 42°40'29.775""N ","25°14'9.396""E ",422,12,11,0.6,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Part of a long southern terrain wave. Extensions to south and east. Light stone scatter. No obvious robbers trenches
+3624,,2011,C,Survey,Yasenovo Region," 42°40'38.985""N","25°14'0.732""E ",430,11,11,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Stony Surface, some wear from agricultural activity"
+3625,,2011,U,Survey,Yasenovo Region,"42°40'39.849""N ","25°14'2.289""E  ",431,8,8,0.4,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Large robbers trench in the centre filled with stones on slope facing south east
+3626,,2011,U,Survey,Yasenovo Region," 42°40'43.281""N ","25°14'4.584""E ",433,10,10,0.6,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Flattened on top. Built on gentle slope to the SW. Top scattered with stones
+3627,,2011,U,Survey,Yasenovo Region," 42°40'42.411""N ","25°14'4.722""E ",433,14,13,1,1,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,Robbers trench filled in with field stones and is overgrown
+3628,,2011,U,Survey,Yasenovo Region," 42°40'42.411""N","25°14'4.722""E ",434,10,10,0.8,1,Yes,3,2,Pasture,Scrub,Photo,Y,,,N/A,Built into gentle slope (W-E) Robbers trench buried by field stones and partly overgrown
+3629,,2011,U,Survey,Yasenovo Region,"42°40'46.107""N ","25°14'0.725""E  ",437,9,8,0.7,1,Yes,3,2,Pasture,Scrub,Photo,Y,,,N/A,"Possible mound (uncertain) South side of mound has been largely dug away, partly overgrown"
+3630,,2011,U,Survey,Yasenovo Region," 42°40'48.453""N ","25°13'58.214""E ",438,7,5,0.3,1,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,"Possible defunct mound, south half robbed away"
+3631,,2011,C,Survey,Yasenovo Region,"42°40'49.791""N ","25°13'56.528""E  ",439,11,10,1,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,No recent robbers trench. Stony Surfaced. Worn by agriculture
+3632,,2011,U,Survey,Yasenovo Region," 42°40'55.305""N ","25°13'55.418""E ",453,13,10,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Possible defunct mound
+3633,,2011,U,Survey,Yasenovo Region,"42°40'56.007""N ","25°13'51.149""E  ",467,10,10,0.4,1,Yes,2,2,Pasture,Pasture and some scrub,Photo,Y,,,N/A,"Road cuts off west side of mound, old robbers trench"
+3634,,2011,U,Survey,Yasenovo Region,"42°40'48.285""N ","25°13'52.91""E  ",437,12,12,1,1,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,"Almost fully excavated, large stones in and around the mound"
+3635,,2011,C,Survey,Yasenovo Region," 42°40'40.113""N ","25°13'55.916""E ",443,12,12,1,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"No obvious robbers trench. Overgrown, covered with field stones. Purple survey mark on top."
+3636,,2011,U,Survey,Yasenovo Region,"42°40'46.545""N ","25°13'53.73""E  ",438,12,12,0.7,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Worn surface from agricultural activity, covered in field stones"
+3637,,2011,U,Survey,Yasenovo Region,"42°40'46.545""N ","25°13'53.73""E  ",438,11,10,0.5,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Covered in field stones, partly overgrown, height is uncertain."
+3638,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'57.493""","25°12'35.869""",459,6,6,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"No robbers trenches. Eroded by agricultural activity, thinly vegetated"
+3639,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'57.708""","42°39'57.493""",460,5,5,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Stony surface, thin vegetation. Severely damaged by agriculture. No Visibile RT's"
+3640,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'57.359""","25°12'33.001""",461,5,5,0.1,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Unhealthy vegetation, stony surface. Small defunct mound"
+3641,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'58.034""","25°12'32.597""",463,5,5,0.1,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Stony surface, thin vegetation. Damaged by agriculture and erosion no visible robbers trenches"
+3642,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'58.581""","25°12'33.329""",463,5,5,0.1,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Thin vegetation, stoney surface. No visible Robbers Trench. Damage by agriculture"
+3643,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'58.961""","25°12'33.103""",463,5,5,0.1,1,No,4,2,Pasture,Pasture,Photo,Y,,,N/A,Possible defunct mound
+3644,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'57.487""","25°12'31.8""",463,7,4,0.3,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Damage by agriculture. Thin vegetation, stoney surface"
+3645,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'57.095""","25°12'32.172""",461,5,5,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Stony Surface, little vegetation"
+3646,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'55.766""","25°12'32.034""",458,6,6,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Stoney surface, thin vegetation. No visible robbers trenches, agricultural damage"
+3647,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'57.756""","25°12'30.378""",463,5,5,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Stoney Surface, thin vegetation"
+3648,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'57.593""","25°12'29.323""",463,5,4,0.1,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Flattened by agriculture, severely damaged. No visible robbers trenches"
+3649,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'56.567""","25°12'27.876""",462,6,6,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Worn by agricultural activity possibly old robbing
+3650,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'55.501""","25°12'28.062""",461,5,5,0.2,1,No,3,3,Pasture,Pasture,Photo,Y,,,N/A,Beside a dirt road. Stoney surface thin vegetation. Damage by modern activity. No visible robbers trenchs.
+3651,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'56.079""","25°12'26.323""",462,5,4,0.1,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Heavily disturbed by modern activity. Cut in several places by old ploughing stoney surface, thin vegetation. No visible robbers trenches."
+3652,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'55.199""","25°12'26.754""",461,4,4,0.1,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Defunct mound, stony no vegetation"
+3653,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'53.324""","25°12'18.215""",460,16,16,0.3,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Beside a dirt road, highly disturbed"
+3654,,2011,C,RS,Gorno Sahrane necropolis,"42°39'54.599""","25°12'10.644""",461,15,15,0.6,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Stony surface, poor vegeation growth, west side of mound  disturbed by old robbers trench"
+3655,,2011,C,RS,Gorno Sahrane necropolis,"42°39'50.073""","25°12'12.059""",454,10,10,0.3,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Severely damaged by old agriculture, possibly old robbing. Stoney, poor vegetation. Mostley flattened."
+3656,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'50.233""","25°12'12.906""",454,4,4,0.1,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Severely damaged by agricultural activity. Stoney surface. Defunct mound.
+3657,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'49.104""","25°12'11.94""",454,10,10,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Uncertain, possible defunct mound. Highly disturbed area near intersection of road and ravine Badly damaged."
+3658,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'48.264""","25°12'14.61""",453,10,10,0.2,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Natural terrain wave present. Agricultural damage.
+3659,,2011,C,RS,Gorno Sahrane necropolis,"42°39'48.728""","25°12'18.101""",456,12,12,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Stoney surface, no recent robbers trenches. Damaged by agricultural activity"
+3660,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'49.789""","25°12'18.522""",457,18,15,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Light stone scatter, some large stones. In a highly disrupted area. Several old robbers trenches"
+3661,,2011,U,RS,Gorno Sahrane necropolis,"42°39'48.675""","25°12'19.501""",457,14,14,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Stoney surface, poor vegetation"
+3662,,2011,U,Survey,Gorno Sahrane necropolis," 42°39'52.014""","25°12'28.988""",456,20,18,1,1,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,A military earthwork ploughed into the south east quadrant of mound
+3663,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'51.521""","25°12'29.544""",456,7,5,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Badly damaged by agriculture. No visible robbers trenches. Overgrown
+3664,,2011,C,RS,Gorno Sahrane necropolis,"42°39'53.244""","25°12'30.078""",456,10,9,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,On south facing slope worn from agriculture. No visible robbers trenches
+3665,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'53.443""","25°12'31.403""",456,5,5,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Possible defunct mound
+3666,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'52.538""","25°12'32.004""",456,7,6,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Bady damaged by agricultural activity and possible old robbing
+3667,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'53.419""","25°12'32.43""",456,5,5,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Possible defunct mound
+3668,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'53.017""","25°12'32.334""",456,5,5,0.1,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,No visible robbers trenches. Severe damage by agriculture. Overgrown by dead grass
+3669,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'54.331""","25°12'33.486""",456,20,20,0.4,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Large mound destroyed by agricultural activity. Not identified as modern due to origin of soil
+3670,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'55.596""","25°12'35.094""",456,5,5,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Damaged by agricultural activity, stony surface."
+3671,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'57.063""","25°12'35.441""",457,6,6,0.2,1,No,4,2,Pasture,Pasture,Photo,Y,,,N/A,"Probable defunct mound, less stony than normal. Roads close by mound but have not damaged mound"
+3672,,2011,C,RS,Gorno Sahrane necropolis,"42°39'56.436""","25°12'34.92""",458,6,6,0.4,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Heavy scatter of stones on surface, thin vegetation. Damaged by agriculture. No visible robbers trenches"
+3673,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'56.787""","25°12'33.995""",458,5,5,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Stony surface, sparse vegetation"
+3674,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'56.216""","25°12'33.93""",459,6,5,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Badly damaged by agriculture. No visible robbers trenches. Light stone scatter
+3675,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'54.86""","25°12'31.206""",458,5,5,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Stony surface, sparse vegetation"
+3676,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'55.784""","25°12'30.137""",459,8,6,0.1,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,Old wagon trail cuts through North and south edge(2m). Damage by modern activity. No visible robbers trenches.
+3677,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'54.81""","25°12'29.676""",458,5,5,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Possible defunct mound, stoney surface, sparse vegetation"
+3678,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'49.636""","25°12'27.043""",457,10,10,0.3,1,No,2,2,Forest,Forest,Photo,Y,,,N/A,"defunct mound, very stoney, considerably damaged by forrest planting"
+3679,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'50.083""","25°12'26.4""",457,8,8,0.3,1,No,2,2,Forest,Pasture/Forest,Photo,Y,,,N/A,Stonier than surronding areas
+3680,,2011,C,Survey,Skobelevo ,"42°40'23.579""","25°13'16.014""",458,20,12,1,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Damaged by road and drainage canal. Stoney, thinly vegetated."
+3681,,2011,U,Survey,Skobelevo ,"42°40'15.724""","25°12'59.699""",458,5,5,0.1,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Thinly vegetation , nearly destroyed by agriculture. Slightly rocky. Possibly defunct mound. Appears to be an old robbers trench. "
+3682,,2011,C,RS,Golyamo Dryanovo,"42°40'25.395""","25°13'45.721""",447,10,10,1,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,Mound consists of large to medium field stones and compact earth. Similar vegetation to surrounding areas.
+3683,,2011,U,Survey,Golyamo Dryanovo,"42°40'25.257""","25°13'40.993""",450,20,20,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Unusually flat for its size, very symetrical, though severly damaged/flattened by agriculture. No visible RTs."
+3684,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'47.364""","25°12'23.334""",458,13,11,0.2,1,No,2,2,Forest,Forest,Photo,Y,,,N/A,Possibly defunct mound. Badly damaged by tree planting.
+3685,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'47.387""","25°12'22.926""",458,10,10,0.3,1,No,2,2,Forest,Forest,Photo,Y,,,N/A,Highly disturbed. Stoney surface. Damaged by tree planting. No visible robbers trenches.
+3686,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'46.531""","25°12'19.764""",456,14,12,0.5,1,No,2,2,Forest,Forest,Photo,Y,,,N/A,"Forested area, disturbed by plantation planting."
+3687,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'43.752""","25°12'15.414""",451,16,17,1,1,Yes,2,1,Pasture,Pasture and some scrub,Photo,Y,,,N/A,"Forested area, some field stones. Light vegetation."
+3688,,2011,U,Survey,Gorno Sahrane necropolis,"42°39'40.832""","25°12'14.567""",452,20,17,1,1,Yes,2,1,Pasture,Pasture and some scrub,Photo,Y,,,N/A,Some large and small stones. Discarded by bulldozing or roadworks.
+3689,,2011,C,Survey,Asen  ,"42°39'39.535""","25°12'4.205""",453,8,9,0.3,1,N/A,4,3,Pasture,Stones,N/A,N ,,,N/A,Site found during extensive ground control; identified as mound but not fully registered
+3690,,2011,U,Survey,Asen  ,"42°39'38.754""","25°12'1.614""",453,8,8,0.1,1,N/A,4,3,Beach,Stones,N/A,N ,,,N/A,Site found during extensive ground control; identified as mound but not fully registered
+3691,,2011,C,Survey,Asen  ,"42°39'38.988""","25°12'0.918""",453,8,8,0.3,1,N/A,5,5,Beach,Stones,N/A,N ,,,N/A,Defunct mound; site found during extensive ground control; identified as mound but not fully registered; Height extrapolated not documented
+3692,,2011,C,Survey,Asen  ,"42°39'39.385""","25°12'1.056""",453,8,8,0.2,1,N/A,4,3,Beach,Stones,N/A,N ,,,N/A,Site found during extensive ground control; identified as mound but not fully registered
+3693,,2011,C,Survey,Asen  ,"42°39'39.785""","25°12'0.409""",453,8,6,0.3,1,N/A,4,3,Pasture,Stones,N/A,N ,,,N/A,Site found during extensive ground control; identified as mound but not fully registered
+3694,,2011,C,Survey,Asen  ,"42°39'40.242""","25°12'0.456""",453,7,7,0.3,1,N/A,5,5,Pasture,Stones,N/A,N ,,,N/A,Defunct mound. Site found during extensive ground control; identified as mound but not fully registeredHeight extrapolated not documented
+3695,,2011,U,Survey,Asen  ,"42°39'40.459""","25°12'0.839""",453,10,10,0.3,1,N/A,4,3,Pasture,Stones,N/A,N ,,,N/A,Site found during extensive ground control; identified as mound but not fully registered; Height extrapolated not documented
+3696,,2011,U,Survey,Asen  ,"42°39'40.726""","25°12'0.037""",454,8,8,0.3,1,N/A,4,3,Pasture,Stones,N/A,N ,,,N/A,Site found during extensive ground control; identified as mound but not fully registered
+3697,,2011,U,Survey,Asen  ,"42°39'43.437""","25°12'2.447""",453,16,13,0.2,1,N/A,5,5,Pasture,Stones,N/A,N ,,,N/A,Defunct mound. Site found during extensive ground control; identified as mound but not fully registered
+3698,,2011,U,Survey,Asen  ,"42°39'47.09""","25°12'2.58""",459,16,17,0.4,1,N/A,4,3,Pasture,Stones,N/A,N ,,,N/A,Possible defunct mound. Site found during extensive ground control; identified as mound but not fully registered
+3699,,2011,C,Survey,Asen  ,"42°39'48.266""","25°12'1.488""",459,9,9,0.4,1,N/A,4,3,Pasture,Stones,N/A,N ,,,N/A,Site found during extensive ground control; identified as earthwork but not fully registered
+3700,,2011,U,Survey,Asen  ,"42°39'49.975""","25°12'0.816""",460,12,12,0.3,1,N/A,4,3,Pasture,Stones,N/A,N ,,,N/A,Site found during extensive ground control; identified as earthwork but not fully registered; Height extrapolated not documented
+3701,,2011,C,Survey,Gorno Cherkhovishte,"42°34'59.692""","25°16'11.957""",428,15,15,5,2,No,1,1,Pasture,High vegetation or scrub,Photo,Y,,,N/A,overgrown; hardly accessible
+3702,,2011,C,Survey,Gorno Cherkhovishte,"42°35'0.101""","25°16'14.646""",431,15,10,4,2,Yes,2,1,Pasture,Pasture,Photo,Y,,,N/A,old small RT's
+3703,,2011,C,Survey,Gorno Cherkhovishte,"42°35'0.02""","25°16'17.778""",431,15,15,3,2,Yes,2,1,Pasture,Pasture,Photo,Y,,,N/A,1 old RT in the top.
+3704,,2011,C,Survey,Gorno Cherkhovishte,"42°34'51.33""","25°16'19.52""",415,8,8,6,3,Yes,3,1,Pasture,Pasture,Photo,Y,,,N/A,dug trough; old small RTs on top; ovrgrown;
+3707,,2011,C,Survey,Gorno Sahrane,"42°40'3.146""","25°12'39.051""",464,6,6,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,some rocks on surface some track/tyre works on top? Small long depressions 
+3709,,2011,C,Survey,Gorno Sahrane,"42°40'3.811""","25°12'35.996""",463,8,8,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,no stones or RTs
+3711,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'5.68""","25°12'42.858""",464,10,8,1,1,No,1,1,Pasture,Pasture and some scrub,Photo,Y,,,N/A,"many stones spread all over the surface, medium pine trees on top"
+3712,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'5.716""","25°12'41.558""",464,7,7,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,no stones or RTs
+3713,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'4.988""","25°12'40.407""",464,6,6,0.5,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"only a few stones/ over grown, shalow indent on east top"
+3714,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'5.619""","25°12'39.021""",464,8,8,0.3,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"some smal stones on east side, no RTs"
+3716,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'5.209""","25°12'46.126""",463,6,6,0.1,1,Yes,3,2,Pasture,Pasture,Photo,Y,,,N/A,some large stones in RT base
+3717,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'4.384""","25°12'47.812""",462,6,6,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"barely visble, no RTs or stones"
+3718,,2011,C,Survey,Gorno Sahrane necropolis,"42°40'4.705""","25°12'47.548""",462,6,6,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,one stone on top/middle
+3719,,2011,C,Survey,Kran,"42°41'20.493""","25°22'13.376""",488,15,12,0.3,1,No,4,4,Agriculture,Perennial,Photo,Y,,,N/A,Almost entirely destroyed by agriculture.
+3720,,2011,C,Survey,Kran,"42°41'21.987""","25°22'8.166""",485,25,25,0.5,1,No,4,3,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,Stones spread all over the surface.
+3721,,2011,C,Survey,Hadzhidimitrovo,"42°40'54.102""","25°21'15.3""",326,16,6,0.2,1,Yes,5,5,Agriculture,Ploughed,Survey,Y,,,N/A,Almost entirely destroyed by agriculture.
+3722,,2011,C,Survey,Viden,"42°35'24.768""","25°15'38.365""",458,25,25,2,2,Yes,3,1,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,1 old RT on the top.
+3723,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'44.63""","25°12'36.553""",446,18,7,1,1,No,3,2,Pasture,High vegetation or scrub,Photo,Y,,,N/A,"pile of rocks on the top, probably digged through"
+3725,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'32.737""","25°13'34.114""",425,4,4,0.2,1,No,2,2,Pasture,Pasture,Photo,Y,,,N/A,"Defunct mound. Trenches to old to accurately determine dimensions. Almost completely flat, minimal profile."
+3726,,2011,C,Survey,Gorno Sahrane necropolis,"42°39'30.866""","25°13'34.87""",426,9,7,0.2,1,Yes,2,2,Pasture,Pasture,Photo,Y,,,N/A,"old shallow RT's, defunct mound, light rock scatter"
+3728,,2011,C,Survey,Gorno Sahrane,"42°39'29.86""","25°13'38.35""",427,22,20,0.8,1,No,5,5,Agriculture,Perennial,Photo,N,,,N/A,Ploughed over but not robbed - mature lavender field ploughed between rows of plants
+3729,,2011,C,Survey,Gorno Sahrane,"42°39'28.833""","25°12'36.512""",387,16,16,0.3,1,No,3,2,Pasture,High vegetation or scrub,Photo,Y,,,N/A,"rubbish, overgrown, stones on the surface"
+4002,,2009,C,Survey,Gorno Cherkhovishte,"42°36'20.664""","25°17'43.5""",396,14,10,7,3,Yes,2,1,Forest,High vegetation or scrub,Photo,Y,5510054,GCH002,N/A,Rocky soil
+4003,,2009,C,Survey,Gorno Cherkhovishte,"42°36'32.646""","25°18'24.93""",381,18,18,5,2,Yes,3,1,Forest,High vegetation or scrub,Photo,Y,5510055,GCH003,N/A,"part of the hill, trees on the top, RT full of rubish on the top"
+4004,,2009,C,Survey,Koprinka,"42°36'39.234""","25°18'30.258""",367,50,50,6,3,No,1,1,Forest,High vegetation or scrub,Photo,Y,5510084,КОР041,N/A,"no major RT's, integrated part of the hill, mnd is unidentifiable"
+4005,Mogilata Gyurlya,2009,C,Survey,Koprinka,"42°36'43.308""","25°18'28.812""",370,25,25,4,2,Yes,3,1,Forest,High vegetation or scrub,Photo,Y,5510085,КОР042,N/A,"visible from the dirt road, RT on top going to bedrock"
+4006,,2009,C,Survey,Koprinka,"42°36'45.72""","25°18'32.502""",372,10,10,5,2,No,2,1,Forest,Forest,Photo,Y,5510086,КОР043,N/A,Trees all over the surface.
+4007,,2009,C,Survey,Koprinka,"42°36'46.146""","25°18'33.63""",372,8,8,2,2,No,3,2,Forest,Beach,Photo,Y,5510087,КОР044,N/A,"close to the beach, fire place on the top, pine trees on the surface"
+4008,,2009,C,Survey,Gorno Cherkhovishte,"42°36'16.31""","25°18'28.134""",388,32,32,5,2,Yes,3,2,Pasture,High vegetation or scrub,Photo,Y,5510058,GCH005,N/A,"massive stones in the RT, digged throught"
+4009,,2009,C,Survey,Gorno Cherkhovishte,"42°36'11.596""","25°18'29.776""",395,25,25,2,2,Yes,3,1,Pasture,High vegetation or scrub,Photo,Y,5510059,GCH006,N/A,"overgrown RT's, large stone on the surface"
+4010,,2009,C,Survey,Gorno Cherkhovishte,"42°35'30.224""","25°20'48.653""",365,20,20,1,1,Yes,2,1,Forest,High vegetation or scrub,Photo,Y,5510066,GCH011,N/A,At the top of a hill
+4011,,2009,C,Survey,Koprinka,"42°36'44.244""","25°18'26.562""",366,8,8,2,2,No,2,2,Forest,High vegetation or scrub,Photo,Y,5510088,КОР045,N/A,"extremly bushy, close to the road but almost indistinguishable"
+4012,,2009,C,Survey,Koprinka,"42°36'39.348""","25°18'46.872""",379,15,15,5,2,No,2,1,Forest,High vegetation or scrub,Photo,Y,5510089,КОР046,N/A,"no RT's visible on the surface, very overgrown, bushy"
+4013,,2009,C,Survey,Koprinka,"42°36'41.082""","25°18'37.944""",373,5,5,0.5,1,Yes,3,1,Forest,High vegetation or scrub,Photo,Y,5510091,КОР047,N/A,"almost invisible in the forest, 2 big pine trees on the top"
+4014,,2009,C,Survey,Koprinka,"42°36'40.074""","25°18'38.664""E  ",374,24,24,2,2,Yes,2,1,Forest,Forest,Photo,Y,5510092,КОР048,N/A,"old RT's, rich vegetation"
+4015,,2009,C,Survey,Koprinka,"42°36'38.568""","25°18'39.3""",383,12,12,4,2,Yes,3,1,Forest,High vegetation or scrub,Photo,Y,5510093,КОР049,N/A,"very old RT's, 2 trees on the top - between them RT"
+4016,,2009,C,Survey,Koprinka,"42°36'38.052""","25°18'39.36""",382,9,9,0.8,1,Yes,3,1,Forest,High vegetation or scrub,Photo,Y,5510094,КОР050,N/A,"almost invisible, rich vegetation"
+4017,,2009,C,Survey,Gorno Cherkhovishte,"42°35'32.715""","25°19'17.257""",409,20,20,4,2,No,1,1,Forest,High vegetation or scrub,Photo,Y,5510067,GCH012,N/A,Covered with vegetation
+4018,,2009,C,Survey,Gorno Cherkhovishte,"42°35'45.285""",25°19'17.768,404,20,20,1.5,2,No,1,1,Forest,High vegetation or scrub,Photo,Y,5510065,GCH017,N/A,hardly visible; 10 m (NE) from the original point taken by theBG team 
+4019,,2009,C,Survey,Gorno Cherkhovishte,"42°35'53.928""","25°17'40.296""",393,10,12,7,3,Yes,3,2,Pasture,Pasture,Photo,Y,5510079,GCH022,N/A,Shallow trench connecting RT1 and RT2. Possibly ploughed over
+4020,,2009,C,Survey,Gorno Cherkhovishte,"42°35'55.919""","25°17'41.373""",395,15,15,5,2,Yes,2,1,Pasture,Pasture,Photo,Y,5510080,GCH023,N/A,Large stones scattered on the S side
+4021,,2009,C,Survey,Gorno Cherkhovishte,"42°34'21.194""","25°18'16.438""",388,20,15,2,2,Yes,3,4,Agriculture,Pasture ,Photo,Y,5510082,GCH026,N/A,"Top cut off, and looks like about 2/3rds of the mound missing due to sides being cut away."
+4022,,2009,C,Survey,Gorno Cherkhovishte,"42°34'31.207""","25°18'17.922""",370,20,20,3,2,Yes,2,1,Pasture,Pasture,Photo,Y,5510082,GCH027,N/A,"In rubbish tip, top completely cut off, elevation mark on top, old undifined trenches"
+4023,,2009,U,AKB,Gorno Cherkhovishte,"42°34'34.747""","25°18'12.905""",369,18,16,5,2,Yes,4,5,Agriculture,Pasture,Photo,Y,5510082,GCH028,N/A,"Unable to tell boundries, rubbish all over, very flat top. Possible trenches., maybe just rubbish holes which are surrounding the mound."
+4024,,2009,C,Survey,Gorno Cherkhovishte,"42°36'22.796""","25°18'30.24""",375,23,23,2.5,2,Yes,3,1,Pasture,High vegetation or scrub,Photo,Y,5510057,GCH004,N/A,"digged throught (tunnel), visible soil structure in RT"
+4025,,2009,C,Survey,Koprinka,"42°36'54.705""","25°19'49.892""",361,20,19,1,1,No,2,2,Forest,Forest,Photo,Y,5510155,КОР063,N/A,Surface disturbances and some soil elevations (roots of pine trees)
+4026,,2009,C,Survey,Koprinka,"42°36'57.353""","25°20'7.408""",369,16,16,1,1,No,2,2,Pasture,Pasture,Photo,Y,5510157,КОР064,N/A,covered with dense grass
+4027,,2009,C,Survey,Koprinka,"42°36'57.476""","25°20'8.772""",371,14,12,0.6,1,Yes,2,1,Pasture,Pasture,Photo,Y,5510158,КОР065,N/A,Extensive RT with vague margins 
+4028,,2009,C,Survey,Koprinka,"42°36'50.529""","25°20'14.831""",345,24,24,3,2,Yes,3,2,Forest,Forest,Photo,Y,5510160,КОР066,N/A,"from the S almost invisible (integrated part of a hill), large RT's distracting the mound"
+4052,,2009,C,Survey,Gorno Cherkhovishte,"42°36'1.974""","25°19'7.266""",394,30,30,4,2,No,2,1,Forest,High vegetation or scrub,Photo,Y,5510022,GCH007,N/A,Hidden deep in the forest
+4053,,2009,C,Survey,Gorno Cherkhovishte,"42°35'47.286""","25°19'16.152""",403,15,15,0.5,1,No,2,1,Forest,High vegetation or scrub,Photo,Y,5510062,GCH008,N/A,Hidden deep in the forest
+4054,,2009,C,Survey,Gorno Cherkhovishte,"42°35'46.464""","25°19'22.704""",402,30,30,5,2,Yes,2,1,Forest,High vegetation or scrub,Photo,Y,5510063,GCH009,N/A,"next to a marked tourist trail; hardly visible, covered with vegetation, RT going to the bedrock"
+4055,,2009,C,Survey,Gorno Cherkhovishte,"42°35'45.804""","25°19'25.758""",399,20,20,1,1,No,1,1,Forest,High vegetation or scrub,Photo,Y,5510064,GCH010,N/A,hardy visible and accessible
+4056,,2009,C,Survey,Gorno Cherkhovishte,"42°35'18.21""","25°18'33.75""",443,21,21,2,2,Yes,3,1,Forest,High vegetation or scrub,Photo,Y,5510069,GCH013_М01,N/A,elevation marker on top
+4057,,2009,C,Survey,Gorno Cherkhovishte,"42°35'16.806""","25°18'36.984""",441,23,20,3,2,Yes,3,1,Forest,Pasture/Forest,Photo,Y,5510070,GCH014_М02,N/A,Tall trees on the top
+4058,,2009,C,Survey,Gorno Cherkhovishte,"42°35'15.81""","25°18'37.056""",442,28,28,5,2,Yes,2,1,Forest,High vegetation or scrub,Photo,Y,5510071,GCH015_М03,N/A,RT on top
+4059,,2009,C,Survey,Gorno Cherkhovishte,"42°35'15.234""","25°18'37.572""",441,25,22,5,2,N/A,3,,Pasture,Stones,N/A,N,5510072,GCH016_М04,N/A,
+4060,,2009,C,Survey,Gorno Cherkhovishte,"42°34'49.056""","25°18'18.888""",374,20,20,4,2,Yes,2,1,Pasture,Pasture and some scrub,Photo,Y,5510074,GCH018,N/A,
+4061,,2009,C,Survey,Gorno Cherkhovishte,"42°34'49.95""","25°18'16.788""",370,35,35,0.3,1,No,5,5,Agriculture,Ploughed,Photo,Y,5510075,GCH019,N/A,Almost completely ploughed over and very little left
+4062,,2009,C,Survey,Gorno Cherkhovishte,"42°35'31.278""","25°17'45.378""",378,15,15,2,2,Yes,3,2,Pasture,Pasture,Photo,Y,5510076,GCH020,N/A,"Possibly bulldozed over, edges cut away on the W side"
+4063,,2009,C,Survey,Gorno Cherkhovishte,"42°35'35.946""","25°17'51.492""",405,12,12,2,2,Yes,4,2,Pasture,Pasture,Photo,Y,5510077,GCH021,N/A,"Very slight depression, undifined on north. Possible RT or erosion."
+4064,,2009,C,Survey,Koprinka,"42°36'16.872""","25°18'34.854""",384,25,25,5,2,Yes,4,3,Forest,High vegetation or scrub,Photo,Y,5510060,GCH024,N/A,"difficult to determine boundaries, RT on top"
+4066,,2009,C,Survey,Gorno Cherkhovishte,"42°33'26.526""","25°18'19.878""",466,15,15,5,2,Yes,3,2,Pasture,Pasture,Photo,Y,5510099,GCH029,N/A,"Central area completely destroyed by RT 1, small rocks and sandy soil on surface."
+4067,,2009,C,Survey,Gorno Cherkhovishte,"42°33'44.256""","25°18'43.518""",439,20,20,2,2,Yes,2,1,Pasture,Pasture,Photo,Y,5510102,GCH030,N/A,RT 1 was fresh
+4068,,2009,C,Survey,Gorno Cherkhovishte,"42°33'44.226""","25°18'45.984""",439,25,25,5,2,Yes,2,1,Pasture,Pasture and some scrub,Photo,Y,5510101,GCH031,N/A,Several small old RT's on top.
+4069,,2009,C,Survey,Gorno Cherkhovishte,"42°33'51.612""","25°18'37.518""",425,10,10,1.5,2,Yes,2,1,Pasture,Pasture,Photo,Y,5510103,GCH032,N/A,"Small stones on the surface, reddish soil."
+4070,,2009,C,Survey,Gorno Cherkhovishte,"42°33'53.022""","25°18'37.17""",426,20,20,3,2,Yes,2,1,Pasture,Pasture,Photo,Y,5510104,GCH033,N/A,"Small stones on the surface, top has been taken."
+4071,,2009,C,Survey,Gorno Cherkhovishte,"42°33'53.964""","25°18'35.304""",423,20,20,1.5,2,Yes,3,2,Pasture,Pasture,Photo,Y,5510105,GCH034,N/A,"Top, S and E sides were dugged through, small stones on the surface, old RT's"
+4072,,2009,C,Survey,Gorno Cherkhovishte,"42°33'47.532""","25°19'2.286""",412,20,14,5,2,Yes,2,2,Pasture,Pasture,Photo,Y,5510106,GCH035,N/A,Western side taken by bulldozer
+4073,,2009,C,Survey,Gorno Cherkhovishte,"42°33'57.168""","25°19'1.164""",408,20,15,4,2,Yes,2,1,Agriculture,High vegetation or scrub,Photo,Y,5510107,GCH036,N/A,Covered in vegetation. Robber's trenches made by bulldozer.
+4074,,2009,C,Survey,Gorno Cherkhovishte,"42°34'1.26""","25°19'2.364""",394,30,25,3,2,Yes,3,1,Pasture,Pasture,Photo,Y,5510109,GCH037,N/A,"Ploughed through the top, Robber's trench removed from N and top; benchmark GT596."
+4075,,2009,C,Survey,Gorno Cherkhovishte,"42°34'2.448""","25°19'1.884""",390,20,20,1,1,Yes,3,2,Pasture,Pasture,Photo,Y,5510110,GCH038,N/A,earth taken from the top
+4076,,2009,C,Survey,Gorno Cherkhovishte,"42°34'4.086""","25°19'0.306""",388,20,15,1,1,Yes,2,1,Pasture,Pasture,Photo,Y,5510111,GCH039,N/A,all RT's are old
+4077,,2009,C,Survey,Gorno Cherkhovishte,"42°34'5.237""","25°18'59.408""",384,20,20,2,2,Yes,3,2,Pasture,Pasture,Photo,Y,5510112,GCH040,N/A,"next to the gipsy quater, top was taken"
+4078,,2009,C,Survey,Koprinka,"42°36'48.084""","25°19'28.836""",358,25,25,5,2,Yes,2,2,Forest,Pasture and some scrub,Photo,Y,5510095,КОР051,N/A,"flat-topped, concrete structures on the top and slopes (sewerage), cutting in N slope"
+4079,,2009,C,Survey,Koprinka,"42°36'44.766""","25°19'27.894""",350,22,22,3.5,2,Yes,2,1,Forest,Pasture,Photo,Y,5510096,КОР052,N/A,"high kota on the top, many shallow surface disturbances, bushy, cutting on the NE side - modern concrete building"
+4080,,2009,C,Survey,Koprinka,"42°36'44.124""","25°19'27.468""",349,19,19,1.8,2,No,2,1,Forest,Forest,Photo,Y,5510097,КОР053,N/A,"Hardly many shadeterminable borders, low surface disturbances, very bushy"
+4081,,2009,C,Survey,Gorno Cherkhovishte,"42°35'54.93""","25°19'54.384""",339,30,25,5,2,Yes,2,1,Forest,High vegetation or scrub,Photo,Y,5510098,GCH041,N/A,next to some houses; covered in vegetation; benchmark
+4084,,2009,C,Survey,Buzovgrad,"42°35'15.048""","25°21'47.586""",332,24,24,3,2,Yes,2,1,Pasture,Pasture and some scrub,Photo,Y,5510114,BUZ002,N/A,Fireplace on the top.
+4085,,2009,C,Survey,Koprinka,"42°37'16.296""","25°19'54.834""",386,20,18,1,1,No,2,1,Forest,Forest,Photo,Y,5510148,КОР054,N/A,"Low, irregular shape, covered with trees and bushes"
+4086,,2009,C,Survey,Koprinka,"42°40.501""","25°19'53.448""",393,12,12,1,1,Yes,2,1,Forest,Forest,Photo,Y,5510147,КОР055,N/A,A lot of RT
+4087,,2009,C,Survey,Koprinka,"42°37'17.67""","25°19'52.398""",396,15,15,1,1,Yes,2,1,Forest,Forest,Photo,Y,5510146,КОР056,N/A,"Old RT's, irregualr shape, no surface material"
+4088,,2009,C,Survey,Koprinka,"42°36'59.784""","25°20'26.82""",366,27,26,3,2,Yes,2,1,Forest,Forest,Photo,Y,5510149,КОР057,N/A,"scattered stones, high number of RTs"
+4089,,2009,C,Survey,Koprinka,"42°37'13.242""","25°20'17.874""",367,20,15,5,2,Yes,2,1,Forest,High vegetation or scrub,Photo,Y,5510150,KOP058M1,N/A,"Small, irregular shape"
+4090,,2009,C,Survey,Koprinka,"42°37'13.386"" ","25°20'16.878""",371,20,15,1,1,Yes,2,1,Forest,High vegetation or scrub,Photo,Y,5510150,KOP059M1,N/A,"Irregular shape, low visibility"
+4091,,2009,C,Survey,Koprinka,"42°37'20.28""","25°20'9.438""",380,18,15,1,1,Yes,1,1,Pasture,Pasture,Photo,Y,5510152,КОР060,N/A,"Red soil, small stones covering the surface, next to the village graveyard"
+4092,,2009,C,Survey,Koprinka,"42°37'25.818""","25°20'7.2""",379,15,15,5,2,Yes,2,1,Pasture,Pasture,Photo,Y,5510153,КОР061,N/A,Uneven surface.
+4093,,2009,C,Survey,Koprinka,"42°37'25.65""","25°20'11.742""",371,20,20,2,2,Yes,1,1,Pasture,Pasture,Photo,Y,5510154,КОР062,N/A,"Red soil, small stones covering the surface, and part taken by the road"
+4094,,2009,C,Survey,Koprinka,"42°37'52.728""","25°19'51.798""",386,17,16,5,2,Yes,3,1,Pasture,Pasture,Photo,Y,5510161,КОР067,N/A,"Dug through, next to village"
+4095,,2009,C,Survey,Koprinka,"42°36'59.316""","25°20'6.462""",370,18,14,1,1,Yes,2,1,Pasture,Forest,Photo,Y,5510159,КОР068,N/A,"Almost invisible RT (blur margins), some shallow surface disturbances"
+4096,,2009,C,Survey,Koprinka,"42°36'37.249""","25°19'50.753""",386,40,40,5,2,Yes,1,1,Pasture,Pasture,Photo,Y,5510162,КОР069,N/A,overgrown; next to agr fields; several old shallow test trenches.
+4100,Shipchenska mogila,2010,C,AKB,Enina,42°40.299',25°23.859',454,31,31,2,2,Yes,1,1,Pasture,Pasture,Survey,Y,5510244,ENIM01,N/A,"lot of garbage around, very near to Enina village (land fill of Enina)"
+4101,Mogila Razluovec,2010,C,AKB,Kran,42°40.453',25°23.414',440,10,10,4,2,Yes,2,1,Perennial,Pasture,Survey,Y,5510245,ENIM02,N/A,"stones and 3 m wide trench on the top, lot of garbage (land fill of Enina), in triangle of 3 roads"
+4102,Tumbova cheshma II / Malkata mogila,2010,C,AKB,Enina,42°40.285',25°23.613',451,27,25,3,2,Yes,2,1,Agriculture,Pasture,Survey,Y,5510246,ENIM03,Iron Age,"in 3m circle around mound many IA sherds, highly fragmentated, Southern of mound 3 big stones"
+4103,,2010,C,AKB,Enina,42°40.245',25°23.745',450,6,4,0.5,1,Yes,4,4,Agriculture,Ploughed,Survey,Y,5510247,ENIM04,N/A,"destroyed by agriculture, huge stone in the middle (1x1m)"
+4104,Slivova mogila,2010,C,AKB,Enina,42°40.158',25°23.685,442,43,30,6,3,Yes,2,1,Pasture,Pasture,Photo,Y,5510040,ENIM05,N/A,
+4105,Gardova mogila / Trite mogili,2010,C,AKB,Enina,42°38.660',25°23.543',378,20,20,5,2,Yes,4,3,Pasture,Pasture,Survey,N,5510251,ENINA 010,N/A,"on the borders of Kran and Enina, land fill, destroyed by RT's, looks like there was a grave, now entirely gone"
+4107,,2010,C,AKB,Kran,42°40. 761',25°22.335',466,32,22,1.5,2,Yes,2,2,Pasture,Pasture,Photo,Y,5500083,KRAN03,N/A,"2 RT's, 1 large next to the mound"
+4108,,2010,C,AKB,Kran,42°40. 694',25°22.510',461,24,22,0.9,1,Yes,3,2,Pasture,Pasture,Photo,Y,5510257,KRAN04,N/A,RT in the middle took most of the mound
+4109,,2010,C,AKB,Kran,42°40. 936',25°22.536',473,30,29,3,2,Yes,4,2,Pasture,Pasture,Photo,Y,5500085,KRAN05,N/A,"excavated by Kitov, surface very uneven"
+4110,,2010,C,AKB,Kran,42°41. 135',25°22.457',492,30,27,4,2,Yes,3,2,Pasture,Pasture,Photo,Y,5500089,KRAN06,N/A,"excavated by Kitov, surface very uneven"
+4111,Kran II/Sarafova mogila,2010,C,AKB,Kran,42°40.536',25°22.886',450,20,16,6,3,Yes,2,1,Pasture,Pasture,Photo,Y,5500086,KRAN_Grobnica2,4th/3rd C. BC,"Excavated in 1995 by TEMP, tomb with frescos inside."
+4112,,2010,C,AKB,Kran,,,446,35,26,5.5,3,Yes,NA,NA,Pasture,Pasture,Photo,Y,5500084,KRAN08,Late Iron Age,"150m, NE of Kran tell, excavated by Kitov, inhumation; Newly readded to this list- as it was conflated with a surface concentration of the same label."
+4129,Fidankos,2011,C,Survey,Sheynovo,"42° 39' 15.615""","25° 19' 19.325""",377,30,30,0.5,1,No,5,5,Agriculture,Ploughed,Photo,Y,,,N/A,entirely destroyed by agriculture
+4133,,2011,C,Survey,Kazanlak,"42° 39' 26.562""","25° 19' 26.064""",376,30,30,0.5,1,No,5,5,Agriculture,Ploughed,Photo,Y,,,N/A,entirely destroyed by agriculture
+4134,,2011,U,AKB,Hadzhidimitrovo,"42°39'40.927""N ","25°20'50.463""E ",405,8,8,0.2,1,Yes,4,4,Pasture,Pasture,Photo,Y,5500102,,N/A,large fresh RT took the middle part of the mound
+5001,,2009,C,Survey,Dolno Sahrane,"42°38'8.926"" ","25°15'51.548""",365,5,5,0.2,1,Yes,5,5,Agriculture,Ploughed,Photo,Y,,,N/A,"entirely looted grave encircled by stones, 1.5m deep, 2.1x2.85m, around the grave several large stones (ca 15 m circle around), soil from grave around"
+5002,,2009,U,Survey,Dolno Sahrane,"42°38'16.649""","25°15'52.934""",385,5,5,0.5,1,No,5,5,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,entirely destroyed by agriculture
+5003,,2009,C,Survey,Dolno Sahrane,"42°37'51.295""","25°16'12.056""",365,20,20,1.5,2,Yes,3,2,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,
+5004,,2009,C,Survey,Dolno Sahrane,"42°37'51.924""","25°16'11.539""",365,8,8,0.8,1,Yes,4,4,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,
+5007,,2009,C,Survey,Dolno Sahrane,"42°37'48.084""","25°16'12.744""",365,30,20,1.5,2,Yes,4,3,Agriculture,Ploughed,Photo,Y,,,N/A,"Oval-shaped mound, North side plowed over, rest of mound pasture with undefined boundaries."
+5008,,2009,C,Survey,Dolno Sahrane,42°37'49.818 ,"25°16'12.36""",366,30,30,4,2,Yes,2,1,Agriculture,High vegetation or scrub,Photo,Y,,,N/A,Many RT's and test holes. Also many animal burrows.
+3152,,2010,C,Survey,Skobelevo,"42°40'55.837""","25°12'57.928""",484,12,10,1.5,2,No,2,1,Perennial,Scrub,Photo,Y,,Skb 003-19,N/A,Surface of the mound covered with ca 0.5m layer of stones/either from the surrounding pasture or from the mound
